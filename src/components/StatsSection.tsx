@@ -11,21 +11,21 @@ const stats = [
     description:
       "Training Students From Across The Globe To Achieve Outstanding Results In Digital Marketing.",
     value: "500+",
-    gradient: "from-black via-black to-blue-600/80",
+    gradient: "from-black via-black to-[#be1e2e]/80",
   },
   {
     label: "Projects Successfully Completed",
     description:
       "Delivering Customized Courses That Drive Careers And Boost Conversions.",
     value: "700+",
-    gradient: "from-black via-black to-red-600/80",
+    gradient: "from-black via-black to-[#be1e2e]/60",
   },
   {
     label: "Revenue Generated for Clients",
     description:
       "Our Alumni Have Generated Outstanding Revenue Through Digital Marketing Skills.",
     value: "$200M+",
-    gradient: "from-black via-black to-indigo-600/80",
+    gradient: "from-black via-black to-[#be1e2e]/40",
   },
 ]
 
@@ -88,7 +88,7 @@ export default function StatsSection() {
                 transition={{ delay: index * 0.15 }}
                 whileHover={{ y: -8 }}
               >
-                <Card className="relative overflow-hidden rounded-lg border-0 shadow-lg">
+                <Card className="relative overflow-hidden rounded-lg border-0 shadow-lg p-0">
                   <CardContent
                     className={`relative min-h-[350px] p-10 flex flex-col justify-between text-white bg-gradient-to-t ${stat.gradient}`}
                   >

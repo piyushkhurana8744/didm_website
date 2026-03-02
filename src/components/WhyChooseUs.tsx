@@ -10,17 +10,17 @@ const reasons = [
   {
     number: "1",
     title: "Proven Track Record",
-    description: "Hundreds Of Successful Campaigns And Satisfied Clients.",
+    description: "Hundreds Of Successful Campaigns And Satisfied Clients Across Various Industries.",
   },
   {
     number: "2",
-    title: "Custom Strategies",
-    description: "Tailored SEO And Marketing Plans That Align With Your Unique Goals.",
+    title: "Custom SEO Plan",
+    description: "We Design SEO Plans That Drive You Towards Your Success And Goals.",
   },
   {
     number: "3",
     title: "Expert Team",
-    description: "Certified Professionals With Extensive Industry Experience.",
+    description: "Certified Professionals With Extensive Industry Experience In Digital Marketing.",
   },
   {
     number: "4",
@@ -29,46 +29,14 @@ const reasons = [
   },
 ];
 
-// Slow, smooth scroll-triggered animations
+// Scroll animation variants
 const scrollRevealVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 80 
-  },
+  hidden: { opacity: 0, y: 50 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: {
-      duration: 1.0,
-      ease: [0.25, 0.4, 0.25, 1]
-    }
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
   }
-};
-
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-const cardVariants: Variants = {
-  hidden: { 
-    opacity: 0, 
-    y: 60 
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.25, 0.4, 0.25, 1]
-    },
-  },
 };
 
 export default function WhyChooseUs() {
@@ -76,103 +44,76 @@ export default function WhyChooseUs() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section
-      className="py-24 bg-white text-black overflow-hidden border-t border-gray-50"
-      ref={ref}
-    >
+    <section className="py-24 bg-white text-black overflow-hidden" ref={ref}>
       <div className="container mx-auto px-6">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-16">
           <motion.div
             variants={scrollRevealVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             className="flex-1"
           >
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center">
-                <div className="w-2 h-2 rounded-full bg-primary" />
-              </div>
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-black/40">
-                Why Choose Us
+            <div className="flex items-center gap-2 mb-6 text-primary">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <span className="text-[10px] font-black uppercase tracking-[0.2em]">
+               Why Choose Us
               </span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-black leading-tight tracking-tighter mb-0 max-w-xl">
-              Right Choice <span className="text-primary italic">for Your Business</span>
+            <h2 className="text-4xl lg:text-6xl font-black leading-[1.1] tracking-tighter mb-4 max-w-xl">
+              Why We're the Right Choice <br /> for Your Business
             </h2>
           </motion.div>
-
+          
           <motion.div
             variants={scrollRevealVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
           >
-            <Button className="bg-[#be1e2e] text-white px-8 py-6 rounded-full font-black shadow-xl hover:bg-[#a01824] transition-all duration-300 transform hover:scale-105">
+             <Button className="bg-[#be1e2e] text-white rounded-md px-6 py-4 text-[10px] font-black uppercase tracking-wider hover:bg-[#a01824] transition-all">
               Work With Us
             </Button>
           </motion.div>
         </div>
 
-        {/* Content Grid */}
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Image */}
+        {/* Content Layout */}
+        <div className="space-y-16">
+          {/* Top: Large Image */}
           <motion.div
             variants={scrollRevealVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="flex-1 relative w-full aspect-square max-w-[500px]"
+            className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl"
           >
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4 }}
-              className="rounded-[32px] overflow-hidden shadow-2xl relative z-10 w-full h-full grayscale hover:grayscale-0 transition-all duration-700 card-glow"
-            >
-              <Image
-                src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2070&auto=format&fit=crop"
-                alt="Why Choose Us"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
+            <Image
+              src="/images/why_choose_us_new.png"
+              alt="Our Professional Workspace"
+              fill
+              className="object-cover"
+            />
           </motion.div>
 
-          {/* Reasons Grid */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6"
-          >
+          {/* Bottom: Reasons Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {reasons.map((reason, index) => (
               <motion.div
                 key={index}
-                variants={cardVariants}
-                whileHover={{
-                  y: -8,
-                  transition: { duration: 0.3, ease: "easeOut" },
-                }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
               >
-                <Card className="bg-[#F8F9FA] rounded-[32px] border border-gray-100 transition-all duration-500 hover:bg-white hover:border-primary/20 hover:shadow-lg card-glow h-full">
-                  <CardContent className="p-8">
-                    <motion.div
-                      whileHover={{ rotate: 12, scale: 1.1 }}
-                      transition={{ duration: 0.3 }}
-                      className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-primary font-black mb-6 shadow-sm border border-gray-50 uppercase text-xs"
-                    >
-                      0{reason.number}
-                    </motion.div>
-                    <h3 className="text-xl font-black mb-3 leading-tight group-hover:text-primary transition-colors duration-300">
-                      {reason.title}
-                    </h3>
-                    <p className="text-black/40 font-medium leading-relaxed text-sm">
-                      {reason.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="flex flex-col gap-4">
+                  <div className="text-primary font-black text-xs uppercase tracking-widest">
+                    {reason.number}. {reason.title}
+                  </div>
+                  <p className="text-black/40 font-medium text-sm leading-relaxed">
+                    {reason.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden">
+    <section id="home" className="relative min-h-screen bg-black text-white overflow-hidden">
       {/* Background Gradient - Updated to match the example */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#be1e2e]/40 via-black to-[#0a0a0a]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -37,16 +37,14 @@ export default function Hero() {
             variants={fadeUp}
             className="text-4xl md:text-6xl font-bold leading-tight"
           >
-            Master Digital <br />
-            Marketing With <span className="text-primary">DIDM</span>
+            Your Partner in <span className="text-primary">Digital Excellence</span>
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="text-gray-300 max-w-xl"
           >
-            Launch your career in digital marketing with DIDM — Delhi&apos;s
-            top-rated institute for SEO, PPC, social media & more.
+            Transforming businesses through innovative digital solutions.
           </motion.p>
 
           {/* Audit Form */}
@@ -59,7 +57,7 @@ export default function Hero() {
               className="bg-transparent border-none text-white placeholder:text-gray-400"
             />
             <Button className="rounded-full bg-primary hover:bg-primary/90 text-white px-6">
-              Audit
+              Get Started
             </Button>
           </motion.div>
 

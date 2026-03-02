@@ -5,13 +5,11 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import StatsSection from "@/components/StatsSection";
-import ServicesSection from "@/components/ServicesSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ProcessSection from "@/components/ProcessSection";
 import Testimonials from "@/components/Testimonials";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -33,7 +31,6 @@ export default function Home() {
       <Header />
       <Hero />
       <StatsSection />
-      <ServicesSection />
       <WhyChooseUs />
       <ProcessSection />
       <Testimonials />
@@ -49,7 +46,7 @@ export default function Home() {
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-primary-lg hover:shadow-primary transition-all z-50 transform hover:-translate-y-1 group"
+            className="fixed bottom-8 right-8 w-12 h-12 bg-[#be1e2e] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all z-50 transform hover:-translate-y-1 group"
           >
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"

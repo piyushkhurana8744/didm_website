@@ -3,20 +3,37 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ChevronDown, Menu, X, Phone } from "lucide-react";
+import { Search, ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navItems = [
-  { name: "Home", href: "#", hasDropdown: false },
-  { name: "Courses", href: "#", hasDropdown: true },
-  { name: "About", href: "#", hasDropdown: false },
-  { name: "Placements", href: "#", hasDropdown: false },
-  { name: "Blog", href: "#", hasDropdown: false },
+  { name: "Home", href: "/", hasDropdown: false },
+  { name: "Portfolio", href: "/portfolio", hasDropdown: false },
+  { name: "Service", href: "/services", hasDropdown: false },
+  { 
+    name: "Page's", 
+    href: "#", 
+    hasDropdown: true,
+    dropdownItems: [
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/team" },
+      { name: "Testimonial", href: "/testimonials" },
+      { name: "FAQ's", href: "/faq" },
+      { name: "Pricing", href: "/pricing" },
+      { name: "Contact Us", href: "/contact" },
+      { name: "404", href: "/404" },
+    ]
+  },
+  { name: "Blogs", href: "/blogs", hasDropdown: false }, // Fixed: set to false if no items
 ];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +43,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // useWhiteUI determines if we use white logo/text (for dark backgrounds)
+  // 1. Home page (/) and Portfolio page (/portfolio) have dark hero sections.
+  // 2. When scrolled, everything becomes black background -> White UI.
+  const isDarkHeroPage = pathname === "/" || pathname === "/portfolio";
+  const useWhiteUI = isDarkHeroPage || isScrolled;
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -33,8 +56,10 @@ export default function Header() {
       transition={{ duration: 0.9, ease: [0.25, 0.4, 0.25, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-gradient-to-b from-black/98 to-black/95 backdrop-blur-xl py-3 border-b border-[#be1e2e]/30 shadow-[0_10px_40px_rgba(190,30,46,0.2)]"
-          : "bg-gradient-to-b from-black/80 to-transparent py-5"
+          ? "bg-black/95 backdrop-blur-xl border-b border-white/5 py-3"
+          : isDarkHeroPage 
+            ? "bg-transparent py-6"
+            : "bg-white/90 backdrop-blur-md border-b border-black/5 py-4"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -42,69 +67,91 @@ export default function Header() {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:rotate-12 ring-2 ring-white/20 shadow-[0_0_20px_rgba(190,30,46,0.3)] group-hover:shadow-[0_0_30px_rgba(190,30,46,0.5)]">
-              <span className="text-white font-black text-sm">D</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-black tracking-tighter text-white drop-shadow-md leading-none">
-                DIDM
-              </span>
-              <span className="text-[8px] font-bold uppercase tracking-[0.15em] text-white/40 leading-none">
-                Digital Marketing
-              </span>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative h-10 w-40 md:h-12 md:w-48 transition-all duration-500 hover:scale-105">
+              <Image
+                src={useWhiteUI ? "/logo-light.png" : "/logo-dark.png"}
+                alt="Online Strikers Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </Link>
         </motion.div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {navItems.map((item, index) => (
             <motion.div
               key={item.name}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1, ease: [0.25, 0.4, 0.25, 1] }}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+              className="relative"
+              onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
               <Link
                 href={item.href}
-                className="group flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white/90 hover:text-[#be1e2e] transition-all duration-300 relative"
+                className={`group flex items-center gap-1.5 text-[13px] font-black transition-all duration-300 relative py-2 ${
+                  useWhiteUI ? "text-white/80 hover:text-[#be1e2e]" : "text-black/80 hover:text-[#be1e2e]"
+                }`}
               >
                 {item.name}
                 {item.hasDropdown && (
-                  <ChevronDown className="w-3 h-3 group-hover:rotate-180 transition-transform duration-300 text-white/40" />
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${activeDropdown === item.name ? "rotate-180" : ""} ${useWhiteUI ? "text-white/30" : "text-black/20"} group-hover:text-[#be1e2e]`} />
                 )}
               </Link>
+
+              {/* Dropdown Menu */}
+              <AnimatePresence>
+                {item.hasDropdown && activeDropdown === item.name && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute top-full left-0 mt-1 w-48 bg-white rounded-xl shadow-2xl py-3 overflow-hidden border border-black/5"
+                  >
+                    {item.dropdownItems?.map((subItem) => (
+                      <Link
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block px-6 py-2.5 text-[13px] font-black text-black/70 hover:text-[#be1e2e] hover:bg-gray-50 transition-colors"
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </nav>
 
         {/* Right Side Actions */}
-        <div className="flex items-center gap-4">
-          <motion.a
-            href="tel:+919999999999"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
-            className="hidden sm:flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-300"
-          >
-            <Phone className="w-4 h-4" />
-            <span className="text-xs font-bold">+91 99999-99999</span>
-          </motion.a>
+        <div className="flex items-center gap-6 md:gap-8">
+          <button className={`transition-colors ${useWhiteUI ? "text-white/60 hover:text-white" : "text-black/60 hover:text-black"}`}>
+            <Search className="w-5 h-5" />
+          </button>
 
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="hidden sm:block"
           >
             <Button
               asChild
-              className="bg-[#be1e2e] text-white px-8 py-6 rounded-full text-xs font-black uppercase tracking-wider hover:bg-[#a01824] transition-all duration-300 shadow-[0_10px_20px_rgba(190,30,46,0.3)] active:scale-95 transform hover:-translate-y-0.5"
+              className="bg-[#be1e2e] text-white hover:bg-[#a01824] px-6 md:px-8 py-5 md:py-6 h-auto rounded-full text-[12px] md:text-[13px] font-black group transition-all duration-300 shadow-xl shadow-[#be1e2e]/20 active:scale-95 transform hover:-translate-y-0.5"
             >
-              <Link href="#">Contact Us</Link>
+              <Link href="/contact" className="flex items-center gap-2">
+                Contact Us
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
             </Button>
           </motion.div>
 
@@ -113,14 +160,14 @@ export default function Header() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="lg:hidden text-white p-2"
+            className={`lg:hidden p-1 ${useWhiteUI ? "text-white" : "text-black"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </motion.button>
         </div>
       </div>
-
+    
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -129,33 +176,43 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:hidden bg-gradient-to-b from-black/98 to-black/95 backdrop-blur-xl border-t border-[#be1e2e]/30"
+            className="lg:hidden bg-black/95 backdrop-blur-2xl border-t border-white/5 overflow-hidden"
           >
-            <div className="container mx-auto px-6 py-6">
-              <nav className="flex flex-col gap-4">
+            <div className="px-6 py-8">
+              <nav className="flex flex-col gap-5">
                 {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                  >
-                    <Link
-                      href={item.href}
-                      className="flex items-center justify-between text-sm font-bold uppercase tracking-wider text-white/90 hover:text-[#be1e2e] transition-colors py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                  <div key={item.name}>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.05 }}
                     >
-                      {item.name}
-                      {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
-                    </Link>
-                  </motion.div>
+                      <Link
+                        href={item.href}
+                        className="flex items-center justify-between text-base font-bold text-white/90 hover:text-[#be1e2e] transition-colors py-2"
+                        onClick={() => !item.hasDropdown && setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                        {item.hasDropdown && <ChevronDown className="w-5 h-5 text-white/20" />}
+                      </Link>
+                    </motion.div>
+                    {item.hasDropdown && (
+                      <div className="pl-4 mt-2 flex flex-col gap-3">
+                        {item.dropdownItems?.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="text-sm font-bold text-white/40 hover:text-[#be1e2e] transition-colors"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </nav>
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <a href="tel:+919999999999" className="flex items-center gap-2 text-white/70 text-sm font-bold">
-                  <Phone className="w-4 h-4" /> +91 99999-99999
-                </a>
-              </div>
             </div>
           </motion.div>
         )}
