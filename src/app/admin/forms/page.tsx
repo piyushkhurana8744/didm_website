@@ -43,9 +43,10 @@ export default function FormBuilderPage() {
     try {
       const res = await fetch("/api/forms");
       const data = await res.json();
-      setForms(data || []);
+      setForms(Array.isArray(data) ? data : []);
     } catch (error) {
       console.error("Error fetching forms:", error);
+      setForms([]);
     }
   };
 
@@ -87,6 +88,7 @@ export default function FormBuilderPage() {
   };
 
   const removeField = (id: string) => {
+    if (!selectedForm?.fields) return;
     setSelectedForm({
       ...selectedForm,
       fields: selectedForm.fields.filter((f: any) => f.id !== id)
@@ -94,6 +96,7 @@ export default function FormBuilderPage() {
   };
 
   const updateField = (id: string, updates: any) => {
+    if (!selectedForm?.fields) return;
     setSelectedForm({
       ...selectedForm,
       fields: selectedForm.fields.map((f: any) => f.id === id ? { ...f, ...updates } : f)
@@ -116,7 +119,7 @@ export default function FormBuilderPage() {
           <div className="bg-white/5 border border-white/10 p-6 rounded-3xl space-y-4">
             <h3 className="text-xs font-black uppercase tracking-widest text-white/40 px-2">Your Forms</h3>
                   <div className="space-y-1">
-              {forms.map((form) => (
+              {Array.isArray(forms) && forms.map((form) => (
                 <button
                   key={form.slug}
                   onClick={() => setSelectedForm(form)}

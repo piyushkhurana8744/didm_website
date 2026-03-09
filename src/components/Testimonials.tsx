@@ -7,36 +7,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const testimonials = [
-  {
-    name: "Sarah M",
-    role: "Store Owner",
-    content: "DIDM Transformed Our Career Trajectory. The Hands-On Training Was Exceptional!",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
-    isPrimary: false,
-  },
-  {
-    name: "John Doe",
-    role: "SEO Manager",
-    content:
-      "The Faculty At DIDM Is Proactive, Professional, And Results-Driven. Highly Recommend!",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-    isPrimary: true,
-  },
-  {
-    name: "Alex Hales",
-    role: "Business Owner",
-    content:
-      "Thanks To DIDM, I Landed My Dream Job In Digital Marketing Within 3 Months.",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
-    isPrimary: false,
-  },
-];
-
-// Slow, smooth scroll-triggered animations
 const scrollRevealVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -78,9 +48,53 @@ const itemVariants: Variants = {
   },
 };
 
-export default function Testimonials() {
+interface TestimonialsProps {
+  content?: {
+    title?: string;
+    subtitle?: string;
+    ctaText?: string;
+    imageUrl?: string;
+    items?: Array<{
+      name: string;
+      role: string;
+      content: string;
+      image: string;
+      isPrimary?: boolean;
+    }>;
+  };
+}
+
+export default function Testimonials({ content }: TestimonialsProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const displayTitle = content?.title || "Success Through Clients' Words";
+  const displaySubtitle = content?.subtitle || "Testimonials";
+  const displayCtaText = content?.ctaText || "View All Review";
+  const displayFeaturedImage = content?.imageUrl || "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop";
+  const displayTestimonials = content?.items || [
+    {
+      name: "Sarah M",
+      role: "Store Owner",
+      content: "DIDM Transformed Our Career Trajectory. The Hands-On Training Was Exceptional!",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
+      isPrimary: false,
+    },
+    {
+      name: "John Doe",
+      role: "SEO Manager",
+      content: "The Faculty At DIDM Is Proactive, Professional, And Results-Driven. Highly Recommend!",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+      isPrimary: true,
+    },
+    {
+      name: "Alex Hales",
+      role: "Business Owner",
+      content: "Thanks To DIDM, I Landed My Dream Job In Digital Marketing Within 3 Months.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
+      isPrimary: false,
+    },
+  ];
 
   return (
     <section
@@ -99,11 +113,17 @@ export default function Testimonials() {
             <div className="flex items-center gap-2 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-primary" />
               <span className="text-[10px] font-black uppercase tracking-[0.25em] text-black/40">
-                Testimonials
+                {displaySubtitle}
               </span>
             </div>
             <h2 className="text-5xl lg:text-6xl font-black leading-[0.95] tracking-tighter mb-0 max-w-xl">
-              Success Through <br /> <span className="text-primary italic">Clients' Words</span>
+              {displayTitle.includes("Clients' Words") ? (
+                <>
+                  {displayTitle.split("Clients' Words")[0]} <br /> <span className="text-primary italic">Clients' Words</span>
+                </>
+              ) : (
+                displayTitle
+              )}
             </h2>
           </motion.div>
 
@@ -113,7 +133,7 @@ export default function Testimonials() {
             animate={isInView ? "visible" : "hidden"}
           >
             <Button className="bg-[#be1e2e] text-white px-8 py-6 rounded-full text-xs font-black uppercase tracking-wider hover:bg-[#a01824] transition-all duration-300 transform hover:scale-105 shadow-xl">
-              View All Review
+              {displayCtaText}
             </Button>
           </motion.div>
         </div>
@@ -126,7 +146,7 @@ export default function Testimonials() {
             animate={isInView ? "visible" : "hidden"}
             className="flex-[1.2] space-y-4 w-full"
           >
-            {testimonials.map((t, index) => (
+            {displayTestimonials.map((t, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -192,7 +212,7 @@ export default function Testimonials() {
           >
             <div className="relative w-full max-w-[500px] aspect-[4/5] overflow-hidden rounded-[50px] shadow-2xl group">
               <Image
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop"
+                src={displayFeaturedImage}
                 alt="Success Client"
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"

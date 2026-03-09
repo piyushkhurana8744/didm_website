@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [pageData, setPageData] = useState<any>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,22 +24,67 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const res = await fetch("/api/content?path=/", { cache: "no-store" });
+        if (res.ok) {
+          const data = await res.json();
+          setPageData(data);
+        }
+      } catch (error) {
+        console.error("Error fetching page content:", error);
+      } finally {
+        setIsLoaded(true);
+      }
+    };
+    fetchContent();
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Extract section data
+  const heroSection = pageData?.sections?.find((s: any) => s.type === "hero");
+  const statsSection = pageData?.sections?.find((s: any) => s.type === "features" || (s.type === "standard" && s.title?.includes("Results")));
+  const whyChooseSection = pageData?.sections?.find((s: any) => s.type === "standard" && s.subtitle?.includes("Why Choose Us"));
+  const processSection = pageData?.sections?.find((s: any) => s.type === "standard" && s.subtitle?.includes("Work Process"));
+  const testimonialsSection = pageData?.sections?.find((s: any) => s.type === "standard" && s.subtitle?.includes("Testimonials"));
+  const blogSection = pageData?.sections?.find((s: any) => s.type === "standard" && s.subtitle?.includes("Blog"));
+
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      <Hero />
-      <StatsSection />
-      <WhyChooseUs />
-      <ProcessSection />
-      <Testimonials />
-      <BlogSection />
+      
+      <Hero content={heroSection} />
+      <StatsSection content={statsSection} />
+      <WhyChooseUs content={whyChooseSection} />
+      <ProcessSection content={processSection} />
+      
+      {/* Render any additional dynamic sections */}
+      {pageData?.sections?.filter((s: any) => 
+        !["hero", "features"].includes(s.type) && 
+        !s.subtitle?.includes("Why Choose Us") && 
+        !s.title?.includes("Results") &&
+        !s.subtitle?.includes("Work Process") &&
+        !s.subtitle?.includes("Testimonials") &&
+        !s.subtitle?.includes("Blog")
+      ).map((section: any) => (
+        <section key={section.sectionId} className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-4xl font-bold mb-4">{section.title}</h2>
+            <p className="text-lg text-gray-600 mb-8">{section.content}</p>
+            {section.imageUrl && <img src={section.imageUrl} alt={section.title} className="rounded-2xl shadow-xl max-w-2xl" />}
+          </div>
+        </section>
+      ))}
+
+      <Testimonials content={testimonialsSection} />
+      <BlogSection content={blogSection} />
       <Footer />
 
-      {/* Scroll to Top Button with Animation */}
+      {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button

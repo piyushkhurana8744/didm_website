@@ -8,38 +8,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const posts = [
-  {
-    title: "Transform Your Online Presence With Expert SEO Strategies.",
-    date: "12/12/2024",
-    author: "John Doe",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    excerpt:
-      "Strategic search engine optimization (SEO) that positions your brand for growth.",
-    isFeatured: true,
-  },
-  {
-    title: "Maximize Your Business Success With Tailored SEO Solutions.",
-    date: "12/12/2024",
-    author: "John Doe",
-    image:
-      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop",
-    excerpt: "Achieve top rankings with innovative SEO techniques from our experts.",
-    isFeatured: false,
-  },
-  {
-    title: "The Future of Digital Marketing in 2025 and Beyond.",
-    date: "15/12/2024",
-    author: "Jane Smith",
-    image:
-      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
-    excerpt: "Stay ahead of the curve with our latest projections for marketing trends.",
-    isFeatured: false,
-  },
-];
-
-// Slow, smooth scroll-triggered animations
 const scrollRevealVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -81,9 +49,55 @@ const itemVariants: Variants = {
   },
 };
 
-export default function BlogSection() {
+interface BlogSectionProps {
+  content?: {
+    title?: string;
+    subtitle?: string;
+    ctaText?: string;
+    posts?: Array<{
+      title: string;
+      date: string;
+      author: string;
+      image: string;
+      excerpt: string;
+      isFeatured?: boolean;
+    }>;
+  };
+}
+
+export default function BlogSection({ content }: BlogSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const displayTitle = content?.title || "Insights from DIDM Experts";
+  const displaySubtitle = content?.subtitle || "Our Blog";
+  const displayCtaText = content?.ctaText || "All Categories";
+  const displayPosts = content?.posts || [
+    {
+      title: "Transform Your Online Presence With Expert SEO Strategies.",
+      date: "12/12/2024",
+      author: "John Doe",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+      excerpt: "Strategic search engine optimization (SEO) that positions your brand for growth.",
+      isFeatured: true,
+    },
+    {
+      title: "Maximize Your Business Success With Tailored SEO Solutions.",
+      date: "12/12/2024",
+      author: "John Doe",
+      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop",
+      excerpt: "Achieve top rankings with innovative SEO techniques from our experts.",
+      isFeatured: false,
+    },
+    {
+      title: "The Future of Digital Marketing in 2025 and Beyond.",
+      date: "15/12/2024",
+      author: "Jane Smith",
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+      excerpt: "Stay ahead of the curve with our latest projections for marketing trends.",
+      isFeatured: false,
+    },
+  ];
 
   return (
     <section
@@ -102,11 +116,17 @@ export default function BlogSection() {
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
               <div className="w-1.5 h-1.5 rounded-full bg-primary" />
               <span className="text-[10px] font-black uppercase tracking-[0.25em] text-black/40">
-                Our Blog
+                {displaySubtitle}
               </span>
             </div>
             <h2 className="text-5xl lg:text-6xl font-black leading-[0.95] tracking-tighter mb-0 max-w-2xl">
-              Insights <br /> <span className="text-primary italic">from DIDM Experts</span>
+              {displayTitle.includes("DIDM Experts") ? (
+                <>
+                  {displayTitle.split("DIDM Experts")[0]} <br /> <span className="text-primary italic">from DIDM Experts</span>
+                </>
+              ) : (
+                displayTitle
+              )}
             </h2>
           </motion.div>
 
@@ -116,7 +136,7 @@ export default function BlogSection() {
             animate={isInView ? "visible" : "hidden"}
           >
             <Button className="bg-[#be1e2e] text-white px-8 py-6 rounded-full text-xs font-black uppercase tracking-wider hover:bg-[#a01824] transition-all duration-300 transform hover:scale-105 shadow-xl">
-              All Categories
+              {displayCtaText}
             </Button>
           </motion.div>
         </div>
@@ -132,8 +152,8 @@ export default function BlogSection() {
           <motion.div variants={itemVariants} className="flex flex-col gap-8 group">
             <div className="rounded-[50px] overflow-hidden aspect-[16/10] relative shadow-2xl">
               <Image
-                src={posts[0].image}
-                alt={posts[0].title}
+                src={displayPosts[0].image}
+                alt={displayPosts[0].title}
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
@@ -160,15 +180,15 @@ export default function BlogSection() {
             </div>
             <div className="px-4">
               <div className="flex items-center gap-6 mb-5 text-[11px] font-black uppercase tracking-[0.25em] text-black/40">
-                <span>{posts[0].date}</span>
+                <span>{displayPosts[0].date}</span>
                 <span className="w-1 h-1 rounded-full bg-[#b1ff01]" />
-                <span>{posts[0].author}</span>
+                <span>{displayPosts[0].author}</span>
               </div>
               <h3 className="text-3xl lg:text-4xl font-black mb-6 hover:text-primary transition-colors cursor-pointer leading-[1.1] tracking-tight">
-                {posts[0].title}
+                {displayPosts[0].title}
               </h3>
               <p className="text-lg text-black/50 font-medium mb-8 leading-relaxed line-clamp-2">
-                {posts[0].excerpt}
+                {displayPosts[0].excerpt}
               </p>
               <Link
                 href="#"
@@ -188,7 +208,7 @@ export default function BlogSection() {
 
           {/* List of other posts */}
           <div className="flex flex-col gap-10">
-            {posts.slice(1).map((post, index) => (
+            {displayPosts.slice(1).map((post, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -206,13 +226,6 @@ export default function BlogSection() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    {index === 0 && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Target className="w-6 h-6 text-white" />
-                        </div>
-                      </div>
-                    )}
                   </CardContent>
                   <CardContent className="flex-1 p-0">
                     <div className="flex items-center gap-4 mb-4 text-[10px] font-black uppercase tracking-[0.2em] text-black/30">

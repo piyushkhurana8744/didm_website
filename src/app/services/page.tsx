@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Header from "@/components/Header"
@@ -13,37 +13,36 @@ interface Service {
   image: string
 }
 
-const services: Service[] = [
-  { id: 1, title: "Business Strategy", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" },
-  { id: 2, title: "Business Strategy", image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop" },
-  { id: 3, title: "Business Strategy", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" },
-  { id: 4, title: "Business Strategy", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" },
-  { id: 5, title: "PR Staffing", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" },
-  { id: 6, title: "Web Design", image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=800&auto=format&fit=crop" },
-  { id: 7, title: "Architecture", image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=800&auto=format&fit=crop" },
-  { id: 8, title: "Advertising", image: "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=800&auto=format&fit=crop" },
-  { id: 9, title: "E-Commerce", image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800&auto=format&fit=crop" },
-  { id: 10, title: "Travel Guide", image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" },
-  { id: 11, title: "Investment", image: "https://images.unsplash.com/photo-1579548122064-9da09ea2475a?q=80&w=800&auto=format&fit=crop" },
-  { id: 12, title: "Solar Energy", image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop" },
-]
-
-const stats = [
-  { label: "Agency Employees", value: "500+" },
-  { label: "Project Done", value: "900+" },
-  { label: "Revenue Generated", value: "$200M" },
-  { label: "Satisfied Client", value: "110K" },
-  { label: "Country Worldwide", value: "109+" },
-]
-
-const team = [
-  { id: 1, name: "Morgan Brooks", role: "Senior Project Leader", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" },
-  { id: 2, name: "Alan Patterson", role: "Marketing Officer", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop" },
-  { id: 3, name: "Sophia Lee", role: "UI/UX Designer", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop" },
-  { id: 4, name: "Chris Glasser", role: "The Team", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" },
-]
+interface Stat {
+  label: string
+  value: string
+}
 
 export default function ServicesPage() {
+  const [pageData, setPageData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const res = await fetch("/api/content?path=/services", { cache: "no-store" });
+        const data = await res.json();
+        setPageData(data);
+      } catch (error) {
+        console.error("Error fetching services content:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchContent();
+  }, []);
+
+  const heroSection = pageData?.sections?.find((s: any) => s.type === "hero");
+  const servicesSection = pageData?.sections?.find((s: any) => s.services);
+  const statsSection = pageData?.sections?.find((s: any) => s.stats);
+
+  const services: Service[] = servicesSection?.services || [];
+  const stats: Stat[] = statsSection?.stats || [];
   return (
     <main className="min-h-screen bg-white font-sans">
       <Header />
@@ -58,7 +57,7 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl lg:text-8xl font-black text-black tracking-tighter mb-4"
           >
-            Our Service V1
+            {heroSection?.title || "Our Services"}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -66,7 +65,7 @@ export default function ServicesPage() {
             transition={{ delay: 0.1 }}
             className="text-gray-400 font-bold uppercase tracking-[0.3em] text-[10px]"
           >
-            Looking For Strategic Web
+            {heroSection?.subtitle || "Looking For Strategic Web"}
           </motion.p>
         </div>
       </section>

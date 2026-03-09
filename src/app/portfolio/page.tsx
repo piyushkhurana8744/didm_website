@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
@@ -19,81 +19,6 @@ interface PortfolioItem {
   year: string
 }
 
-const portfolioItems: PortfolioItem[] = [
-  {
-    id: 1,
-    title: "Fintech Dashboard",
-    category: "ui-ux",
-    image: "https://picsum.photos/seed/fintech/800/600",
-    description: "A comprehensive financial dashboard with real-time analytics, transaction tracking, and customizable widgets.",
-    client: "FinanceCorp",
-    year: "2024",
-  },
-  {
-    id: 2,
-    title: "E-Commerce Platform",
-    category: "development",
-    image: "https://picsum.photos/seed/ecommerce/800/600",
-    description: "Full-featured online store with payment integration, inventory management, and AI-powered recommendations.",
-    client: "ShopTech",
-    year: "2024",
-  },
-  {
-    id: 3,
-    title: "Fitness Tracker App",
-    category: "app",
-    image: "https://picsum.photos/seed/fitness/800/600",
-    description: "Mobile application for tracking workouts, nutrition, and health metrics with social features.",
-    client: "FitLife",
-    year: "2023",
-  },
-  {
-    id: 4,
-    title: "Healthcare Portal",
-    category: "ui-ux",
-    image: "https://picsum.photos/seed/healthcare/800/600",
-    description: "Patient management system with appointment scheduling, telemedicine, and medical records access.",
-    client: "MedCare",
-    year: "2024",
-  },
-  {
-    id: 5,
-    title: "SaaS Analytics",
-    category: "development",
-    image: "https://picsum.photos/seed/saas/800/600",
-    description: "Business intelligence platform with custom dashboards, data visualization, and predictive analytics.",
-    client: "DataPro",
-    year: "2023",
-  },
-  {
-    id: 6,
-    title: "Food Delivery App",
-    category: "app",
-    image: "https://picsum.photos/seed/food/800/600",
-    description: "Food delivery platform with real-time tracking, restaurant management, and loyalty program.",
-    client: "QuickEats",
-    year: "2024",
-  },
-  {
-    id: 7,
-    title: "Real Estate Platform",
-    category: "ui-ux",
-    image: "https://picsum.photos/seed/realestate/800/600",
-    description: "Property listing platform with virtual tours, advanced search, and agent management system.",
-    client: "PropertyHub",
-    year: "2023",
-  },
-  {
-    id: 8,
-    title: "Education LMS",
-    category: "development",
-    image: "https://picsum.photos/seed/education/800/600",
-    description: "Learning management system with course creation, progress tracking, and interactive assessments.",
-    client: "EduLearn",
-    year: "2024",
-  },
-]
-
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "All" },
   { id: "ui-ux", label: "UI/UX Design" },
@@ -111,6 +36,27 @@ const categoryLabels: Record<Category, string> = {
 export default function PortfolioPage() {
   const [activeFilter, setActiveFilter] = useState<Category>("all")
   const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null)
+  const [pageData, setPageData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const res = await fetch("/api/content?path=/portfolio", { cache: "no-store" });
+        const data = await res.json();
+        setPageData(data);
+      } catch (error) {
+        console.error("Error fetching portfolio content:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchContent();
+  }, []);
+
+  const heroSection = pageData?.sections?.find((s: any) => s.type === "hero");
+  const portfolioSection = pageData?.sections?.find((s: any) => s.portfolioItems);
+  const portfolioItems: PortfolioItem[] = portfolioSection?.portfolioItems || [];
 
   const filteredItems =
     activeFilter === "all"
@@ -129,7 +75,7 @@ export default function PortfolioPage() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-block text-sm font-medium text-primary mb-4 tracking-wider"
           >
-            ● OUR WORK
+            ● {heroSection?.subtitle || "OUR WORK"}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +83,7 @@ export default function PortfolioPage() {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold mb-6"
           >
-            PORTFOLIO
+            {heroSection?.title || "PORTFOLIO"}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -145,8 +91,7 @@ export default function PortfolioPage() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto text-lg"
           >
-            Showcasing our expertise across digital design and development. 
-            Explore our latest projects and see how we transform ideas into reality.
+            {heroSection?.content || "Showcasing our expertise across digital design and development. Explore our latest projects and see how we transform ideas into reality."}
           </motion.p>
         </div>
       </section>
@@ -176,81 +121,91 @@ export default function PortfolioPage() {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-24 min-h-[400px]">
         <div className="max-w-7xl mx-auto">
-          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence mode="popLayout">
-              {filteredItems.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  onClick={() => setSelectedProject(item)}
-                  className="group relative aspect-[4/3] rounded-3xl overflow-hidden cursor-pointer bg-white/5"
-                >
-                  {/* Image Container */}
-                  <div className="absolute inset-0">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
-
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-
-                  {/* Content */}
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    {/* Category Tag */}
-                    <motion.span
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      className="inline-block text-xs font-bold text-primary tracking-wider mb-3"
-                    >
-                      {categoryLabels[item.category]}
-                    </motion.span>
-
-                    {/* Title */}
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {item.title}
-                    </h3>
-
-                    {/* Description Preview */}
-                    <p className="text-gray-400 text-sm line-clamp-2 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                      {item.description}
-                    </p>
-
-                    {/* View More Arrow */}
-                    <div className="absolute top-8 right-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                      >
-                        <path d="M7 17 17 7" />
-                        <path d="M7 7h10v10" />
-                      </svg>
+          {isLoading ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+            </div>
+          ) : portfolioItems.length > 0 ? (
+            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <AnimatePresence mode="popLayout">
+                {filteredItems.map((item, index) => (
+                  <motion.div
+                    key={item.id}
+                    layout
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    onClick={() => setSelectedProject(item)}
+                    className="group relative aspect-[4/3] rounded-3xl overflow-hidden cursor-pointer bg-white/5"
+                  >
+                    {/* Image Container */}
+                    <div className="absolute inset-0">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
                     </div>
-                  </div>
 
-                  {/* Border Glow on Hover */}
-                  <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary/50 transition-colors duration-300" />
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+
+                    {/* Content */}
+                    <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                      {/* Category Tag */}
+                      <motion.span
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="inline-block text-xs font-bold text-primary tracking-wider mb-3"
+                      >
+                        {categoryLabels[item.category] || item.category.toUpperCase()}
+                      </motion.span>
+
+                      {/* Title */}
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {item.title}
+                      </h3>
+
+                      {/* Description Preview */}
+                      <p className="text-gray-400 text-sm line-clamp-2 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        {item.description}
+                      </p>
+
+                      {/* View More Arrow */}
+                      <div className="absolute top-8 right-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 text-white">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                        >
+                          <path d="M7 17 17 7" />
+                          <path d="M7 7h10v10" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Border Glow on Hover */}
+                    <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary/50 transition-colors duration-300" />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          ) : (
+            <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10 border-dashed">
+              <p className="text-white/20 font-bold uppercase tracking-widest text-xs">No projects found</p>
+            </div>
+          )}
         </div>
       </section>
 

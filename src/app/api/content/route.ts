@@ -4,6 +4,8 @@ import connectDB from "@/lib/mongodb";
 import PageContent from "@/models/PageContent";
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic';
+
 // GET all page content or specific page by query
 export async function GET(req: Request) {
   try {

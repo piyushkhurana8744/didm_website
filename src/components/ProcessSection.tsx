@@ -7,37 +7,6 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const steps = [
-  {
-    number: "01",
-    title: "Monitoring & Optimization",
-    subtitle:
-      "Continuous Monitoring And Regular Optimizations To Keep Your Campaigns Effective.",
-    features: ["In-Depth Research", "Precision Implementation", "Transparent Reporting"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-  },
-  {
-    number: "02",
-    title: "Strategy Development",
-    subtitle:
-      "Creating Customized Strategies Aligned With Your Business Goals And Target Audience.",
-    features: ["Market Analysis", "Competitor Research", "Goal Setting"],
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-  },
-  {
-    number: "03",
-    title: "Implementation & Launch",
-    subtitle:
-      "Executing Campaigns With Precision And Launching Them Across Multiple Channels.",
-    features: ["Multi-Channel Setup", "Content Creation", "Campaign Launch"],
-    image:
-      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop",
-  },
-];
-
-// Slow, smooth scroll-triggered animations
 const scrollRevealVariants: Variants = {
   hidden: { 
     opacity: 0, 
@@ -76,20 +45,66 @@ const slideVariants: Variants = {
   }),
 };
 
-export default function ProcessSection() {
+interface ProcessSectionProps {
+  content?: {
+    title?: string;
+    subtitle?: string;
+    ctaText?: string;
+    steps?: Array<{
+      number: string;
+      title: string;
+      subtitle: string;
+      features: string[];
+      image: string;
+    }>;
+  };
+}
+
+const defaultSteps = [
+  // ... (original steps)
+];
+
+export default function ProcessSection({ content }: ProcessSectionProps) {
   const [activeStep, setActiveStep] = useState(0);
   const [direction, setDirection] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const displayTitle = content?.title || "Proven Process for Success";
+  const displaySubtitle = content?.subtitle || "Our Work Process";
+  const displayCtaText = content?.ctaText || "Get In Touch";
+  const displaySteps = content?.steps || [
+    {
+      number: "01",
+      title: "Monitoring & Optimization",
+      subtitle: "Continuous Monitoring And Regular Optimizations To Keep Your Campaigns Effective.",
+      features: ["In-Depth Research", "Precision Implementation", "Transparent Reporting"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    },
+    {
+      number: "02",
+      title: "Strategy Development",
+      subtitle: "Creating Customized Strategies Aligned With Your Business Goals And Target Audience.",
+      features: ["Market Analysis", "Competitor Research", "Goal Setting"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    },
+    {
+      number: "03",
+      title: "Implementation & Launch",
+      subtitle: "Executing Campaigns With Precision And Launching Them Across Multiple Channels.",
+      features: ["Multi-Channel Setup", "Content Creation", "Campaign Launch"],
+      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop",
+    },
+  ];
+
   const nextStep = () => {
     setDirection(1);
-    setActiveStep((prev) => (prev + 1) % steps.length);
+    setActiveStep((prev) => (prev + 1) % displaySteps.length);
   };
 
   const prevStep = () => {
     setDirection(-1);
-    setActiveStep((prev) => (prev - 1 + steps.length) % steps.length);
+    setActiveStep((prev) => (prev - 1 + displaySteps.length) % displaySteps.length);
   };
 
   return (
@@ -111,11 +126,17 @@ export default function ProcessSection() {
                 <div className="w-2 h-2 rounded-full bg-primary" />
               </div>
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-black/40">
-                Our Work Process
+                {displaySubtitle}
               </span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-black leading-tight tracking-tighter mb-0 max-w-xl">
-              Proven Process <span className="text-primary">for Success</span>
+              {displayTitle.includes("Success") ? (
+                <>
+                  {displayTitle.split("Success")[0]} <span className="text-primary">Success</span> {displayTitle.split("Success")[1]}
+                </>
+              ) : (
+                displayTitle
+              )}
             </h2>
           </motion.div>
 
@@ -128,7 +149,7 @@ export default function ProcessSection() {
               variant="outline"
               className="bg-primary/10 text-primary border-primary/20 hover:bg-primary hover:text-white px-8 py-6 rounded-full font-black transition-all duration-300 transform hover:scale-105"
             >
-              Get In Touch
+              {displayCtaText}
             </Button>
           </motion.div>
         </div>
@@ -170,8 +191,8 @@ export default function ProcessSection() {
                     className="relative w-full h-full rounded-full border-[8px] border-white shadow-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700"
                   >
                     <Image
-                      src={steps[activeStep].image}
-                      alt={steps[activeStep].title}
+                      src={displaySteps[activeStep].image}
+                      alt={displaySteps[activeStep].title}
                       fill
                       className="object-cover"
                     />
@@ -185,16 +206,16 @@ export default function ProcessSection() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   >
                     <div className="text-primary font-black text-xs uppercase tracking-widest mb-4">
-                      Step {steps[activeStep].number}
+                      Step {displaySteps[activeStep].number}
                     </div>
                     <h3 className="text-3xl lg:text-4xl font-black mb-6 leading-tight">
-                      {steps[activeStep].title}
+                      {displaySteps[activeStep].title}
                     </h3>
                     <p className="text-lg text-black/50 mb-8 leading-relaxed font-medium">
-                      {steps[activeStep].subtitle}
+                      {displaySteps[activeStep].subtitle}
                     </p>
                     <ul className="space-y-4">
-                      {steps[activeStep].features.map((feature, i) => (
+                      {displaySteps[activeStep].features.map((feature, i) => (
                         <motion.li
                           key={i}
                           initial={{ opacity: 0, x: -20 }}
@@ -233,7 +254,7 @@ export default function ProcessSection() {
           animate={isInView ? "visible" : "hidden"}
           className="flex justify-center gap-3 mt-10"
         >
-          {steps.map((_, index) => (
+          {displaySteps.map((_, index) => (
             <button
               key={index}
               onClick={() => {

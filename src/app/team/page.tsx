@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Header from "@/components/Header"
@@ -8,22 +9,36 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
-const teamMembers = [
-  { id: 1, name: "Rodger Struck", role: "Social Media Specialist", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" },
-  { id: 2, name: "Alex Buckmaster", role: "Marketing Officer", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop" },
-  { id: 3, name: "Sarah Joe", role: "Marketer", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop" },
-  { id: 4, name: "Chris Glasser", role: "Marketer", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" },
-  { id: 5, name: "Katie Sims", role: "Team Member", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" },
-  { id: 6, name: "Jerry Helfer", role: "Team Member", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" },
-  { id: 7, name: "Rodger Struck", role: "Team Member", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" },
-  { id: 8, name: "Stephanie Nicol", role: "Team Member", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" },
-  { id: 9, name: "Iva Ryan", role: "Team Member", image: "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?q=80&w=400&auto=format&fit=crop" },
-  { id: 10, name: "Judith Rodriguez", role: "Team Member", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" },
-  { id: 11, name: "Judith Rodriguez", role: "Team Member", image: "https://images.unsplash.com/photo-1567532939604-b6c5b0ad2e01?q=80&w=400&auto=format&fit=crop" },
-  { id: 12, name: "Autumn Philips", role: "Team Member", image: "https://images.unsplash.com/photo-1554151228-14d9def656ec?q=80&w=400&auto=format&fit=crop" },
-]
+interface TeamMember {
+  id: number
+  name: string
+  role: string
+  image: string
+}
 
 export default function TeamPage() {
+  const [pageData, setPageData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const res = await fetch("/api/content?path=/team", { cache: "no-store" });
+        const data = await res.json();
+        setPageData(data);
+      } catch (error) {
+        console.error("Error fetching team content:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchContent();
+  }, []);
+
+  const heroSection = pageData?.sections?.find((s: any) => s.type === "hero");
+  const teamSection = pageData?.sections?.find((s: any) => s.teamMembers);
+  const teamMembers: TeamMember[] = teamSection?.teamMembers || [];
+
   return (
     <main className="min-h-screen bg-white font-sans">
       <Header />
@@ -37,7 +52,7 @@ export default function TeamPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-black tracking-tighter mb-4"
           >
-            Our Team Member
+            {heroSection?.title || "Our Team Member"}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +60,7 @@ export default function TeamPage() {
             transition={{ delay: 0.1 }}
             className="text-gray-400 font-bold uppercase tracking-[0.3em] text-[10px]"
           >
-            Home / Our Team Member
+            {heroSection?.subtitle || "Home / Our Team Member"}
           </motion.p>
         </div>
       </section>

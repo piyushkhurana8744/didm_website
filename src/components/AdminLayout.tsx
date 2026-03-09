@@ -22,8 +22,10 @@ import Image from "next/image";
 const menuItems = [
   { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
   { name: "Page Content", href: "/admin/content", icon: FileText },
+  { name: "Media Library", href: "/admin/media", icon: Database },
   { name: "Form Builder", href: "/admin/forms", icon: Forms },
-  { name: "Global Settings", href: "/admin/settings", icon: Settings },
+  { name: "Theme Settings", href: "/admin/theme", icon: Settings },
+  { name: "Account Settings", href: "/admin/account", icon: Users },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
