@@ -18,6 +18,18 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const fieldTypes = [
   { id: "text", name: "Text Input", icon: FileText },
@@ -33,7 +45,9 @@ export default function FormBuilderPage() {
   const [selectedForm, setSelectedForm] = useState<any>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
+  const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false);
+  const [newFormName, setNewFormName] = useState("");
+  const [deleteFormSlug, setDeleteFormSlug] = useState<string | null>(null);
 
   useEffect(() => {
     fetchForms();
@@ -61,11 +75,13 @@ export default function FormBuilderPage() {
       });
 
       if (res.ok) {
-        setShowSuccess(true);
-        setTimeout(() => setShowSuccess(false), 3000);
+        toast.success("Form saved successfully");
         fetchForms();
+      } else {
+        toast.error("Failed to save form");
       }
     } catch (error) {
+      toast.error("Error occurred while saving");
       console.error("Error saving form:", error);
     } finally {
       setIsSaving(false);
@@ -103,12 +119,39 @@ export default function FormBuilderPage() {
     });
   };
 
-  const createNewForm = () => {
-    const name = prompt("Enter form name:");
-    if (!name) return;
-    const slug = name.toLowerCase().replace(/ /g, "-");
-    const newForm = { name, slug, fields: [], submitButtonText: "Submit" };
+  const deleteForm = async (slug: string) => {
+    setDeleteFormSlug(slug);
+  };
+
+  const confirmDeleteForm = async () => {
+    if (!deleteFormSlug) return;
+    try {
+      const res = await fetch(`/api/forms?slug=${deleteFormSlug}`, { method: "DELETE" });
+      if (res.ok) {
+        toast.success("Form deleted successfully");
+        if (selectedForm?.slug === deleteFormSlug) setSelectedForm(null);
+        fetchForms();
+      } else {
+        toast.error("Failed to delete form");
+      }
+    } catch (error) {
+      toast.error("Error deleting form");
+    } finally {
+      setDeleteFormSlug(null);
+    }
+  };
+
+  const handleCreateConfirm = () => {
+    if (!newFormName.trim()) return;
+    const slug = newFormName.toLowerCase().trim().replace(/ /g, "-");
+    const newForm = { name: newFormName, slug, fields: [], submitButtonText: "Submit" };
     setSelectedForm(newForm);
+    setIsCreateDialogOpen(false);
+    setNewFormName("");
+  };
+
+  const createNewForm = () => {
+    setIsCreateDialogOpen(true);
   };
 
   return (
@@ -120,21 +163,35 @@ export default function FormBuilderPage() {
             <h3 className="text-xs font-black uppercase tracking-widest text-white/40 px-2">Your Forms</h3>
                   <div className="space-y-1">
               {Array.isArray(forms) && forms.map((form) => (
-                <button
+                <div
                   key={form.slug}
-                  onClick={() => setSelectedForm(form)}
-                  className={`w-full flex items-center justify-between px-4 py-4 rounded-2xl transition-all duration-300 ${
+                  className={`group w-full flex items-center justify-between px-4 py-4 rounded-2xl transition-all duration-300 ${
                     selectedForm?.slug === form.slug 
                       ? "bg-[#be1e2e]/10 border border-[#be1e2e]/20 text-white" 
                       : "text-white/40 hover:text-white hover:bg-white/5 border border-transparent"
                   }`}
                 >
-                  <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setSelectedForm(form)}
+                    className="flex-1 flex items-center gap-3 text-left"
+                  >
                     <Layout className={`w-4 h-4 ${selectedForm?.slug === form.slug ? "text-[#be1e2e]" : ""}`} />
-                    <span className="text-sm font-bold uppercase tracking-tight">{form.name}</span>
-                  </div>
-                  <span className="text-[10px] font-black text-white/20">{form.fields?.length || 0} fields</span>
-                </button>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-bold uppercase tracking-tight">{form.name}</span>
+                      <span className="text-[8px] font-black text-white/10 uppercase tracking-widest">{form.fields?.length || 0} fields</span>
+                    </div>
+                  </button>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      deleteForm(form.slug);
+                    }}
+                    className="p-2 text-white/0 group-hover:text-white/20 hover:text-red-500 transition-all rounded-lg hover:bg-red-500/5"
+                    title="Delete Form"
+                  >
+                    <Trash2 className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               ))}
             </div>
             <button 
@@ -165,8 +222,17 @@ export default function FormBuilderPage() {
                     <Layout className="w-6 h-6 text-[#be1e2e]" />
                   </div>
                   <div>
-                    <h1 className="text-3xl font-black uppercase tracking-tighter">{selectedForm.name}</h1>
-                    <span className="text-[10px] font-black uppercase tracking-widest text-white/20">CUSTOM FORM BUILDER</span>
+                    <input
+                      type="text"
+                      value={selectedForm.name || ""}
+                      onChange={(e) => setSelectedForm({ ...selectedForm, name: e.target.value })}
+                      className="bg-transparent border-none p-0 text-3xl font-black uppercase tracking-tighter focus:ring-0 w-full"
+                    />
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-white/20">Slug:</span>
+                      <code className="text-[10px] font-mono text-[#be1e2e] bg-[#be1e2e]/10 px-2 py-0.5 rounded-md">{selectedForm.slug}</code>
+                    </div>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-white/40 block mt-1">CUSTOM FORM BUILDER</span>
                   </div>
                 </div>
                 <button
@@ -175,7 +241,7 @@ export default function FormBuilderPage() {
                   className="px-8 py-4 bg-[#be1e2e] rounded-2xl font-black uppercase text-[12px] tracking-widest flex items-center gap-3 hover:bg-[#a01824] transition-all disabled:opacity-50"
                 >
                   {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-                  {showSuccess ? "Saved!" : "Save Form Schema"}
+                  Save Form Schema
                 </button>
               </div>
 
@@ -219,7 +285,7 @@ export default function FormBuilderPage() {
                           <div className="space-y-2">
                             <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] ml-1">Label</label>
                             <input 
-                              value={field.label}
+                              value={field.label || ""}
                               onChange={(e) => updateField(field.id, { label: e.target.value })}
                               className="w-full bg-white/5 border border-white/10 rounded-xl py-3 px-4 text-sm font-bold focus:outline-none focus:border-[#be1e2e]/50 transition-all"
                             />
@@ -228,8 +294,12 @@ export default function FormBuilderPage() {
                           <div className="space-y-2">
                             <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] ml-1">Type</label>
                             <div className="relative">
-                              <select className="w-full appearance-none bg-white/5 border border-white/10 rounded-xl py-3 px-4 text-sm font-bold focus:outline-none focus:border-[#be1e2e]/50 transition-all uppercase tracking-widest">
-                                {fieldTypes.map(t => <option key={t.id} value={t.id} selected={field.type === t.id}>{t.name}</option>)}
+                              <select 
+                                className="w-full appearance-none bg-white/5 border border-white/10 rounded-xl py-3 px-4 text-sm font-bold focus:outline-none focus:border-[#be1e2e]/50 transition-all uppercase tracking-widest"
+                                value={field.type || "text"}
+                                onChange={(e) => updateField(field.id, { type: e.target.value })}
+                              >
+                                {fieldTypes.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
                               </select>
                               <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 pointer-events-none" />
                             </div>
@@ -237,7 +307,8 @@ export default function FormBuilderPage() {
                           <div className="space-y-2">
                             <label className="text-[9px] font-black text-white/20 uppercase tracking-[0.2em] ml-1">Placeholder</label>
                             <input 
-                              defaultValue={field.placeholder}
+                              value={field.placeholder || ""}
+                              onChange={(e) => updateField(field.id, { placeholder: e.target.value })}
                               className="w-full bg-white/5 border border-white/10 rounded-xl py-3 px-4 text-sm font-bold focus:outline-none focus:border-[#be1e2e]/50 transition-all"
                             />
                           </div>
@@ -246,7 +317,11 @@ export default function FormBuilderPage() {
                           <button className="p-3 rounded-xl bg-white/5 border border-transparent hover:border-[#be1e2e]/20 hover:bg-[#be1e2e]/5 text-white/20 hover:text-[#be1e2e] transition-all">
                             <Settings2 className="w-4 h-4" />
                           </button>
-                          <button className="p-3 rounded-xl bg-red-500/5 border border-transparent hover:border-red-500/20 text-red-500/20 hover:text-red-500 transition-all">
+                          <button 
+                            onClick={() => removeField(field.id)}
+                            className="p-3 rounded-xl bg-red-500/5 border border-transparent hover:border-red-500/20 text-red-500/20 hover:text-red-500 transition-all font-sans"
+                            title="Remove Field"
+                          >
                             <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
@@ -266,6 +341,50 @@ export default function FormBuilderPage() {
           )}
         </div>
       </div>
+
+      <Dialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-black uppercase tracking-tighter">Create New Form</DialogTitle>
+            <DialogDescription className="text-white/40 font-bold">
+              Give your new form a name to get started.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid gap-4 py-4">
+            <div className="space-y-2">
+              <Label htmlFor="name" className="text-[10px] font-black uppercase tracking-widest text-white/40">
+                Form Name
+              </Label>
+              <Input
+                id="name"
+                value={newFormName}
+                onChange={(e) => setNewFormName(e.target.value)}
+                placeholder="e.g. Contact Us"
+                className="bg-white/5 border-white/10 rounded-xl py-6 font-bold"
+                onKeyDown={(e) => e.key === "Enter" && handleCreateConfirm()}
+              />
+            </div>
+          </div>
+          <DialogFooter>
+            <Button 
+              onClick={handleCreateConfirm} 
+              disabled={!newFormName.trim()}
+              className="w-full py-6 bg-[#be1e2e] hover:bg-[#a01824] rounded-xl font-black uppercase text-[12px] tracking-widest"
+            >
+              Start Building
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+      <ConfirmDialog 
+        isOpen={!!deleteFormSlug}
+        onClose={() => setDeleteFormSlug(null)}
+        onConfirm={confirmDeleteForm}
+        title="Delete Form?"
+        description="Are you sure you want to delete this entire form? This action cannot be undone and will remove all associated field definitions."
+        confirmText="Delete Form"
+        variant="destructive"
+      />
     </AdminLayout>
   );
 }

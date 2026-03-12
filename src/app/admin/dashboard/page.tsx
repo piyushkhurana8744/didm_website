@@ -3,6 +3,7 @@
 import AdminLayout from "@/components/AdminLayout";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { 
   FileText, 
   Users, 
@@ -57,12 +58,12 @@ export default function DashboardPage() {
             <p className="text-white/40 font-bold">Here is what is happening with Online Strikers today.</p>
           </div>
           <div className="flex gap-4">
-            <button className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-white/10 transition-all">
+            <Link href="/" target="_blank" className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-white/10 transition-all">
               View Site
-            </button>
-            <button className="px-6 py-3 bg-[#be1e2e] rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-[#a01824] transition-all shadow-lg shadow-[#be1e2e]/20">
+            </Link>
+            <Link href="/admin/forms" className="px-6 py-3 bg-[#be1e2e] rounded-xl font-black uppercase text-[10px] tracking-widest hover:bg-[#a01824] transition-all shadow-lg shadow-[#be1e2e]/20">
               New Form
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -103,7 +104,7 @@ export default function DashboardPage() {
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center justify-between px-2">
               <h3 className="font-black uppercase tracking-widest text-sm">Recent Submissions</h3>
-              <button className="text-[10px] font-black uppercase tracking-widest text-[#be1e2e] hover:underline">View All</button>
+              <Link href="/admin/forms" className="text-[10px] font-black uppercase tracking-widest text-[#be1e2e] hover:underline">View All</Link>
             </div>
             <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden">
               {recentSubmissions.length === 0 && (
@@ -122,9 +123,9 @@ export default function DashboardPage() {
                   </div>
                   <div className="flex items-center gap-6">
                     <span className="text-[10px] text-white/20 font-bold">{new Date(sub.createdAt).toLocaleDateString()}</span>
-                    <button className="p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                    <Link href={`/admin/forms?slug=${sub.formSlug}`} className="p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
                       <ArrowUpRight className="w-4 h-4 text-white/40" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

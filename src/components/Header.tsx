@@ -8,34 +8,46 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const navItems = [
-  { name: "Home", href: "/", hasDropdown: false },
-  { name: "Portfolio", href: "/portfolio", hasDropdown: false },
-  { name: "Service", href: "/services", hasDropdown: false },
-  { 
-    name: "Page's", 
-    href: "#", 
-    hasDropdown: true,
-    dropdownItems: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "Testimonial", href: "/testimonials" },
-      { name: "FAQ's", href: "/faq" },
-      { name: "Pricing", href: "/pricing" },
-      { name: "Contact Us", href: "/contact" },
-      { name: "404", href: "/404" },
-    ]
-  },
-  { name: "Blogs", href: "/blogs", hasDropdown: false }, // Fixed: set to false if no items
-];
-
 export default function Header() {
+  const [navItems, setNavItems] = useState([
+    { name: "Home", href: "/", hasDropdown: false },
+    { name: "Portfolio", href: "/portfolio", hasDropdown: false },
+    { name: "Service", href: "/services", hasDropdown: false },
+    { 
+      name: "Page's", 
+      href: "#", 
+      hasDropdown: true,
+      dropdownItems: [
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/team" },
+        { name: "Testimonial", href: "/testimonials" },
+        { name: "FAQ's", href: "/faq" },
+        { name: "Pricing", href: "/pricing" },
+        { name: "Contact Us", href: "/contact" },
+        { name: "404", href: "/404" },
+      ]
+    },
+    { name: "Blogs", href: "/blogs", hasDropdown: false },
+  ]);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
+    const fetchNavItems = async () => {
+      try {
+        const res = await fetch("/api/content?path=__navbar");
+        const data = await res.json();
+        if (data && data.sections && data.sections[0] && data.sections[0].items) {
+          setNavItems(data.sections[0].items);
+        }
+      } catch (error) {
+        console.error("Error fetching nav items:", error);
+      }
+    };
+    fetchNavItems();
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };

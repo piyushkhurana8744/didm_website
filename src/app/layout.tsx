@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Providers>
           <ThemeProvider>
             {children}
+            <Toaster />
           </ThemeProvider>
         </Providers>
       </body>

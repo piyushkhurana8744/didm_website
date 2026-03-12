@@ -10,6 +10,7 @@ import ProcessSection from "@/components/ProcessSection";
 import Testimonials from "@/components/Testimonials";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
+import { DynamicForm } from "@/components/DynamicForm";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -71,11 +72,31 @@ export default function Home() {
         !s.subtitle?.includes("Testimonials") &&
         !s.subtitle?.includes("Blog")
       ).map((section: any) => (
-        <section key={section.sectionId} className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-4xl font-bold mb-4">{section.title}</h2>
-            <p className="text-lg text-gray-600 mb-8">{section.content}</p>
-            {section.imageUrl && <img src={section.imageUrl} alt={section.title} className="rounded-2xl shadow-xl max-w-2xl" />}
+        <section key={section.sectionId} className="py-24 px-6 bg-white overflow-hidden border-t border-gray-50">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div className="flex-1 space-y-6">
+              <div className="flex items-center gap-2 text-[#be1e2e]">
+                 <div className="w-6 h-[2px] bg-[#be1e2e]" />
+                 <span className="text-[10px] font-black uppercase tracking-widest">{section.subtitle}</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black tracking-tighter">{section.title}</h2>
+              <p className="text-black/40 font-bold leading-relaxed">{section.content}</p>
+            </div>
+            {(section.imageUrl || section.type === "form") && (
+              <div className="flex-1">
+                {section.type === "form" ? (
+                  <div className="bg-[#F8F9FA] p-10 rounded-[2.5rem] border border-gray-100 shadow-xl">
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-black tracking-tighter mb-2">{section.title}</h3>
+                      <p className="text-black/40 text-sm font-bold">{section.content}</p>
+                    </div>
+                    <DynamicForm slug={section.formSlug} />
+                  </div>
+                ) : (
+                  <img src={section.imageUrl} alt={section.title} className="rounded-3xl shadow-2xl w-full object-cover" />
+                )}
+              </div>
+            )}
           </div>
         </section>
       ))}

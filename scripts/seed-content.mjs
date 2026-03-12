@@ -65,7 +65,9 @@ async function seedContent() {
             "/portfolio": "Portfolio",
             "/team": "Team",
             "/faq": "FAQ",
-            "/contact": "Contact"
+            "/contact": "Contact",
+            "__navbar": "Navbar",
+            "__footer": "Footer"
         };
 
         for (const [pagePath, data] of Object.entries(initialData)) {

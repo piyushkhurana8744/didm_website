@@ -6,6 +6,7 @@ import Image from "next/image"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Button } from "@/components/ui/button"
+import { DynamicForm } from "@/components/DynamicForm"
 
 export default function AboutPage() {
   const [pageData, setPageData] = useState<any>(null);
@@ -114,9 +115,19 @@ export default function AboutPage() {
                 </Button>
               )}
             </div>
-            {section.imageUrl && (
+            {(section.imageUrl || section.type === "form") && (
               <div className="flex-1">
-                <img src={section.imageUrl} alt={section.title} className="rounded-3xl shadow-2xl w-full object-cover" />
+                {section.type === "form" ? (
+                  <div className="bg-[#F8F9FA] p-10 rounded-[2.5rem] border border-gray-100 shadow-xl">
+                    <div className="mb-8">
+                      <h3 className="text-2xl font-black tracking-tighter mb-2">{section.title}</h3>
+                      <p className="text-black/40 text-sm font-bold">{section.content}</p>
+                    </div>
+                    <DynamicForm slug={section.formSlug} />
+                  </div>
+                ) : (
+                  <img src={section.imageUrl} alt={section.title} className="rounded-3xl shadow-2xl w-full object-cover" />
+                )}
               </div>
             )}
           </div>

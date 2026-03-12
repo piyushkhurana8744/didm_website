@@ -15,11 +15,11 @@ import {
   Settings
 } from "lucide-react";
 import CloudinaryUpload from "@/components/admin/CloudinaryUpload";
+import { toast } from "sonner";
 
 export default function ThemePage() {
   const [isSaving, setIsSaving] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
   const [theme, setTheme] = useState({
     primaryColor: "#be1e2e",
     secondaryColor: "#000000",
@@ -56,10 +56,12 @@ export default function ThemePage() {
       });
 
       if (res.ok) {
-        setShowSuccess(true);
-        setTimeout(() => setShowSuccess(false), 3000);
+        toast.success("Theme settings saved successfully");
+      } else {
+        toast.error("Failed to save theme settings");
       }
     } catch (error) {
+      toast.error("An error occurred while saving theme");
       console.error("Error saving theme:", error);
     } finally {
       setIsSaving(false);
@@ -85,7 +87,7 @@ export default function ThemePage() {
             className="px-8 py-4 bg-[#be1e2e] rounded-2xl font-black uppercase text-[12px] tracking-widest flex items-center gap-3 hover:bg-[#a01824] transition-all disabled:opacity-50 shadow-xl shadow-[#be1e2e]/20"
           >
             {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-            {showSuccess ? "Applied!" : "Save Theme"}
+            Save Theme
           </button>
         </div>
 
@@ -106,13 +108,13 @@ export default function ThemePage() {
                   <div className="flex gap-4">
                     <input 
                       type="color" 
-                      value={theme.primaryColor}
+                      value={theme.primaryColor || "#be1e2e"}
                       onChange={(e) => setTheme({ ...theme, primaryColor: e.target.value })}
                       className="w-12 h-12 rounded-xl bg-transparent border border-white/10 cursor-pointer"
                     />
                     <input 
                       type="text"
-                      value={theme.primaryColor}
+                      value={theme.primaryColor || ""}
                       onChange={(e) => setTheme({ ...theme, primaryColor: e.target.value })}
                       className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 text-xs font-mono text-white"
                     />
@@ -123,13 +125,13 @@ export default function ThemePage() {
                   <div className="flex gap-4">
                     <input 
                       type="color" 
-                      value={theme.accentColor}
+                      value={theme.accentColor || "#be1e2e"}
                       onChange={(e) => setTheme({ ...theme, accentColor: e.target.value })}
                       className="w-12 h-12 rounded-xl bg-transparent border border-white/10 cursor-pointer"
                     />
                     <input 
                       type="text"
-                      value={theme.accentColor}
+                      value={theme.accentColor || ""}
                       onChange={(e) => setTheme({ ...theme, accentColor: e.target.value })}
                       className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 text-xs font-mono text-white"
                     />
@@ -147,7 +149,7 @@ export default function ThemePage() {
                 <div className="space-y-3">
                   <label className="text-[10px] font-black text-white/40 uppercase tracking-widest pl-1">Font Family</label>
                   <select 
-                    value={theme.fontFamily}
+                    value={theme.fontFamily || "Outfit"}
                     onChange={(e) => setTheme({ ...theme, fontFamily: e.target.value })}
                     className="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-xs font-bold text-white focus:outline-none"
                   >
@@ -200,7 +202,7 @@ export default function ThemePage() {
               <div className="space-y-3">
                 <label className="text-[10px] font-black text-white/40 uppercase tracking-widest pl-1">Custom CSS</label>
                 <textarea 
-                  value={theme.customCss}
+                  value={theme.customCss || ""}
                   onChange={(e) => setTheme({ ...theme, customCss: e.target.value })}
                   rows={6}
                   className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-xs font-mono text-white focus:outline-none focus:border-[#be1e2e]/50"

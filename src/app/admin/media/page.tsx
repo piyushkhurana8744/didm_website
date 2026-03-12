@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
+import { toast } from "sonner";
 
 interface MediaItem {
   _id: string;
@@ -32,6 +34,7 @@ export default function MediaPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [deleteId, setDeleteId] = useState<string | null>(null);
 
   useEffect(() => {
     fetchMedia();
@@ -52,16 +55,24 @@ export default function MediaPage() {
     }
   };
 
-  const handleDelete = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this asset?")) return;
-    
+  const handleDelete = (id: string) => {
+    setDeleteId(id);
+  };
+
+  const confirmDelete = async () => {
+    if (!deleteId) return;
     try {
-      const res = await fetch(`/api/media?id=${id}`, { method: "DELETE" });
+      const res = await fetch(`/api/media?id=${deleteId}`, { method: "DELETE" });
       if (res.ok) {
-        setMedia(media.filter(m => m._id !== id));
+        setMedia(media.filter(m => m._id !== deleteId));
+        toast.success("Asset deleted successfully");
+      } else {
+        toast.error("Failed to delete asset");
       }
     } catch (error) {
-      console.error("Error deleting asset:", error);
+      toast.error("An error occurred during deletion");
+    } finally {
+      setDeleteId(null);
     }
   };
 
@@ -241,6 +252,15 @@ export default function MediaPage() {
           </div>
         )}
       </div>
+      <ConfirmDialog 
+        isOpen={!!deleteId}
+        onClose={() => setDeleteId(null)}
+        onConfirm={confirmDelete}
+        title="Delete Asset?"
+        description="Are you sure you want to delete this asset? This will permanently remove it from your media library. This action cannot be undone."
+        confirmText="Delete Asset"
+        variant="destructive"
+      />
     </AdminLayout>
   );
 }

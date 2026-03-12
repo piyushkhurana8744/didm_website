@@ -18,10 +18,12 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Toaster } from "@/components/ui/sonner";
 
 const menuItems = [
   { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
   { name: "Page Content", href: "/admin/content", icon: FileText },
+  { name: "Global Settings", href: "/admin/global", icon: Settings },
   { name: "Media Library", href: "/admin/media", icon: Database },
   { name: "Form Builder", href: "/admin/forms", icon: Forms },
   { name: "Theme Settings", href: "/admin/theme", icon: Settings },
@@ -33,6 +35,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const router = useRouter();
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -126,7 +129,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <header className="h-20 border-b border-white/5 px-8 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="lg:hidden">
-              <button className="p-2 text-white/60 hover:text-white">
+              <button 
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="p-2 text-white/60 hover:text-white transition-colors"
+              >
                 <Menu className="w-6 h-6" />
               </button>
             </div>
@@ -153,6 +159,74 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           {children}
         </div>
       </main>
+      {/* Mobile Sidebar Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+            />
+            <motion.aside
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed inset-y-0 left-0 w-72 bg-[#0a0a0a] border-r border-white/5 z-50 lg:hidden flex flex-col p-6"
+            >
+              <div className="flex items-center justify-between mb-10">
+                <Link href="/admin/dashboard" className="flex items-center gap-3">
+                  <div className="relative h-8 w-32">
+                    <Image src="/logo-light.png" alt="Logo" fill className="object-contain" />
+                  </div>
+                </Link>
+                <button 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 bg-white/5 rounded-xl text-white/40 hover:text-white"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <nav className="flex-1 space-y-2">
+                {menuItems.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`flex items-center gap-4 px-4 py-4 rounded-2xl transition-all duration-300 ${
+                        isActive 
+                          ? "bg-[#be1e2e] text-white shadow-lg shadow-[#be1e2e]/20" 
+                          : "text-white/40 hover:text-white hover:bg-white/5"
+                      }`}
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span className="text-[13px] font-black uppercase tracking-widest">{item.name}</span>
+                    </Link>
+                  );
+                })}
+              </nav>
+
+              <div className="pt-6 border-t border-white/5">
+                <button
+                  onClick={() => signOut()}
+                  className="w-full flex items-center gap-4 px-4 py-4 rounded-2xl text-white/40 hover:text-red-500 hover:bg-red-500/5 transition-all group"
+                >
+                  <LogOut className="w-5 h-5" />
+                  <span className="text-[13px] font-black uppercase tracking-widest">Sign Out</span>
+                </button>
+              </div>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
+
+      <Toaster />
     </div>
   );
 }

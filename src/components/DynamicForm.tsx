@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 interface DynamicFormProps {
   slug: string;
@@ -43,10 +44,13 @@ export function DynamicForm({ slug }: DynamicFormProps) {
         body: JSON.stringify({ formSlug: slug, data }),
       });
       if (res.ok) {
-        setSubmitted(true);
+        toast.success(formDef.successMessage || "Submission successful!");
         reset();
+      } else {
+        toast.error("Failed to submit the form. Please try again.");
       }
     } catch (err) {
+      toast.error("An error occurred during submission.");
       console.error("Submission failed");
     } finally {
       setSubmitting(false);
@@ -58,20 +62,7 @@ export function DynamicForm({ slug }: DynamicFormProps) {
 
   return (
     <div className="bg-white/5 border border-white/10 p-10 rounded-[2.5rem] relative overflow-hidden">
-      {submitted ? (
-        <div className="flex flex-col items-center justify-center text-center py-10">
-          <CheckCircle2 className="w-16 h-16 text-[#be1e2e] mb-6 animate-bounce" />
-          <h3 className="text-2xl font-black uppercase tracking-tighter mb-2">{formDef.successMessage}</h3>
-          <p className="text-white/40 font-bold">Thank you for Reaching out!</p>
-          <Button 
-            className="mt-8 bg-white/5" 
-            onClick={() => setSubmitted(false)}
-          >
-            Submit Another
-          </Button>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="mb-10 text-center">
             <h3 className="text-3xl font-black uppercase tracking-tighter mb-2">{formDef.name}</h3>
             <p className="text-white/40 font-bold uppercase tracking-widest text-[10px]">Please fill in the details below</p>
@@ -88,6 +79,35 @@ export function DynamicForm({ slug }: DynamicFormProps) {
                     rows={4}
                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:border-[#be1e2e]/50 transition-all resize-none"
                   />
+                ) : field.type === "select" ? (
+                  <div className="relative">
+                    <select
+                      {...register(field.id, { required: field.required })}
+                      className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:border-[#be1e2e]/50 transition-all appearance-none cursor-pointer"
+                    >
+                      <option value="" className="bg-black">Select an option...</option>
+                      {field.options?.map((opt: any) => (
+                        <option key={opt} value={opt} className="bg-black">{opt}</option>
+                      ))}
+                    </select>
+                    <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none opacity-20">
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                ) : field.type === "checkbox" ? (
+                  <div className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-2xl cursor-pointer group">
+                    <input
+                      type="checkbox"
+                      id={field.id}
+                      {...register(field.id, { required: field.required })}
+                      className="w-5 h-5 rounded-lg border-white/10 bg-white/5 text-[#be1e2e] focus:ring-[#be1e2e]/50 cursor-pointer"
+                    />
+                    <label htmlFor={field.id} className="text-sm font-bold text-white/60 group-hover:text-white transition-colors cursor-pointer">
+                      {field.placeholder || "Agree to terms"}
+                    </label>
+                  </div>
                 ) : (
                   <input
                     type={field.type}
@@ -109,7 +129,6 @@ export function DynamicForm({ slug }: DynamicFormProps) {
             {submitting ? <Loader2 className="w-6 h-6 animate-spin" /> : formDef.submitButtonText}
           </Button>
         </form>
-      )}
     </div>
   );
 }

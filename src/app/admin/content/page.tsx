@@ -17,10 +17,13 @@ import {
   CheckCircle2,
   Settings,
   Globe,
-  RotateCcw
+  RotateCcw,
+  LayoutTemplate as Forms
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CloudinaryUpload from "@/components/admin/CloudinaryUpload";
+import { toast } from "sonner";
+import { ConfirmDialog } from "@/components/admin/ConfirmDialog";
 import INITIAL_CONTENT_DATA from "@/data/initial-content.json";
 
 const pages = [
@@ -40,28 +43,34 @@ export default function ContentPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [isUpdatingSeed, setIsUpdatingSeed] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [showSeedSuccess, setShowSeedSuccess] = useState(false);
+  const [showConfirmSeed, setShowConfirmSeed] = useState(false);
+  const [availableForms, setAvailableForms] = useState<any[]>([]);
   const [sections, setSections] = useState<any[]>([]);
   const [seo, setSeo] = useState<any>({ title: "", description: "", keywords: [] });
 
   // Fetch page content when selected page changes
   useEffect(() => {
-    const fetchContent = async () => {
+    const fetchData = async () => {
       setIsLoaded(false);
       try {
+        // Fetch forms first
+        const formsRes = await fetch("/api/forms");
+        const formsData = await formsRes.json();
+        setAvailableForms(formsData);
+
+        // Then fetch page content
         const res = await fetch(`/api/content?path=${selectedPage.path}`);
         const data = await res.json();
         setSections(data.sections || []);
         setSeo(data.seo || { title: "", description: "", keywords: [] });
       } catch (error) {
-        console.error("Error fetching content:", error);
+        console.error("Error fetching data:", error);
       } finally {
         setIsLoaded(true);
       }
     };
-    fetchContent();
-  }, [selectedPage]);
+    fetchData();
+  }, [selectedPage.path]);
 
   const handleSeed = () => {
     const seedData = INITIAL_CONTENT[selectedPage.path];
@@ -72,10 +81,10 @@ export default function ContentPage() {
   };
 
   const handleUpdateSeed = async () => {
-    if (!confirm("Are you sure you want to set the current content as the default? This will update the 'Seed' data for this page.")) {
-      return;
-    }
+    setShowConfirmSeed(true);
+  };
 
+  const confirmUpdateSeed = async () => {
     setIsUpdatingSeed(true);
     try {
       const res = await fetch("/api/admin/update-seed", {
@@ -89,19 +98,19 @@ export default function ContentPage() {
       });
 
       if (res.ok) {
-        setShowSeedSuccess(true);
-        setTimeout(() => setShowSeedSuccess(false), 3000);
+        toast.success("Default content updated successfully (Seed Data)");
         // Alert the user that they should commit changes if they want them to persist in git
         console.log("Seed data updated in src/data/initial-content.json");
       } else {
         const error = await res.json();
-        alert(`Error: ${error.error}`);
+        toast.error(`Error: ${error.error}`);
       }
     } catch (error) {
+      toast.error("Failed to update default content.");
       console.error("Error updating seed data:", error);
-      alert("Failed to update seed data.");
     } finally {
       setIsUpdatingSeed(false);
+      setShowConfirmSeed(false);
     }
   };
 
@@ -120,10 +129,12 @@ export default function ContentPage() {
       });
 
       if (res.ok) {
-        setShowSuccess(true);
-        setTimeout(() => setShowSuccess(false), 3000);
+        toast.success(`${selectedPage.name} content saved successfully`);
+      } else {
+        toast.error(`Failed to save ${selectedPage.name.toLowerCase()} content`);
       }
     } catch (error) {
+      toast.error("An error occurred while saving content");
       console.error("Error saving content:", error);
     } finally {
       setIsSaving(false);
@@ -252,7 +263,7 @@ export default function ContentPage() {
                 className="w-full py-3 bg-white/5 border border-white/10 rounded-xl text-[10px] font-black uppercase tracking-widest text-white/60 hover:text-white hover:bg-white/10 transition-all flex items-center justify-center gap-2"
               >
                 {isUpdatingSeed ? <Loader2 className="w-3 h-3 animate-spin" /> : <Save className="w-3 h-3" />}
-                {showSeedSuccess ? "Default Updated!" : "Set Current as Default"}
+                Set Current as Default
               </button>
             </div>
           </div>
@@ -281,7 +292,7 @@ export default function ContentPage() {
               className="px-8 py-4 bg-[#be1e2e] rounded-2xl font-black uppercase text-[12px] tracking-widest flex items-center gap-3 hover:bg-[#a01824] transition-all disabled:opacity-50 shadow-xl shadow-[#be1e2e]/20"
             >
               {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-              {showSuccess ? "Published!" : "Publish Changes"}
+              Publish Changes
             </button>
           </div>
 
@@ -328,6 +339,7 @@ export default function ContentPage() {
                             <option value="standard">Standard</option>
                             <option value="hero">Hero</option>
                             <option value="features">Features</option>
+                            <option value="form">Dynamic Form</option>
                             <option value="cta">Call to Action</option>
                             <option value="about">About</option>
                           </select>
@@ -387,6 +399,29 @@ export default function ContentPage() {
                             />
                           </div>
                         </div>
+
+                        {section.type === "form" && (
+                          <div className="space-y-4 pt-4">
+                            <label className="text-[10px] font-black text-[#be1e2e] uppercase tracking-widest pl-1 flex items-center gap-2">
+                              <Forms className="w-3 h-3" /> Select Integrated Form
+                            </label>
+                            <select 
+                              value={section.formSlug || ""}
+                              onChange={(e) => updateSection(idx, "formSlug", e.target.value)}
+                              className="w-full bg-[#be1e2e]/5 border border-[#be1e2e]/30 rounded-2xl py-5 px-6 text-white text-sm font-bold focus:outline-none focus:border-[#be1e2e]/50 transition-all cursor-pointer appearance-none shadow-inner"
+                            >
+                              <option value="" className="bg-black text-white/40">-- Select a Form to Integrate --</option>
+                              {availableForms.map((form) => (
+                                <option key={form.slug} value={form.slug} className="bg-black text-white">
+                                  {form.name} ({form.slug})
+                                </option>
+                              ))}
+                            </select>
+                            <p className="text-[9px] font-bold text-white/20 uppercase tracking-widest">
+                              This section will render the selected form instead of standard content.
+                            </p>
+                          </div>
+                        )}
 
                         <div className="space-y-3">
                           <label className="text-[10px] font-black text-white/40 uppercase tracking-widest pl-1">Main Content</label>
@@ -806,6 +841,14 @@ export default function ContentPage() {
           </AnimatePresence>
         </div>
       </div>
+      <ConfirmDialog 
+        isOpen={showConfirmSeed}
+        onClose={() => setShowConfirmSeed(false)}
+        onConfirm={confirmUpdateSeed}
+        title="Set as Default?"
+        description="Are you sure you want to set the current content as the default? This will update the master seed data for this page. New versions will start with this content."
+        confirmText="Update Default"
+      />
     </AdminLayout>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, Variants } from "framer-motion";
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Facebook, Instagram, Linkedin, Send, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,17 +42,67 @@ const itemVariants: Variants = {
   },
 };
 
-const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Send, href: "#", label: "X" },
-];
-
-const quickLinks = ["Home", "About Us", "Services", "Blog", "Contact Us", "Testimonials"];
-const categoryList = ["Digital Marketing", "SEO Marketing", "Startup Agency", "Advertising Agency", "Social Media Agency", "Web Design Agency"];
+const iconMap: Record<string, any> = {
+  Facebook,
+  Instagram,
+  LinkedIn: Linkedin,
+  X: Send,
+};
 
 export default function Footer() {
+  const [footerContent, setFooterContent] = useState<any>(null);
+  
+  useEffect(() => {
+    const fetchFooter = async () => {
+      try {
+        const res = await fetch("/api/content?path=__footer");
+        const data = await res.json();
+        if (data && data.sections) {
+          setFooterContent(data);
+        }
+      } catch (error) {
+        console.error("Error fetching footer content:", error);
+      }
+    };
+    fetchFooter();
+  }, []);
+
+  const getSection = (id: string) => footerContent?.sections?.find((s: any) => s.sectionId === id);
+  
+  const brandSection = getSection("footer_brand");
+  const quickLinksRef = getSection("footer_quick_links");
+  const categoryLinksRef = getSection("footer_categories");
+  const contactSection = getSection("footer_contact");
+  const bottomSection = getSection("footer_bottom");
+
+  const socialLinks = brandSection?.social?.map((s: any) => ({
+    icon: iconMap[s.platform] || Send,
+    href: s.href,
+    label: s.platform
+  })) || [
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Send, href: "#", label: "X" },
+  ];
+
+  const quickLinks = quickLinksRef?.links || [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Blog", href: "/blogs" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "Testimonials", href: "/testimonials" },
+  ];
+
+  const categoryList = categoryLinksRef?.links || [
+    { label: "Digital Marketing", href: "#" },
+    { label: "SEO Marketing", href: "#" },
+    { label: "Startup Agency", href: "#" },
+    { label: "Advertising Agency", href: "#" },
+    { label: "Social Media Agency", href: "#" },
+    { label: "Web Design Agency", href: "#" }
+  ];
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -114,17 +164,17 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/60 mb-8 max-w-sm leading-relaxed font-bold italic">
-              Online Strikers — India&apos;s Leading Digital Marketing Agency Empowering Brands For Over A Decade.
+              {brandSection?.description || "Online Strikers — India's Leading Digital Marketing Agency Empowering Brands For Over A Decade."}
             </p>
             <div className="flex items-center gap-3">
-              {socialLinks.map((social, i) => (
+              {socialLinks.map((social: any, i: number) => (
                 <Link
                   key={i}
                   href={social.href}
                   className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-[#be1e2e] hover:text-white hover:scale-110 transition-all duration-300 shadow-lg shadow-white/5"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-4 h-4 fill-current" />
+                  <social.icon className="w-4 h-4" />
                 </Link>
               ))}
             </div>
@@ -133,10 +183,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-lg font-black mb-8 text-white">Quick Links</h4>
             <ul className="space-y-4">
-              {quickLinks.map((link) => (
-                <li key={link}>
-                  <Link href="#" className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic">
-                    {link}
+              {quickLinks.map((link: { label: string; href: string }) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic">
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -146,10 +196,10 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <h4 className="text-lg font-black mb-8 text-white">Category List</h4>
             <ul className="space-y-4">
-              {categoryList.map((cat) => (
-                <li key={cat}>
-                  <Link href="#" className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic text-sm">
-                    {cat}
+              {categoryList.map((cat: any) => (
+                <li key={cat.label || cat}>
+                  <Link href={cat.href || "#"} className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic text-sm">
+                    {cat.label || cat}
                   </Link>
                 </li>
               ))}
@@ -161,15 +211,15 @@ export default function Footer() {
             <div className="space-y-6">
               <div className="flex items-center gap-4 group cursor-pointer">
                 <Mail className="w-5 h-5 text-white/40 group-hover:text-[#be1e2e] transition-colors" />
-                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">info@onlinestrikers.com</p>
+                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">{contactSection?.email || "info@onlinestrikers.com"}</p>
               </div>
               <div className="flex items-start gap-4 group cursor-pointer">
                 <MapPin className="w-5 h-5 text-white/40 group-hover:text-[#be1e2e] transition-colors mt-1" />
-                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">New Delhi, India</p>
+                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">{contactSection?.address || "New Delhi, India"}</p>
               </div>
               <div className="flex items-center gap-4 group cursor-pointer">
                 <Phone className="w-5 h-5 text-white/40 group-hover:text-[#be1e2e] transition-colors" />
-                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">99999-99999</p>
+                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">{contactSection?.phone || "99999-99999"}</p>
               </div>
             </div>
           </div>
@@ -181,11 +231,11 @@ export default function Footer() {
             ©Copyright 2025 Online Strikers . All rights reserved
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-white/40 text-sm font-bold italic hover:text-white transition-colors">
+            <Link href="/terms" className="text-white/40 text-sm font-bold italic hover:text-white transition-colors">
               Terms & Conditions
             </Link>
             <div className="w-px h-4 bg-white/10 hidden md:block" />
-            <Link href="#" className="text-white/40 text-sm font-bold italic hover:text-white transition-colors">
+            <Link href="/privacy" className="text-white/40 text-sm font-bold italic hover:text-white transition-colors">
               Privacy Policy
             </Link>
           </div>

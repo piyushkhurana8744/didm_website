@@ -1,13 +1,22 @@
 {
   "/": {
     "sections": [
-      { "sectionId": "hero_initial", "type": "hero", "title": "Your Partner in Digital Excellence", "subtitle": "DELHI INSTITUTE OF DIGITAL MARKETING", "content": "Transforming businesses through innovative digital solutions.", "imageUrl": "/images/hero.png", "ctaText": "Get Started", "ctaLink": "/contact" },
-      { 
-        "sectionId": "stats_initial", 
-        "type": "features", 
-        "title": "The Results Speak for Themselves", 
-        "subtitle": "About Us", 
-        "content": "We're Not Just A Training Institute — We're Your Partner In Achieving Measurable Growth.", 
+      {
+        "sectionId": "hero_initial",
+        "type": "hero",
+        "title": "Your Partner in Digital Excellence",
+        "subtitle": "DELHI INSTITUTE OF DIGITAL MARKETING",
+        "content": "Transforming businesses through innovative digital solutions.",
+        "imageUrl": "/images/hero.png",
+        "ctaText": "Get Started",
+        "ctaLink": "/contact"
+      },
+      {
+        "sectionId": "stats_initial",
+        "type": "features",
+        "title": "The Results Speak for Themselves",
+        "subtitle": "About Us",
+        "content": "We're Not Just A Training Institute — We're Your Partner In Achieving Measurable Growth.",
         "ctaText": "Work With Us",
         "stats": [
           {
@@ -30,50 +39,190 @@
           }
         ]
       },
-      { "sectionId": "why_choose_initial", "type": "standard", "title": "Why We're the Right Choice for Your Business", "subtitle": "Why Choose Us", "content": "We offer tailored digital marketing solutions that drive real results.", "imageUrl": "/images/why_choose_us_new.png", "ctaText": "Work With Us", "reasons": [
-          { "number": "1", "title": "Proven Track Record", "description": "Hundreds Of Successful Campaigns And Satisfied Clients Across Various Industries." },
-          { "number": "2", "title": "Custom SEO Plan", "description": "We Design SEO Plans That Drive You Towards Your Success And Goals." },
-          { "number": "3", "title": "Expert Team", "description": "Certified Professionals With Extensive Industry Experience In Digital Marketing." },
-          { "number": "4", "title": "Clear Reporting", "description": "Detailed Reports To Keep You Informed Every Step Of The Way." }
+      {
+        "sectionId": "why_choose_initial",
+        "type": "standard",
+        "title": "Why We're the Right Choice for Your Business",
+        "subtitle": "Why Choose Us",
+        "content": "We offer tailored digital marketing solutions that drive real results.",
+        "imageUrl": "/images/why_choose_us_new.png",
+        "ctaText": "Work With Us",
+        "reasons": [
+          {
+            "number": "1",
+            "title": "Proven Track Record",
+            "description": "Hundreds Of Successful Campaigns And Satisfied Clients Across Various Industries."
+          },
+          {
+            "number": "2",
+            "title": "Custom SEO Plan",
+            "description": "We Design SEO Plans That Drive You Towards Your Success And Goals."
+          },
+          {
+            "number": "3",
+            "title": "Expert Team",
+            "description": "Certified Professionals With Extensive Industry Experience In Digital Marketing."
+          },
+          {
+            "number": "4",
+            "title": "Clear Reporting",
+            "description": "Detailed Reports To Keep You Informed Every Step Of The Way."
+          }
         ]
       },
-      { "sectionId": "process_initial", "type": "standard", "title": "Proven Process for Success", "subtitle": "Our Work Process", "content": "Our systematic approach ensures every campaign is optimized for maximum impact.", "ctaText": "Get In Touch", "steps": [
-          { "number": "01", "title": "Monitoring & Optimization", "subtitle": "Continuous Monitoring And Regular Optimizations To Keep Your Campaigns Effective.", "features": ["In-Depth Research", "Precision Implementation", "Transparent Reporting"], "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" },
-          { "number": "02", "title": "Strategy Development", "subtitle": "Creating Customized Strategies Aligned With Your Business Goals And Target Audience.", "features": ["Market Analysis", "Competitor Research", "Goal Setting"], "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" },
-          { "number": "03", "title": "Implementation & Launch", "subtitle": "Executing Campaigns With Precision And Launching Them Across Multiple Channels.", "features": ["Multi-Channel Setup", "Content Creation", "Campaign Launch"], "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop" }
+      {
+        "sectionId": "process_initial",
+        "type": "standard",
+        "title": "Proven Process for Success",
+        "subtitle": "Our Work Process",
+        "content": "Our systematic approach ensures every campaign is optimized for maximum impact.",
+        "ctaText": "Get In Touch",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Monitoring & Optimization",
+            "subtitle": "Continuous Monitoring And Regular Optimizations To Keep Your Campaigns Effective.",
+            "features": [
+              "In-Depth Research",
+              "Precision Implementation",
+              "Transparent Reporting"
+            ],
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+          },
+          {
+            "number": "02",
+            "title": "Strategy Development",
+            "subtitle": "Creating Customized Strategies Aligned With Your Business Goals And Target Audience.",
+            "features": [
+              "Market Analysis",
+              "Competitor Research",
+              "Goal Setting"
+            ],
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+          },
+          {
+            "number": "03",
+            "title": "Implementation & Launch",
+            "subtitle": "Executing Campaigns With Precision And Launching Them Across Multiple Channels.",
+            "features": [
+              "Multi-Channel Setup",
+              "Content Creation",
+              "Campaign Launch"
+            ],
+            "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop"
+          }
         ]
       },
-      { "sectionId": "testimonials_initial", "type": "standard", "title": "Success Through Clients' Words", "subtitle": "Testimonials", "content": "Hear from our satisfied clients about their experiences with DIDM.", "ctaText": "View All Reviews", "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop", "items": [
-          { "name": "Sarah M", "role": "Store Owner", "content": "DIDM Transformed Our Career Trajectory. The Hands-On Training Was Exceptional!", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop", "isPrimary": false },
-          { "name": "John Doe", "role": "SEO Manager", "content": "The Faculty At DIDM Is Proactive, Professional, And Results-Driven. Highly Recommend!", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop", "isPrimary": true },
-          { "name": "Alex Hales", "role": "Business Owner", "content": "Thanks To DIDM, I Landed My Dream Job In Digital Marketing Within 3 Months.", "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop", "isPrimary": false }
+      {
+        "sectionId": "testimonials_initial",
+        "type": "standard",
+        "title": "Success Through Clients' Words",
+        "subtitle": "Testimonials",
+        "content": "Hear from our satisfied clients about their experiences with DIDM.",
+        "ctaText": "View All Reviews",
+        "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop",
+        "items": [
+          {
+            "name": "Sarah M",
+            "role": "Store Owner",
+            "content": "DIDM Transformed Our Career Trajectory. The Hands-On Training Was Exceptional!",
+            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
+            "isPrimary": false
+          },
+          {
+            "name": "John Doe",
+            "role": "SEO Manager",
+            "content": "The Faculty At DIDM Is Proactive, Professional, And Results-Driven. Highly Recommend!",
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+            "isPrimary": true
+          },
+          {
+            "name": "Alex Hales",
+            "role": "Business Owner",
+            "content": "Thanks To DIDM, I Landed My Dream Job In Digital Marketing Within 3 Months.",
+            "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
+            "isPrimary": false
+          }
         ]
       },
-      { "sectionId": "blog_initial", "type": "standard", "title": "Insights from DIDM Experts", "subtitle": "Our Blog", "content": "Stay updated with the latest trends and insights in digital marketing.", "ctaText": "All Categories", "posts": [
-          { "title": "Transform Your Online Presence With Expert SEO Strategies.", "date": "12/12/2024", "author": "John Doe", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop", "excerpt": "Strategic search engine optimization (SEO) that positions your brand for growth.", "isFeatured": true },
-          { "title": "Maximize Your Business Success With Tailored SEO Solutions.", "date": "12/12/2024", "author": "John Doe", "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop", "excerpt": "Achieve top rankings with innovative SEO techniques from our experts.", "isFeatured": false },
-          { "title": "The Future of Digital Marketing in 2025 and Beyond.", "date": "15/12/2024", "author": "Jane Smith", "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop", "excerpt": "Stay ahead of the curve with our latest projections for marketing trends.", "isFeatured": false }
+      {
+        "sectionId": "blog_initial",
+        "type": "standard",
+        "title": "Insights from DIDM Experts",
+        "subtitle": "Our Blog",
+        "content": "Stay updated with the latest trends and insights in digital marketing.",
+        "ctaText": "All Categories",
+        "posts": [
+          {
+            "title": "Transform Your Online Presence With Expert SEO Strategies.",
+            "date": "12/12/2024",
+            "author": "John Doe",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+            "excerpt": "Strategic search engine optimization (SEO) that positions your brand for growth.",
+            "isFeatured": true
+          },
+          {
+            "title": "Maximize Your Business Success With Tailored SEO Solutions.",
+            "date": "12/12/2024",
+            "author": "John Doe",
+            "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop",
+            "excerpt": "Achieve top rankings with innovative SEO techniques from our experts.",
+            "isFeatured": false
+          },
+          {
+            "title": "The Future of Digital Marketing in 2025 and Beyond.",
+            "date": "15/12/2024",
+            "author": "Jane Smith",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+            "excerpt": "Stay ahead of the curve with our latest projections for marketing trends.",
+            "isFeatured": false
+          }
         ]
       }
     ],
-    "seo": { "title": "Online Strikers - Home", "description": "Boost your online presence with Online Strikers." }
+    "seo": {
+      "title": "Online Strikers - Home",
+      "description": "Boost your online presence with Online Strikers."
+    }
   },
   "/about": {
     "sections": [
-      { "sectionId": "about_hero", "type": "hero", "title": "About Us", "subtitle": "Home / About Us", "content": "Learn more about our mission and vision." },
-      { "sectionId": "driving_excellence", "type": "about", "title": "Innovative Scaling Future Business", "subtitle": "Driving Excellence", "content": "Elevate Your Social Media Presence To The Next Level!", "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800" },
-      { "sectionId": "empowering_you", "type": "standard", "title": "Drive Growth With Precision Marketing", "subtitle": "Empowering You", "content": "Our Diverse Team Consists Of SEO Specialists, Content Creators, And Data Analysts Dedicated To Achieving Exceptional Results For Our Clients." }
+      {
+        "sectionId": "about_hero",
+        "type": "hero",
+        "title": "About Us",
+        "subtitle": "Home / About Us",
+        "content": "Learn more about our mission and vision."
+      },
+      {
+        "sectionId": "driving_excellence",
+        "type": "about",
+        "title": "Innovative Scaling Future Business",
+        "subtitle": "Driving Excellence",
+        "content": "Elevate Your Social Media Presence To The Next Level!",
+        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800"
+      },
+      {
+        "sectionId": "empowering_you",
+        "type": "standard",
+        "title": "Drive Growth With Precision Marketing",
+        "subtitle": "Empowering You",
+        "content": "Our Diverse Team Consists Of SEO Specialists, Content Creators, And Data Analysts Dedicated To Achieving Exceptional Results For Our Clients."
+      }
     ],
-    "seo": { "title": "About Us - Online Strikers", "description": "Learn about our team and mission." }
+    "seo": {
+      "title": "About Us - Online Strikers",
+      "description": "Learn about our team and mission."
+    }
   },
   "/services": {
     "sections": [
-      { 
-        "sectionId": "services_hero", 
-        "type": "hero", 
-        "title": "Our Service V1", 
-        "subtitle": "Looking For Strategic Web", 
-        "content": "" 
+      {
+        "sectionId": "services_hero",
+        "type": "hero",
+        "title": "Our Service V1",
+        "subtitle": "Looking For Strategic Web",
+        "content": ""
       },
       {
         "sectionId": "services_grid_initial",
@@ -81,18 +230,66 @@
         "title": "Our Selection",
         "subtitle": "Our Services",
         "services": [
-          { "id": 1, "title": "Business Strategy", "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" },
-          { "id": 2, "title": "Business Strategy", "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop" },
-          { "id": 3, "title": "Business Strategy", "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop" },
-          { "id": 4, "title": "Business Strategy", "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" },
-          { "id": 5, "title": "PR Staffing", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" },
-          { "id": 6, "title": "Web Design", "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=800&auto=format&fit=crop" },
-          { "id": 7, "title": "Architecture", "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=800&auto=format&fit=crop" },
-          { "id": 8, "title": "Advertising", "image": "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=800&auto=format&fit=crop" },
-          { "id": 9, "title": "E-Commerce", "image": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800&auto=format&fit=crop" },
-          { "id": 10, "title": "Travel Guide", "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop" },
-          { "id": 11, "title": "Investment", "image": "https://images.unsplash.com/photo-1579548122064-9da09ea2475a?q=80&w=800&auto=format&fit=crop" },
-          { "id": 12, "title": "Solar Energy", "image": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop" }
+          {
+            "id": 1,
+            "title": "Business Strategy",
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 2,
+            "title": "Business Strategy",
+            "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 3,
+            "title": "Business Strategy",
+            "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 4,
+            "title": "Business Strategy",
+            "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 5,
+            "title": "PR Staffing",
+            "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 6,
+            "title": "Web Design",
+            "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 7,
+            "title": "Architecture",
+            "image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 8,
+            "title": "Advertising",
+            "image": "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 9,
+            "title": "E-Commerce",
+            "image": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 10,
+            "title": "Travel Guide",
+            "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 11,
+            "title": "Investment",
+            "image": "https://images.unsplash.com/photo-1579548122064-9da09ea2475a?q=80&w=800&auto=format&fit=crop"
+          },
+          {
+            "id": 12,
+            "title": "Solar Energy",
+            "image": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop"
+          }
         ]
       },
       {
@@ -101,24 +298,42 @@
         "title": "Stats Bar",
         "subtitle": "Key Performance Indicators",
         "stats": [
-          { "label": "Agency Employees", "value": "500+" },
-          { "label": "Project Done", "value": "900+" },
-          { "label": "Revenue Generated", "value": "$200M" },
-          { "label": "Satisfied Client", "value": "110K" },
-          { "label": "Country Worldwide", "value": "109+" }
+          {
+            "label": "Agency Employees",
+            "value": "500+"
+          },
+          {
+            "label": "Project Done",
+            "value": "900+"
+          },
+          {
+            "label": "Revenue Generated",
+            "value": "$200M"
+          },
+          {
+            "label": "Satisfied Client",
+            "value": "110K"
+          },
+          {
+            "label": "Country Worldwide",
+            "value": "109+"
+          }
         ]
       }
     ],
-    "seo": { "title": "Services - Online Strikers", "description": "Explore our digital marketing services." }
+    "seo": {
+      "title": "Services - Online Strikers",
+      "description": "Explore our digital marketing services."
+    }
   },
   "/portfolio": {
     "sections": [
-      { 
-        "sectionId": "portfolio_hero", 
-        "type": "hero", 
-        "title": "PORTFOLIO", 
-        "subtitle": "OUR WORK", 
-        "content": "Showcasing our expertise across digital design and development. Explore our latest projects and see how we transform ideas into reality." 
+      {
+        "sectionId": "portfolio_hero",
+        "type": "hero",
+        "title": "PORTFOLIO",
+        "subtitle": "OUR WORK",
+        "content": "Showcasing our expertise across digital design and development. Explore our latest projects and see how we transform ideas into reality."
       },
       {
         "sectionId": "portfolio_grid_initial",
@@ -201,16 +416,19 @@
         ]
       }
     ],
-    "seo": { "title": "Portfolio - Online Strikers", "description": "See our successful projects." }
+    "seo": {
+      "title": "Portfolio - Online Strikers",
+      "description": "See our successful projects."
+    }
   },
   "/team": {
     "sections": [
-      { 
-        "sectionId": "team_hero", 
-        "type": "hero", 
-        "title": "Our Team Member", 
-        "subtitle": "Home / Our Team Member", 
-        "content": "" 
+      {
+        "sectionId": "team_hero",
+        "type": "hero",
+        "title": "Our Team Member",
+        "subtitle": "Home / Our Team Member",
+        "content": ""
       },
       {
         "sectionId": "team_grid_initial",
@@ -218,31 +436,94 @@
         "title": "The Experts",
         "subtitle": "Our Team",
         "teamMembers": [
-          { "id": 1, "name": "Rodger Struck", "role": "Social Media Specialist", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" },
-          { "id": 2, "name": "Alex Buckmaster", "role": "Marketing Officer", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop" },
-          { "id": 3, "name": "Sarah Joe", "role": "Marketer", "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop" },
-          { "id": 4, "name": "Chris Glasser", "role": "Marketer", "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" },
-          { "id": 5, "name": "Katie Sims", "role": "Team Member", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" },
-          { "id": 6, "name": "Jerry Helfer", "role": "Team Member", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" },
-          { "id": 7, "name": "Rodger Struck", "role": "Team Member", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" },
-          { "id": 8, "name": "Stephanie Nicol", "role": "Team Member", "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" },
-          { "id": 9, "name": "Iva Ryan", "role": "Team Member", "image": "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?q=80&w=400&auto=format&fit=crop" },
-          { "id": 10, "name": "Judith Rodriguez", "role": "Team Member", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" },
-          { "id": 11, "name": "Judith Rodriguez", "role": "Team Member", "image": "https://images.unsplash.com/photo-1567532939604-b6c5b0ad2e01?q=80&w=400&auto=format&fit=crop" },
-          { "id": 12, "name": "Autumn Philips", "role": "Team Member", "image": "https://images.unsplash.com/photo-1554151228-14d9def656ec?q=80&w=400&auto=format&fit=crop" }
+          {
+            "id": 1,
+            "name": "Rodger Struck",
+            "role": "Social Media Specialist",
+            "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 2,
+            "name": "Alex Buckmaster",
+            "role": "Marketing Officer",
+            "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 3,
+            "name": "Sarah Joe",
+            "role": "Marketer",
+            "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 4,
+            "name": "Chris Glasser",
+            "role": "Marketer",
+            "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 5,
+            "name": "Katie Sims",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 6,
+            "name": "Jerry Helfer",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 7,
+            "name": "Rodger Struck",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 8,
+            "name": "Stephanie Nicol",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 9,
+            "name": "Iva Ryan",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 10,
+            "name": "Judith Rodriguez",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 11,
+            "name": "Judith Rodriguez",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1567532939604-b6c5b0ad2e01?q=80&w=400&auto=format&fit=crop"
+          },
+          {
+            "id": 12,
+            "name": "Autumn Philips",
+            "role": "Team Member",
+            "image": "https://images.unsplash.com/photo-1554151228-14d9def656ec?q=80&w=400&auto=format&fit=crop"
+          }
         ]
       }
     ],
-    "seo": { "title": "Our Team - Online Strikers", "description": "Meet our experts." }
+    "seo": {
+      "title": "Our Team - Online Strikers",
+      "description": "Meet our experts."
+    }
   },
   "/faq": {
     "sections": [
-      { 
-        "sectionId": "faq_hero", 
-        "type": "hero", 
-        "title": "Frequently Asked Question", 
-        "subtitle": "Home / Frequently Asked Question", 
-        "content": "" 
+      {
+        "sectionId": "faq_hero",
+        "type": "hero",
+        "title": "Frequently Asked Question",
+        "subtitle": "Home / Frequently Asked Question",
+        "content": ""
       },
       {
         "sectionId": "common_questions",
@@ -298,21 +579,207 @@
           }
         ]
       },
-      { 
-        "sectionId": "faq_cta", 
-        "type": "cta", 
-        "title": "Ready To Grow Your Business With Online Strikers", 
+      {
+        "sectionId": "faq_cta",
+        "type": "cta",
+        "title": "Ready To Grow Your Business With Online Strikers",
         "content": "Let Us Help You Unlock Your Business's Full Potential. With Tailored SEO Strategies And Proven Digital Marketing Techniques, We'll Drive Traffic, Improve Conversions, And Elevate Your Brand Online.",
         "ctaText": "Subscribe"
       }
     ],
-    "seo": { "title": "FAQ - Online Strikers", "description": "Frequently Asked Questions." }
+    "seo": {
+      "title": "FAQ - Online Strikers",
+      "description": "Frequently Asked Questions."
+    }
   },
   "/contact": {
     "sections": [
-      { "sectionId": "contact_hero", "type": "hero", "title": "Contact Us", "subtitle": "Get In Touch", "content": "Let's discuss your next big project." },
-      { "sectionId": "contact_info", "type": "standard", "title": "Our Office", "subtitle": "Location", "content": "Visit us at our Delhi headquarters." }
+      {
+        "sectionId": "contact_hero",
+        "type": "hero",
+        "title": "Contact Us",
+        "subtitle": "Get In Touch",
+        "content": "Let's discuss your next big project."
+      },
+      {
+        "sectionId": "contact_info",
+        "type": "standard",
+        "title": "Our Office",
+        "subtitle": "Location",
+        "content": "Visit us at our Delhi headquarters."
+      }
     ],
-    "seo": { "title": "Contact Us - Online Strikers", "description": "Contact our team." }
+    "seo": {
+      "title": "Contact Us - Online Strikers",
+      "description": "Contact our team."
+    }
+  },
+  "__navbar": {
+    "sections": [
+      {
+        "sectionId": "nav_items",
+        "items": [
+          {
+            "name": "Home",
+            "href": "/",
+            "hasDropdown": false
+          },
+          {
+            "name": "Portfolio",
+            "href": "/portfolio",
+            "hasDropdown": false
+          },
+          {
+            "name": "Service",
+            "href": "/services",
+            "hasDropdown": false
+          },
+          {
+            "name": "Page's",
+            "href": "#",
+            "hasDropdown": true,
+            "dropdownItems": [
+              {
+                "name": "About Us",
+                "href": "/about"
+              },
+              {
+                "name": "Our Team",
+                "href": "/team"
+              },
+              {
+                "name": "Testimonial",
+                "href": "/testimonials"
+              },
+              {
+                "name": "FAQ's",
+                "href": "/faq"
+              },
+              {
+                "name": "Pricing",
+                "href": "/pricing"
+              },
+              {
+                "name": "Contact Us",
+                "href": "/contact"
+              },
+              {
+                "name": "404",
+                "href": "/404"
+              }
+            ]
+          },
+          {
+            "name": "Blogs",
+            "href": "/blogs",
+            "hasDropdown": false
+          }
+        ]
+      }
+    ]
+  },
+  "__footer": {
+    "sections": [
+      {
+        "sectionId": "footer_brand",
+        "description": "Online Strikers — India's Leading Digital Marketing Agency Empowering Brands For Over A Decade.",
+        "social": [
+          {
+            "platform": "Facebook",
+            "href": "#"
+          },
+          {
+            "platform": "Instagram",
+            "href": "#"
+          },
+          {
+            "platform": "LinkedIn",
+            "href": "#"
+          },
+          {
+            "platform": "X",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "sectionId": "footer_quick_links",
+        "links": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Services",
+            "href": "/services"
+          },
+          {
+            "label": "Blog",
+            "href": "/blogs"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact"
+          },
+          {
+            "label": "Testimonials",
+            "href": "/testimonials"
+          }
+        ]
+      },
+      {
+        "sectionId": "footer_categories",
+        "links": [
+          {
+            "label": "Digital Marketing",
+            "href": "#"
+          },
+          {
+            "label": "SEO Marketing",
+            "href": "#"
+          },
+          {
+            "label": "Startup Agency",
+            "href": "#"
+          },
+          {
+            "label": "Advertising Agency",
+            "href": "#"
+          },
+          {
+            "label": "Social Media Agency",
+            "href": "#"
+          },
+          {
+            "label": "Web Design Agency",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "sectionId": "footer_contact",
+        "email": "info@onlinestrikers.com",
+        "address": "New Delhi, India",
+        "phone": "99999-99999"
+      },
+      {
+        "sectionId": "footer_bottom",
+        "copyright": "©Copyright 2025 Online Strikers . All rights reserved",
+        "legal": [
+          {
+            "label": "Terms & Conditions",
+            "href": "/terms"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "/privacy"
+          }
+        ]
+      }
+    ]
   }
 }
