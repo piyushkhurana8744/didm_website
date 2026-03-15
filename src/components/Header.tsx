@@ -11,23 +11,51 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [navItems, setNavItems] = useState([
     { name: "Home", href: "/", hasDropdown: false },
-    { name: "Portfolio", href: "/portfolio", hasDropdown: false },
-    { name: "Service", href: "/services", hasDropdown: false },
+    { name: "About", href: "/about", hasDropdown: false },
     { 
-      name: "Page's", 
-      href: "#", 
+      name: "Services", 
+      href: "/digital-marketing-agency", 
       hasDropdown: true,
       dropdownItems: [
-        { name: "About Us", href: "/about" },
-        { name: "Our Team", href: "/team" },
-        { name: "Testimonial", href: "/testimonials" },
-        { name: "FAQ's", href: "/faq" },
-        { name: "Pricing", href: "/pricing" },
-        { name: "Contact Us", href: "/contact" },
-        { name: "404", href: "/404" },
+        { name: "Main Agency", href: "/digital-marketing-agency" },
+        { name: "Advertising", href: "#", isHeader: true },
+        { name: "Google PPC", href: "/services/ppc" },
+        { name: "Meta Ads", href: "/services/meta-ads" },
+        { name: "Instagram Ads", href: "/services/instagram-ads" },
+        { name: "Ecommerce PPC", href: "/services/ecommerce-ppc" },
+        { name: "CRO", href: "/services/cro" },
       ]
     },
-    { name: "Blogs", href: "/blogs", hasDropdown: false },
+    {
+      name: "Industries",
+      href: "#",
+      hasDropdown: true,
+      dropdownItems: [
+        { name: "SEO by Industry", href: "#", isHeader: true },
+        { name: "Healthcare SEO", href: "/services/healthcare-seo" },
+        { name: "Real Estate SEO", href: "/services/real-estate-seo" },
+        { name: "Law Firm SEO", href: "/services/legal-seo" },
+        { name: "Ads by Industry", href: "#", isHeader: true },
+        { name: "Healthcare Ads", href: "/services/healthcare-ads" },
+        { name: "Real Estate Ads", href: "/services/real-estate-ads" },
+        { name: "Education Ads", href: "/services/education-ads" },
+      ]
+    },
+    {
+      name: "Development",
+      href: "#",
+      hasDropdown: true,
+      dropdownItems: [
+        { name: "Web Development", href: "/services/web-development" },
+        { name: "WordPress Dev", href: "/services/wordpress-development" },
+        { name: "Shopify Dev", href: "/services/shopify-development" },
+        { name: "UI/UX Design", href: "/services/ui-ux-design" },
+        { name: "LMS Design", href: "/services/lms-design" },
+        { name: "CRM Design", href: "/services/crm-design" },
+      ]
+    },
+    { name: "Portfolio", href: "/portfolio", hasDropdown: false },
+    { name: "Contact", href: "/contact", hasDropdown: false },
   ]);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -126,17 +154,29 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute top-full left-0 mt-1 w-48 bg-white rounded-xl shadow-2xl py-3 overflow-hidden border border-black/5"
+                    className="absolute top-full left-0 mt-1 w-52 bg-white rounded-xl shadow-2xl py-3 overflow-hidden border border-black/5"
                   >
-                    {item.dropdownItems?.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-6 py-2.5 text-[13px] font-black text-black/70 hover:text-[#be1e2e] hover:bg-gray-50 transition-colors"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
+                    {item.dropdownItems?.map((subItem) => {
+                      if (subItem.isHeader) {
+                        return (
+                          <div 
+                            key={subItem.name} 
+                            className="px-6 py-2 text-[10px] font-black tracking-widest uppercase text-black/30 bg-gray-50/50"
+                          >
+                            {subItem.name}
+                          </div>
+                        );
+                      }
+                      return (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block px-6 py-2.5 text-[13px] font-black text-black/70 hover:text-[#be1e2e] hover:bg-gray-50 transition-colors"
+                        >
+                          {subItem.name}
+                        </Link>
+                      );
+                    })}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -210,16 +250,28 @@ export default function Header() {
                     </motion.div>
                     {item.hasDropdown && (
                       <div className="pl-4 mt-2 flex flex-col gap-3">
-                        {item.dropdownItems?.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="text-sm font-bold text-white/40 hover:text-[#be1e2e] transition-colors"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
+                        {item.dropdownItems?.map((subItem) => {
+                          if (subItem.isHeader) {
+                            return (
+                              <div 
+                                key={subItem.name} 
+                                className="text-[10px] font-black tracking-widest uppercase text-white/20 mt-2"
+                              >
+                                {subItem.name}
+                              </div>
+                            );
+                          }
+                          return (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="text-sm font-bold text-white/40 hover:text-[#be1e2e] transition-colors"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          );
+                        })}
                       </div>
                     )}
                   </div>

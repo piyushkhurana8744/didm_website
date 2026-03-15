@@ -30,24 +30,24 @@ export default function StatsSection({ content }: StatsSectionProps) {
 
   const displayTitle = content?.title || "The Results Speak for Themselves";
   const displaySubtitle = content?.subtitle || "About Us";
-  const displayDescription = content?.description || "We're Not Just A Training Institute — We're Your Partner In Achieving Measurable Growth. With Our Tailored Curriculum And Industry-Expert Faculty, We've Built A Legacy Of Success.";
+  const displayDescription = content?.description || "With years of experience, we've helped businesses grow online and stay ahead of their competitors. Our results-driven approach ensures that every campaign we manage delivers measurable success.";
   const displayCtaText = content?.ctaText || "Work With Us";
   const displayStats = content?.stats || [
     {
       label: "Clients Served Worldwide",
-      description: "Training Students From Across The Globe To Achieve Outstanding Results In Digital Marketing.",
-      value: "500+",
+      description: "Successfully partnered with over 500+ clients across the globe, providing tailor-made marketing solutions that drive growth.",
+      value: "500 +",
       gradient: "from-black via-black to-[#be1e2e]/80",
     },
     {
-      label: "Projects Successfully Completed",
-      description: "Delivering Customized Courses That Drive Careers And Boost Conversions.",
-      value: "700+",
+      label: "Project Successfully Completed",
+      description: "We focus on high-performance strategy. We have successfully delivered over 700+ projects for various industries.",
+      value: "700 +",
       gradient: "from-black via-black to-[#be1e2e]/60",
     },
     {
       label: "Revenue Generated for Clients",
-      description: "Our Alumni Have Generated Outstanding Revenue Through Digital Marketing Skills.",
+      description: "Our marketing strategies have helped our clients generate over $200M in revenue for their businesses.",
       value: "$200M+",
       gradient: "from-black via-black to-[#be1e2e]/40",
     },
@@ -73,7 +73,7 @@ export default function StatsSection({ content }: StatsSectionProps) {
       </span>
     </div>
 
-    <h2 className="text-5xl font-black tracking-tight mt-6 mb-6 leading-[1.05]">
+    <h2 className="text-5xl font-black tracking-tight mt-6 mb-6 leading-[1.05] text-black">
       {displayTitle.includes("The Results Speak") ? (
         <>The Results Speak <br /> for Themselves</>
       ) : displayTitle}

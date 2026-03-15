@@ -6,12 +6,25 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
   const [theme, setTheme] = useState<any>(null);
 
   useEffect(() => {
+    const controller = new AbortController();
     const fetchTheme = async () => {
       try {
-        const res = await fetch("/api/theme", { cache: "no-store" });
-        if (!res.ok) throw new Error("Failed to fetch theme");
+        const res = await fetch("/api/theme", { 
+          cache: "no-store",
+          signal: controller.signal 
+        });
         
-        const data = await res.json();
+        let data;
+        if (!res.ok) {
+          console.warn("ThemeProvider: Failed to fetch theme, using defaults");
+          data = {
+            primaryColor: "#be1e2e",
+            darkMode: false,
+          };
+        } else {
+          data = await res.json();
+        }
+
         setTheme(data);
         
         // Inject CSS Variables
@@ -39,11 +52,16 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
           }
           styleElement.innerHTML = data.customCss;
         }
-      } catch (error) {
-        console.error("Error loading theme:", error);
+      } catch (error: any) {
+        if (error.name !== 'AbortError') {
+          console.error("Error loading theme:", error);
+          // Set basic defaults on complete failure
+          document.documentElement.classList.add("dark");
+        }
       }
     };
     fetchTheme();
+    return () => controller.abort();
   }, []);
 
   return <>{children}</>;

@@ -4,11 +4,11 @@
       {
         "sectionId": "hero_initial",
         "type": "hero",
-        "title": "Your Partner in Digital Excellence",
-        "subtitle": "DELHI INSTITUTE OF DIGITAL MARKETING",
-        "content": "Transforming businesses through innovative digital solutions.",
+        "title": "Digital Marketing Agency",
+        "subtitle": "Online Strikers",
+        "content": "Online Strikers is a results-driven digital marketing agency that helps businesses build a powerful online presence using modern marketing strategies, creative campaigns, and data-driven insights.",
         "imageUrl": "/images/hero.png",
-        "ctaText": "Get Started",
+        "ctaText": "Audit Your Website",
         "ctaLink": "/contact"
       },
       {
@@ -16,24 +16,24 @@
         "type": "features",
         "title": "The Results Speak for Themselves",
         "subtitle": "About Us",
-        "content": "We're Not Just A Training Institute — We're Your Partner In Achieving Measurable Growth.",
+        "content": "With years of experience, we've helped businesses grow online and stay ahead of their competitors. Our results-driven approach ensures that every campaign we manage delivers measurable success.",
         "ctaText": "Work With Us",
         "stats": [
           {
             "label": "Clients Served Worldwide",
-            "description": "Training Students From Across The Globe To Achieve Outstanding Results In Digital Marketing.",
-            "value": "500+",
+            "description": "Successfully partnered with over 500+ clients across the globe, providing tailor-made marketing solutions that drive growth.",
+            "value": "500 +",
             "gradient": "from-black via-black to-[#be1e2e]/80"
           },
           {
-            "label": "Projects Successfully Completed",
-            "description": "Delivering Customized Courses That Drive Careers And Boost Conversions.",
-            "value": "700+",
+            "label": "Project Successfully Completed",
+            "description": "We focus on high-performance strategy. We have successfully delivered over 700+ projects for various industries.",
+            "value": "700 +",
             "gradient": "from-black via-black to-[#be1e2e]/60"
           },
           {
             "label": "Revenue Generated for Clients",
-            "description": "Our Alumni Have Generated Outstanding Revenue Through Digital Marketing Skills.",
+            "description": "Our marketing strategies have helped our clients generate over $200M in revenue for their businesses.",
             "value": "$200M+",
             "gradient": "from-black via-black to-[#be1e2e]/40"
           }
@@ -42,74 +42,101 @@
       {
         "sectionId": "why_choose_initial",
         "type": "standard",
-        "title": "Why We're the Right Choice for Your Business",
+        "title": "Why Choose Online Strikers as Your Digital Marketing Partner?",
         "subtitle": "Why Choose Us",
-        "content": "We offer tailored digital marketing solutions that drive real results.",
+        "content": "Selecting the right digital marketing agency can significantly impact your business growth. Online Strikers focuses on delivering strategies that generate real results.",
         "imageUrl": "/images/why_choose_us_new.png",
         "ctaText": "Work With Us",
         "reasons": [
           {
             "number": "1",
-            "title": "Proven Track Record",
-            "description": "Hundreds Of Successful Campaigns And Satisfied Clients Across Various Industries."
+            "title": "Experienced Marketing Professionals",
+            "description": "Our team consists of digital marketing specialists with experience in SEO, paid advertising, content marketing, and social media growth."
           },
           {
             "number": "2",
-            "title": "Custom SEO Plan",
-            "description": "We Design SEO Plans That Drive You Towards Your Success And Goals."
+            "title": "Customized Marketing Strategies",
+            "description": "Every business has unique goals. We create tailored marketing strategies based on your industry, audience behavior, and business objectives."
           },
           {
             "number": "3",
-            "title": "Expert Team",
-            "description": "Certified Professionals With Extensive Industry Experience In Digital Marketing."
+            "title": "Transparent Communication and Reporting",
+            "description": "We believe in complete transparency. Our detailed performance reports help clients understand campaign progress and marketing impact."
           },
           {
             "number": "4",
-            "title": "Clear Reporting",
-            "description": "Detailed Reports To Keep You Informed Every Step Of The Way."
+            "title": "Data-Driven Marketing Approach",
+            "description": "Our strategies are based on analytics and performance insights, ensuring continuous improvement and better marketing outcomes."
+          },
+          {
+            "number": "5",
+            "title": "Focus on Long-Term Growth",
+            "description": "Rather than short-term gains, we focus on sustainable growth strategies that build strong online visibility and brand authority."
           }
         ]
       },
       {
         "sectionId": "process_initial",
         "type": "standard",
-        "title": "Proven Process for Success",
+        "title": "Our Digital Marketing Process",
         "subtitle": "Our Work Process",
-        "content": "Our systematic approach ensures every campaign is optimized for maximum impact.",
+        "content": "At Online Strikers, we follow a structured process to ensure consistent and measurable marketing success.",
         "ctaText": "Get In Touch",
         "steps": [
           {
             "number": "01",
-            "title": "Monitoring & Optimization",
-            "subtitle": "Continuous Monitoring And Regular Optimizations To Keep Your Campaigns Effective.",
+            "title": "Business Research and Market Analysis",
+            "subtitle": "We begin by understanding your business, competitors, target audience, and industry trends to build a solid marketing strategy.",
             "features": [
-              "In-Depth Research",
-              "Precision Implementation",
-              "Transparent Reporting"
+              "Industry Analysis",
+              "Competitor Research",
+              "Audience Insights"
             ],
             "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
           },
           {
             "number": "02",
             "title": "Strategy Development",
-            "subtitle": "Creating Customized Strategies Aligned With Your Business Goals And Target Audience.",
+            "subtitle": "Based on research insights, we create a customized digital marketing strategy that aligns with your business goals.",
             "features": [
-              "Market Analysis",
-              "Competitor Research",
+              "Custom Roadmap",
+              "Channel Selection",
               "Goal Setting"
             ],
             "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
           },
           {
             "number": "03",
-            "title": "Implementation & Launch",
-            "subtitle": "Executing Campaigns With Precision And Launching Them Across Multiple Channels.",
+            "title": "Campaign Implementation",
+            "subtitle": "Our team executes the strategy across multiple digital channels including SEO, PPC, social media, and content marketing.",
             "features": [
               "Multi-Channel Setup",
               "Content Creation",
               "Campaign Launch"
             ],
             "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2069&auto=format&fit=crop"
+          },
+          {
+            "number": "04",
+            "title": "Performance Monitoring and Optimization",
+            "subtitle": "We continuously track campaign performance, identify opportunities, and optimize strategies for better results.",
+            "features": [
+              "Real-Time Tracking",
+              "A/B Testing",
+              "Continuous Optimization"
+            ],
+            "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
+          },
+          {
+            "number": "05",
+            "title": "Reporting and Growth Planning",
+            "subtitle": "We provide detailed performance reports and develop growth-focused plans to scale your marketing efforts over time.",
+            "features": [
+              "Monthly Reports",
+              "Growth Insights",
+              "Scalable Plans"
+            ],
+            "image": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop"
           }
         ]
       },
@@ -190,24 +217,33 @@
       {
         "sectionId": "about_hero",
         "type": "hero",
-        "title": "About Us",
+        "title": "About Online Strikers",
         "subtitle": "Home / About Us",
-        "content": "Learn more about our mission and vision."
+        "content": "A Results-Driven Digital Marketing Agency"
       },
       {
-        "sectionId": "driving_excellence",
+        "sectionId": "company_story",
         "type": "about",
-        "title": "Innovative Scaling Future Business",
-        "subtitle": "Driving Excellence",
-        "content": "Elevate Your Social Media Presence To The Next Level!",
+        "title": "Our Company Story",
+        "subtitle": "About Us",
+        "content": "Online Strikers was founded with a clear purpose—to help businesses navigate the fast-changing world of digital marketing. Many companies struggle to build visibility online because they lack the right strategy, tools, or expertise.\n\nRecognizing this challenge, our team created a digital marketing agency focused on delivering practical solutions that generate measurable results.\n\nOver time, we have worked with businesses from different industries, helping them improve search rankings, increase website traffic, strengthen brand identity, and generate qualified leads.\n\nOur journey continues as we explore new marketing technologies, adapt to search engine updates, and develop innovative strategies that help our clients stay ahead of the competition.",
         "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800"
       },
       {
-        "sectionId": "empowering_you",
+        "sectionId": "vision_mission",
         "type": "standard",
-        "title": "Drive Growth With Precision Marketing",
-        "subtitle": "Empowering You",
-        "content": "Our Diverse Team Consists Of SEO Specialists, Content Creators, And Data Analysts Dedicated To Achieving Exceptional Results For Our Clients."
+        "title": "Vision and Mission",
+        "subtitle": "Our Core Values",
+        "items": [
+          {
+            "title": "Our Vision",
+            "content": "Our vision is to become a trusted digital marketing partner for businesses worldwide by delivering innovative marketing strategies that create long-term growth and digital success."
+          },
+          {
+            "title": "Our Mission",
+            "content": "Our mission is to help businesses achieve measurable results through strategic digital marketing services, advanced analytics, and creative solutions that improve online visibility and customer engagement.\n\nWe believe in building strong partnerships with our clients and supporting their growth through effective marketing strategies."
+          }
+        ]
       }
     ],
     "seo": {
@@ -273,7 +309,7 @@
           {
             "id": 9,
             "title": "E-Commerce",
-            "image": "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800&auto=format&fit=crop"
+            "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop"
           },
           {
             "id": 10,
@@ -614,6 +650,124 @@
       "description": "Contact our team."
     }
   },
+  "/digital-marketing-agency": {
+    "sections": [
+      {
+        "sectionId": "dm_hero",
+        "type": "hero",
+        "title": "Digital Marketing Services",
+        "subtitle": "Online Strikers",
+        "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+        "content": "Online Strikers offers a complete range of digital marketing services designed to help businesses strengthen their online presence, reach their target audience, and generate consistent leads."
+      },
+      {
+        "sectionId": "dm_overview",
+        "type": "standard",
+        "title": "Digital Marketing",
+        "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+        "content": "Our comprehensive digital marketing services combine multiple strategies, such as SEO, paid advertising, social media marketing, content marketing, etc., to build a strong online presence for your brand.\n\nWe focus on creating customized marketing strategies that align with your business goals and deliver measurable results."
+      },
+      {
+        "sectionId": "seo_services",
+        "type": "standard",
+        "title": "SEO Services",
+        "imageUrl": "https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?q=80&w=800&auto=format&fit=crop",
+        "content": "Search Engine Optimization (SEO) is essential for improving your website's visibility on search engines like Google.\n\nOur SEO services focus on increasing organic traffic, improving keyword rankings, and building long-term online authority.",
+        "services": [
+          "Keyword research and strategy",
+          "On-page SEO optimization",
+          "Technical SEO improvements",
+          "Link building strategies",
+          "SEO content optimization",
+          "Performance monitoring"
+        ]
+      },
+      {
+        "sectionId": "local_seo",
+        "type": "standard",
+        "title": "Local SEO",
+        "imageUrl": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=800&auto=format&fit=crop",
+        "content": "For businesses targeting customers in specific locations, Local SEO services are essential.\n\nWe help businesses appear in local search results, Google Maps listings, and location-based searches to attract nearby customers.",
+        "services": [
+          "Google Business Profile optimization",
+          "Local keyword targeting",
+          "Location-based content optimization"
+        ]
+      },
+      {
+        "sectionId": "social_media",
+        "type": "standard",
+        "title": "Social Media Marketing",
+        "imageUrl": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop",
+        "content": "Social media platforms provide businesses with powerful opportunities to connect with their audience.\n\nOur social media marketing services help brands build engagement, increase followers, and improve brand visibility across major platforms.",
+        "services": [
+          "Social media strategy planning",
+          "Content creation and design",
+          "Profile optimization",
+          "Audience engagement",
+          "Social media advertising"
+        ]
+      },
+      {
+        "sectionId": "paid_advertising",
+        "type": "standard",
+        "title": "Paid Advertising Services",
+        "imageUrl": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=800&auto=format&fit=crop",
+        "content": "Paid advertising allows businesses to reach their target audience quickly and generate immediate traffic.\n\nOnline Strikers offers professional paid advertising services designed to maximize marketing performance and return on investment."
+      },
+      {
+        "sectionId": "google_ads",
+        "type": "standard",
+        "title": "Google Ads / Pay-Per-Click (PPC)",
+        "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+        "content": "Our Google Ads/PPC services help businesses appear at the top of search engine results through targeted advertising campaigns.",
+        "services": [
+          "Google Ads setup and management",
+          "Keyword targeting",
+          "Ad copy creation"
+        ]
+      },
+      {
+        "sectionId": "email_marketing",
+        "type": "standard",
+        "title": "Email Marketing",
+        "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
+        "content": "Email marketing remains one of the most effective digital marketing channels for customer engagement and retention.\n\nOur email marketing services focus on creating personalized campaigns that deliver valuable information and encourage customer interaction."
+      },
+      {
+        "sectionId": "whatsapp_marketing",
+        "type": "standard",
+        "title": "WhatsApp Marketing",
+        "imageUrl": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?q=80&w=800&auto=format&fit=crop",
+        "content": "With billions of users worldwide, WhatsApp has become a powerful communication tool for businesses.\n\nOur WhatsApp marketing services help businesses connect directly with customers through personalized messaging, promotional campaigns, and automated communication strategies."
+      },
+      {
+        "sectionId": "content_writing",
+        "type": "standard",
+        "title": "Content Writing",
+        "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop",
+        "content": "Content is the foundation of successful digital marketing. Our content writing services focus on creating informative and engaging content that supports SEO and improves brand credibility.",
+        "services": [
+          "Blog writing",
+          "Website content creation",
+          "SEO content writing",
+          "Product descriptions",
+          "Marketing copywriting"
+        ]
+      },
+      {
+        "sectionId": "apps_marketing",
+        "type": "standard",
+        "title": "Apps Marketing",
+        "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop",
+        "content": "Mobile apps require strategic marketing to reach the right audience and increase downloads.\n\nOur app marketing services focus on promoting mobile applications through app store optimization, advertising campaigns, and digital marketing strategies."
+      }
+    ],
+    "seo": {
+      "title": "Digital Marketing Agency - Online Strikers",
+      "description": "Comprehensive digital marketing services including SEO, PPC, and Social Media."
+    }
+  },
   "__navbar": {
     "sections": [
       {
@@ -625,53 +779,130 @@
             "hasDropdown": false
           },
           {
+            "name": "About",
+            "href": "/about",
+            "hasDropdown": false
+          },
+          {
+            "name": "Services",
+            "href": "/digital-marketing-agency",
+            "hasDropdown": true,
+            "dropdownItems": [
+              {
+                "name": "Main Agency",
+                "href": "/digital-marketing-agency"
+              },
+              {
+                "name": "Advertising",
+                "href": "#",
+                "isHeader": true
+              },
+              {
+                "name": "Google PPC",
+                "href": "/services/ppc"
+              },
+              {
+                "name": "Meta Ads",
+                "href": "/services/meta-ads"
+              },
+              {
+                "name": "Instagram Ads",
+                "href": "/services/instagram-ads"
+              },
+              {
+                "name": "Ecommerce PPC",
+                "href": "/services/ecommerce-ppc"
+              },
+              {
+                "name": "CRO",
+                "href": "/services/cro"
+              }
+            ]
+          },
+          {
+            "name": "Industries",
+            "href": "#",
+            "hasDropdown": true,
+            "dropdownItems": [
+              {
+                "name": "SEO by Industry",
+                "href": "#",
+                "isHeader": true
+              },
+              {
+                "name": "Healthcare SEO",
+                "href": "/services/healthcare-seo"
+              },
+              {
+                "name": "Real Estate SEO",
+                "href": "/services/real-estate-seo"
+              },
+              {
+                "name": "Law Firm SEO",
+                "href": "/services/legal-seo"
+              },
+              {
+                "name": "Dental SEO",
+                "href": "/services/dental-seo"
+              },
+              {
+                "name": "Ads by Industry",
+                "href": "#",
+                "isHeader": true
+              },
+              {
+                "name": "Healthcare Ads",
+                "href": "/services/healthcare-ads"
+              },
+              {
+                "name": "Real Estate Ads",
+                "href": "/services/real-estate-ads"
+              },
+              {
+                "name": "Education Ads",
+                "href": "/services/education-ads"
+              }
+            ]
+          },
+          {
+            "name": "Development",
+            "href": "#",
+            "hasDropdown": true,
+            "dropdownItems": [
+              {
+                "name": "Web Development",
+                "href": "/services/web-development"
+              },
+              {
+                "name": "WordPress Dev",
+                "href": "/services/wordpress-development"
+              },
+              {
+                "name": "Shopify Dev",
+                "href": "/services/shopify-development"
+              },
+              {
+                "name": "UI/UX Design",
+                "href": "/services/ui-ux-design"
+              },
+              {
+                "name": "LMS Design",
+                "href": "/services/lms-design"
+              },
+              {
+                "name": "CRM Design",
+                "href": "/services/crm-design"
+              }
+            ]
+          },
+          {
             "name": "Portfolio",
             "href": "/portfolio",
             "hasDropdown": false
           },
           {
-            "name": "Service",
-            "href": "/services",
-            "hasDropdown": false
-          },
-          {
-            "name": "Page's",
-            "href": "#",
-            "hasDropdown": true,
-            "dropdownItems": [
-              {
-                "name": "About Us",
-                "href": "/about"
-              },
-              {
-                "name": "Our Team",
-                "href": "/team"
-              },
-              {
-                "name": "Testimonial",
-                "href": "/testimonials"
-              },
-              {
-                "name": "FAQ's",
-                "href": "/faq"
-              },
-              {
-                "name": "Pricing",
-                "href": "/pricing"
-              },
-              {
-                "name": "Contact Us",
-                "href": "/contact"
-              },
-              {
-                "name": "404",
-                "href": "/404"
-              }
-            ]
-          },
-          {
-            "name": "Blogs",
-            "href": "/blogs",
+            "name": "Contact",
+            "href": "/contact",
             "hasDropdown": false
           }
         ]
@@ -781,5 +1012,1533 @@
         ]
       }
     ]
+  },
+  "/services/ppc": {
+    "sections": [
+      {
+        "sectionId": "ppc_hero",
+        "type": "hero",
+        "title": "Pay-Per-Click (PPC) Advertising",
+        "subtitle": "Paid Advertising",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+        "content": "Drive immediate, high-quality traffic to your website with our targeted PPC campaigns. We focus on maximizing ROI through data-driven bidding strategies and precision targeting."
+      },
+      {
+        "sectionId": "ppc_details",
+        "type": "standard",
+        "title": "Strategic PPC Management",
+        "subtitle": "Maximize Your ROI",
+        "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+        "content": "Our PPC management services are designed to put your brand in front of the right audience at the right time. We handle everything from keyword selection to conversion tracking.\n\nBy leveraging advanced analytics and continuous optimization, we ensure your ad spend is used effectively to generate leads and sales.",
+        "services": [
+          {
+            "icon": "Search",
+            "title": "In-Depth Keyword Research",
+            "description": "We identify high-intent keywords that your potential customers are searching for to ensure maximum relevance.",
+            "items": [
+              "Competitor Keyword Analysis",
+              "Negative Keyword Filtering",
+              "Search Term Optimization"
+            ]
+          },
+          {
+            "icon": "BarChart3",
+            "title": "Bid Management & Strategy",
+            "description": "Our experts manage your bids in real-time to maintain top positions while keeping your acquisition costs low.",
+            "items": [
+              "Automated Bidding Rules",
+              "Manual Bid Adjustments",
+              "Budget Pacing Control"
+            ]
+          },
+          {
+            "icon": "Zap",
+            "title": "Ad Copy & Creative",
+            "description": "We craft compelling ad copy that resonates with your audience and drives higher click-through rates.",
+            "items": [
+              "A/B Testing",
+              "Dynamic Search Ads",
+              "Extension Optimization"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "PPC Advertising Services - Online Strikers",
+      "description": "Expert PPC management services to drive traffic and increase conversions through Google Ads and Bing Ads."
+    }
+  },
+  "/services/meta-ads": {
+    "sections": [
+      {
+        "sectionId": "meta_hero",
+        "type": "hero",
+        "title": "Meta Ads Management",
+        "subtitle": "Facebook & Instagram",
+        "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop",
+        "content": "Reach billions of users with precision. Our Meta Ads experts create visually stunning campaigns that build brands and drive measurable business results."
+      },
+      {
+        "sectionId": "meta_details",
+        "type": "standard",
+        "title": "Unlock the Power of Social Advertising",
+        "subtitle": "Global Reach, Local Impact",
+        "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop",
+        "content": "Facebook and Instagram remain the most powerful platforms for audience targeting. We help you navigate the complex Meta advertising ecosystem to find your perfect customers.\n\nFrom building brand awareness to retargeting warm leads, our full-funnel approach ensures maximum impact.",
+        "services": [
+          {
+            "icon": "Share2",
+            "title": "Advanced Audience Targeting",
+            "description": "We use detailed demographics, interests, and lookalike audiences to find people most likely to convert.",
+            "items": [
+              "Custom Audience Building",
+              "Lookalike Modeling",
+              "Interest-Based Segments"
+            ]
+          },
+          {
+            "icon": "Rocket",
+            "title": "Creative Excellence",
+            "description": "Our team designs high-engagement creative assets optimized for mobile and social feeds.",
+            "items": [
+              "Video Ad Production",
+              "Carousel Ads",
+              "Collection Ads View"
+            ]
+          },
+          {
+            "icon": "LineChart",
+            "title": "Full-Funnel Retargeting",
+            "description": "We bring back interested visitors with strategic retargeting ads that guide them through the purchase journey.",
+            "items": [
+              "Pixel Implementation",
+              "Dynamic Retargeting",
+              "Conversion Tracking"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Meta Ads Management - Facebook & Instagram Advertising",
+      "description": "Master Facebook and Instagram advertising with Online Strikers. High-ROI Meta Ads management for all business types."
+    }
+  },
+  "/services/instagram-ads": {
+    "sections": [
+      {
+        "sectionId": "insta_hero",
+        "type": "hero",
+        "title": "Instagram Ads Marketing",
+        "subtitle": "Visual Storytelling",
+        "image": "https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=800&auto=format&fit=crop",
+        "content": "Capture attention with vibrant visual ads. We specialize in Instagram marketing that converts followers into loyal customers through Reels, Stories, and Feeds."
+      },
+      {
+        "sectionId": "insta_details",
+        "type": "standard",
+        "title": "Drive Growth through Visual Engagement",
+        "subtitle": "Aesthetics Meet Performance",
+        "image": "https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=800&auto=format&fit=crop",
+        "content": "Instagram is where your brand comes to life visually. Our campaigns are designed to blend seamlessly into the user experience while driving high engagement and conversions.",
+        "services": [
+          {
+            "icon": "Zap",
+            "title": "Reels & Stories Ads",
+            "description": "Leverage high-traffic formats like Reels and Stories to reach a younger, more active audience.",
+            "items": [
+              "Immersive Story Ads",
+              "Viral Reels Strategy",
+              "Interactive Poll Ads"
+            ]
+          },
+          {
+            "icon": "Target",
+            "title": "Influencer Collaboration",
+            "description": "We help you partner with the right influencers to amplify your reach and build trust within your niche.",
+            "items": [
+              "Influencer Matching",
+              "Co-Branded Content",
+              "Campaign Management"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Instagram Ads Agency - Boost Your Visual Presence",
+      "description": "Grow your brand with Instagram Advertising. Experts in Reels, Stories, and Feed marketing."
+    }
+  },
+  "/services/ecommerce-ppc": {
+    "sections": [
+      {
+        "sectionId": "ecom_hero",
+        "type": "hero",
+        "title": "Ecommerce PPC Marketing",
+        "subtitle": "Drive Online Sales",
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+        "content": "Scale your online store with high-performance Google Shopping and Amazon advertising. We focus on ROAS (Return on Ad Spend) to ensure your store's growth."
+      },
+      {
+        "sectionId": "ecom_details",
+        "type": "standard",
+        "title": "Built for Online Retailers",
+        "subtitle": "Maximize Your Store's Potential",
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+        "content": "Our ecommerce marketing strategies are built on data. From product feed optimization to dynamic remarketing, we cover every touchpoint of the buyer's journey.",
+        "services": [
+          {
+            "icon": "BarChart3",
+            "title": "Google Shopping Ads",
+            "description": "Get your products listed at the top of Google Search results with optimized product feeds.",
+            "items": [
+              "Merchant Center Setup",
+              "Product Feed Optimization",
+              "Performance Max Campaigns"
+            ]
+          },
+          {
+            "icon": "Search",
+            "title": "Amazon PPC Management",
+            "description": "Dominate the world's largest marketplace with expert Amazon Sponsored Products and Brands management.",
+            "items": [
+              "Amazon Storefront Setup",
+              "Keyword Optimization",
+              "ACoS Management"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Ecommerce PPC Services - Scale Your Online Sales",
+      "description": "Increase your ROAS with expert Ecommerce PPC. Google Shopping, Amazon Ads, and Shopify marketing specialists."
+    }
+  },
+  "/services/cro": {
+    "sections": [
+      {
+        "sectionId": "cro_hero",
+        "type": "hero",
+        "title": "Conversion Rate Optimization (CRO)",
+        "subtitle": "Turn Visitors into Customers",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+        "content": "Don't just drive traffic—convert it. Our CRO experts identify barriers to conversion and optimize your user journey for maximum performance."
+      },
+      {
+        "sectionId": "cro_details",
+        "type": "standard",
+        "title": "Data-Driven UX Optimization",
+        "subtitle": "Optimize Every Click",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+        "content": "We use heatmaps, A/B testing, and user behavior analysis to understand why visitors leave without buying. Then, we fix it.",
+        "services": [
+          {
+            "icon": "Target",
+            "title": "A/B & Multivariate Testing",
+            "description": "We test different layouts, headlines, and CTAs to find the most effective version for your audience.",
+            "items": [
+              "Headline Testing",
+              "CTA Optimization",
+              "Page Layout Experiments"
+            ]
+          },
+          {
+            "icon": "LineChart",
+            "title": "User Behavior Analysis",
+            "description": "Using tools like Hotjar to see exactly how users interact with your site and where they get stuck.",
+            "items": [
+              "Heatmap Analysis",
+              "Session Recording Review",
+              "Funnel Drop-off Audits"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "CRO Services - Conversion Rate Optimization Agency",
+      "description": "Maximize your ROI with Conversion Rate Optimization. We turn your website traffic into measurable business growth."
+    }
+  },
+  "/services/healthcare-ads": {
+    "sections": [
+      {
+        "sectionId": "health_hero",
+        "type": "hero",
+        "title": "Health Care Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1505751172107-e1773417387a?q=80&w=800&auto=format&fit=crop",
+        "content": "Reach more patients with ethical, high-performance healthcare marketing. We specialize in HIPAA-compliant advertising for clinics, hospitals, and specialized medical practices."
+      },
+      {
+        "sectionId": "health_details",
+        "type": "standard",
+        "title": "Expert Medical Marketing",
+        "subtitle": "Patient-Centric Growth",
+        "image": "https://images.unsplash.com/photo-1505751172107-e1773417387a?q=80&w=800&auto=format&fit=crop",
+        "content": "In the health care industry, trust is everything. Our advertising strategies focus on building authority and providing value to potential patients while adhering to strict medical advertising regulations.",
+        "services": [
+          {
+            "icon": "Search",
+            "title": "Local Patient Targeting",
+            "description": "We target local patients searching for specialized medical services in your immediate area.",
+            "items": [
+              "Geo-Fencing for Clinics",
+              "Local Search Optimization",
+              "Appointment Booking Focus"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Healthcare Advertising Agency - Online Strikers",
+      "description": "Professional medical marketing and healthcare advertising services for clinics and practitioners."
+    }
+  },
+  "/services/real-estate-ads": {
+    "sections": [
+      {
+        "sectionId": "re_hero",
+        "type": "hero",
+        "title": "Real Estate Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1582408921715-18e7806367c1?q=80&w=800&auto=format&fit=crop",
+        "content": "Find qualified buyers and motivated sellers with precision-targeted real estate ads. We help developers and agencies generate high-quality leads that actually convert."
+      },
+      {
+        "sectionId": "re_details",
+        "type": "standard",
+        "title": "Targeted Property Marketing",
+        "subtitle": "High-Quality Lead Gen",
+        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop",
+        "content": "In real estate, lead quality is more important than volume. We create campaigns that target serious property buyers based on their search intent, location, and financial behavior.\n\nFrom luxury villas to affordable housing, we optimize your marketing spend to ensure you get the best cost per qualified lead.",
+        "services": [
+          {
+            "icon": "Target",
+            "title": "Lead Identification",
+            "description": "We identify and target users actively searching for properties in your specific localities.",
+            "items": [
+              "Geo-targeting",
+              "Property Type Interest",
+              "Income-based Targeting"
+            ]
+          },
+          {
+            "icon": "Home",
+            "title": "Project Showcasing",
+            "description": "High-impact visual ads that highlight the USP of your real estate projects.",
+            "items": [
+              "Virtual Tour Integration",
+              "Floor Plan Highlights",
+              "Amenity Focus"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Real Estate Ads Management - Online Strikers",
+      "description": "Expert real estate advertising for agents and developers. High-quality lead generation for property sales."
+    }
+  },
+  "/services/education-ads": {
+    "sections": [
+      {
+        "sectionId": "edu_hero",
+        "type": "hero",
+        "title": "Education & School Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800&auto=format&fit=crop",
+        "content": "Boost your enrollments with strategic digital marketing for schools, colleges, and online learning platforms."
+      },
+      {
+        "sectionId": "edu_details",
+        "type": "standard",
+        "title": "Increase Student Enrollments",
+        "subtitle": "Strategic Education Marketing",
+        "image": "https://images.unsplash.com/photo-1523050335392-93851179ae22?q=80&w=800&auto=format&fit=crop",
+        "content": "The education sector is highly competitive. We help educational institutions build brand awareness and drive student inquiries through targeted PPC and social media campaigns.\n\nWhether you are a local school or a global university, our data-driven approach helps you reach students and parents at the right stage of their decision-making process.",
+        "services": [
+          {
+            "icon": "GraduationCap",
+            "title": "Enrollment Campaigns",
+            "description": "Targeted ad campaigns designed to increase course inquiries and campus visits.",
+            "items": [
+              "Seasonal Enrollment Ads",
+              "Course-specific Targeting",
+              "Webinar Promotion"
+            ]
+          },
+          {
+            "icon": "Users",
+            "title": "Parent & Student Outreach",
+            "description": "Tailored messaging that addresses the concerns and aspirations of both parents and students.",
+            "items": [
+              "Remarketing to Visitors",
+              "Testimonial Integration",
+              "Brand Authority Building"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Education Marketing Agency - Online Strikers",
+      "description": "Specialized digital marketing for schools and universities. Drive more enrollments."
+    }
+  },
+  "/services/b2b-ads": {
+    "sections": [
+      {
+        "sectionId": "b2b_hero",
+        "type": "hero",
+        "title": "B2B Advertising Solutions",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
+        "content": "Generate high-value leads with professional B2B marketing. We specialize in LinkedIn Ads and account-based marketing."
+      },
+      {
+        "sectionId": "b2b_details",
+        "type": "standard",
+        "title": "Scale Your Professional Reach",
+        "subtitle": "Enterprise-Level Marketing",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
+        "content": "B2B marketing requires a deep understanding of the professional buyer's journey. We help you connect with decision-makers through strategic LinkedIn campaigns and specialized B2B targeting.\n\nOur focus is on generating high-intent leads that fill your sales pipeline with quality opportunities.",
+        "services": [
+          {
+            "icon": "Linkedin",
+            "title": "LinkedIn Ads Mastery",
+            "description": "Leverage the world's largest professional network to reach CEOs, Managers, and Decision-makers.",
+            "items": [
+              "Job Title Targeting",
+              "Company Size Filtering",
+              "InMail Campaigns"
+            ]
+          },
+          {
+            "icon": "PieChart",
+            "title": "ABM Strategy",
+            "description": "Account-Based Marketing targeting specific high-value companies with personalized ad content.",
+            "items": [
+              "List-based Targeting",
+              "CRM Integration",
+              "Personalized Content"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "B2B Advertising Agency - Online Strikers",
+      "description": "Expert B2B digital marketing and LinkedIn Ads management. Drive growth and scale your sales funnel."
+    }
+  },
+  "/services/legal-ads": {
+    "sections": [
+      {
+        "sectionId": "law_hero",
+        "type": "hero",
+        "title": "Law Firm Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=800&auto=format&fit=crop",
+        "content": "Dominating the legal market requires precision. We provide expert marketing for law firms to attract qualified clients."
+      },
+      {
+        "sectionId": "law_details",
+        "type": "standard",
+        "title": "High-Value Case Generation",
+        "subtitle": "Strategic Legal Marketing",
+        "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800&auto=format&fit=crop",
+        "content": "In the legal industry, being visible at the exact moment a client needs help is crucial. Our law firm advertising strategies focus on high-intent keywords and localized targeting to ensure your firm stands out.\n\nWe help attorneys and law firms generate more leads for personal injury, family law, criminal defense, and corporate legal services.",
+        "services": [
+          {
+            "icon": "Scale",
+            "title": "Legal Intent Targeting",
+            "description": "Targeting users who are actively searching for legal representation and specific legal solutions.",
+            "items": [
+              "Practice Area Focus",
+              "Urgent Legal Search Ads",
+              "Localized Competitor Benchmarking"
+            ]
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Trust & Authority Ads",
+            "description": "Creating ad content that emphasizes your firm's experience, successful case history, and credibility.",
+            "items": [
+              "Client Review Highlighting",
+              "Attorney Profile Ads",
+              "Video Law Explainers"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Law Firm Advertising Agency - Online Strikers",
+      "description": "Scale your law firm with expert digital marketing. We help attorneys find high-value cases."
+    }
+  },
+  "/services/automotive-ads": {
+    "sections": [
+      {
+        "sectionId": "auto_ads_hero",
+        "type": "hero",
+        "title": "Automotive Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1562141989-c5c79ac8f576?q=80&w=800&auto=format&fit=crop",
+        "content": "Sell more cars and reach local buyers. We specialize in high-performance marketing for dealerships and automotive brands."
+      },
+      {
+        "sectionId": "auto_details",
+        "type": "standard",
+        "title": "Drive More Showroom Traffic",
+        "subtitle": "Automotive Growth Solutions",
+        "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop",
+        "content": "The car buying journey starts online. Our automotive advertising services ensure your inventory is visible to local buyers who are ready to make a purchase.\n\nWe optimize campaigns for dealerships to increase test drive bookings, service inquiries, and retail sales through targeted search and social ads.",
+        "services": [
+          {
+            "icon": "Car",
+            "title": "Inventory-Based Ads",
+            "description": "Dynamic ads that showcase your current vehicle stock directly to interested buyers in your area.",
+            "items": [
+              "Dynamic Search Ads",
+              "Facebook Marketplace Integration",
+              "Live Inventory Feeds"
+            ]
+          },
+          {
+            "icon": "MapPin",
+            "title": "Local Market Dominance",
+            "description": "Capturing the local market by targeting users within a specific radius of your dealership.",
+            "items": [
+              "Local Search Ads",
+              "Dealer Location Extensions",
+              "Radius Remarketing"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Automotive Advertising Agency - Online Strikers",
+      "description": "Professional marketing for car dealerships. Increase showroom traffic."
+    }
+  },
+  "/services/plumber-ads": {
+    "sections": [
+      {
+        "sectionId": "plumber_hero",
+        "type": "hero",
+        "title": "Plumber Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=800&auto=format&fit=crop",
+        "content": "Get more local plumbing jobs with targeted lead generation. We help plumbers dominate their local market."
+      },
+      {
+        "sectionId": "plumber_ads_details",
+        "type": "standard",
+        "title": "Win More Local Jobs",
+        "subtitle": "Plumbing Lead Generation",
+        "image": "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=800&auto=format&fit=crop",
+        "content": "When people have a plumbing emergency, they need help immediately. Our plumber advertising focus is on high-urgency search ads that put your business at the top of the list when local customers are in need.\n\nFrom leak repairs to full installations, we help you secure more calls and bookings through optimized Local Service Ads and localized PPC.",
+        "services": [
+          {
+            "icon": "Wrench",
+            "title": "Emergency Lead Gen",
+            "description": "Targeting high-urgency searches like 'plumber near me' and 'emergency leak repair'.",
+            "items": [
+              "Click-to-Call Ads",
+              "Local Search Dominance",
+              "24/7 Ad Scheduling"
+            ]
+          },
+          {
+            "icon": "Droplets",
+            "title": "Service Promotion",
+            "description": "Generating leads for specific high-value services like water heater installs and drain cleaning.",
+            "items": [
+              "Seasonal Offer Ads",
+              "Project Estimate Funnels",
+              "Customer Trust Badges"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Plumber Marketing Agency - Online Strikers",
+      "description": "Grow your plumbing business with expert local advertising."
+    }
+  },
+  "/services/photographer-ads": {
+    "sections": [
+      {
+        "sectionId": "photo_hero",
+        "type": "hero",
+        "title": "Photographer Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?q=80&w=800&auto=format&fit=crop",
+        "content": "Showcase your portfolio and book more shoots. We help photographers reach their ideal clients."
+      },
+      {
+        "sectionId": "photo_ads_details",
+        "type": "standard",
+        "title": "Visual Storytelling Marketing",
+        "subtitle": "Book More Shoots",
+        "image": "https://images.unsplash.com/photo-1452784444945-3f422708fe5e?q=80&w=800&auto=format&fit=crop",
+        "content": "For photographers, your portfolio is your best sales tool. Our advertising strategies focus on visual platforms like Instagram and Pinterest to showcase your work to brides, business owners, and families.\n\nWe optimize your ad spend to target specific niches—whether it's wedding, commercial, or portrait photography—to ensure you connect with clients who appreciate your style.",
+        "services": [
+          {
+            "icon": "Camera",
+            "title": "Portfolio Showcase Ads",
+            "description": "High-impact visual ads that put your best work in front of potential clients.",
+            "items": [
+              "Instagram Carousel Ads",
+              "Pinterest Visual Targeting",
+              "Video Behind-the-Scenes"
+            ]
+          },
+          {
+            "icon": "Users",
+            "title": "Niche Audience Targeting",
+            "description": "Connecting with specific audiences such as engaged couples, small business owners, or parents.",
+            "items": [
+              "Life Event Targeting",
+              "Demographic Filtering",
+              "Lookalike Audience Creation"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Marketing for Photographers - Online Strikers",
+      "description": "Book more photography clients with expert digital marketing."
+    }
+  },
+  "/services/roofing-ads": {
+    "sections": [
+      {
+        "sectionId": "roof_hero",
+        "type": "hero",
+        "title": "Roofing Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1632759162353-194941ee2471?q=80&w=800&auto=format&fit=crop",
+        "content": "Generate high-quality roofing leads and scale your business with professional local marketing."
+      },
+      {
+        "sectionId": "roof_ads_details",
+        "type": "standard",
+        "title": "Roofing Lead Excellence",
+        "subtitle": "Scale Your Contractor Business",
+        "image": "https://images.unsplash.com/photo-1632759162353-194941ee2471?q=80&w=800&auto=format&fit=crop",
+        "content": "Roofing is a high-ticket service that requires a strong local reputation. Our roofing advertising focus is on generating high-intent leads from homeowners who need roof repairs, replacements, or storm damage inspections.\n\nWe use a combination of Search Ads and localized Social Media campaigns to build a steady pipeline of projects for your team.",
+        "services": [
+          {
+            "icon": "Home",
+            "title": "Local Contractor Ads",
+            "description": "Targeting local homeowners with ads that emphasize reliability, speed, and quality.",
+            "items": [
+              "Storm Damage Targeting",
+              "Roofing Estimate Funnels",
+              "Google Local Service Ads"
+            ]
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Trust & Review Ads",
+            "description": "Highlighting your certifications and positive customer reviews to win big-ticket projects.",
+            "items": [
+              "BBB & Certification Badges",
+              "Client Video Testimonials",
+              "Warranty-focused Ad Copy"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Roofing Marketing Agency - Online Strikers",
+      "description": "Expert digital marketing for roofing contractors. Get more local jobs."
+    }
+  },
+  "/services/dental-ads": {
+    "sections": [
+      {
+        "sectionId": "dental_ads_hero",
+        "type": "hero",
+        "title": "Dental Advertising",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop",
+        "content": "Attract more patients to your dental clinic with specialized medical marketing and local SEO."
+      },
+      {
+        "sectionId": "dental_ads_details",
+        "type": "standard",
+        "title": "Patient-Centric Dental Ads",
+        "subtitle": "Book More Appointments",
+        "image": "https://images.unsplash.com/photo-1505751172107-e1773417387a?q=80&w=800&auto=format&fit=crop",
+        "content": "In dentistry, reaching local patients with the right message at the right time is the key to growth. Our dental advertising services focus on high-value treatments like implants, braces, and cosmetic dentistry.\n\nWe help dental practices build a steady stream of new patients through optimized Google Local Service Ads and localized social media campaigns.",
+        "services": [
+          {
+            "icon": "CalendarCheck",
+            "title": "Appointment Booking Ads",
+            "description": "Ads optimized specifically to drive clicks that result in direct appointment bookings.",
+            "items": [
+              "Online Booking Integration",
+              "Direct Call Extensions",
+              "Emergency Dental Targeting"
+            ]
+          },
+          {
+            "icon": "HeartPulse",
+            "title": "Treatment Promotion",
+            "description": "Highlighting specific procedural successes and patient benefits to drive high-value leads.",
+            "items": [
+              "Cosmetic Dentistry Ads",
+              "Orthodontic Lead Gen",
+              "Family Dental Packages"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Dental Marketing Agency - Online Strikers",
+      "description": "Grow your dental practice with expert patient-centric marketing."
+    }
+  },
+  "/services/dental-seo": {
+    "sections": [
+      {
+        "sectionId": "dental_seo_hero",
+        "type": "hero",
+        "title": "Dental SEO Services",
+        "subtitle": "Patient Acquisition",
+        "image": "https://images.unsplash.com/photo-1505751172107-e1773417387a?q=80&w=800&auto=format&fit=crop",
+        "content": "Attract more patients to your dental practice with expert dental SEO strategies."
+      },
+      {
+        "sectionId": "dental_seo_details",
+        "type": "standard",
+        "title": "Local Visibility for Dentists",
+        "subtitle": "Grow Your Clinic Organically",
+        "image": "https://images.unsplash.com/photo-1606811841660-1b5168c5c7d6?q=80&w=800&auto=format&fit=crop",
+        "content": "Most patients search for 'dentist near me' when they need help. Our dental SEO services ensure your clinic appears in the top results for local dental queries.\n\nWe optimize your Google Business Profile and website content to build trust and authority in your local community.",
+        "services": [
+          {
+            "icon": "MapPin",
+            "title": "Local SEO Optimization",
+            "description": "Perfecting your local presence to ensure you win the 'near me' search game.",
+            "items": [
+              "Google Maps Ranking",
+              "Citation Management",
+              "Local Keyword Targeting"
+            ]
+          },
+          {
+            "icon": "Stethoscope",
+            "title": "Service Page SEO",
+            "description": "Optimizing specific pages for treatments like implants, whitening, and orthodontics.",
+            "items": [
+              "Treatment-specific Content",
+              "Patient Education Blogs",
+              "Schema Markup"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Dental SEO Agency - Online Strikers",
+      "description": "Expert search engine optimization for dentists. Grow your clinic's organic visibility."
+    }
+  },
+  "/services/automotive-seo": {
+    "sections": [
+      {
+        "sectionId": "auto_seo_hero",
+        "type": "hero",
+        "title": "Automotive SEO Services",
+        "subtitle": "Rank Your Dealership",
+        "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800&auto=format&fit=crop",
+        "content": "Dominate the local automotive search market. We help dealerships rank higher and sell faster."
+      },
+      {
+        "sectionId": "auto_seo_details",
+        "type": "standard",
+        "title": "Rank Higher, Sell Faster",
+        "subtitle": "Dealership Visibility",
+        "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800&auto=format&fit=crop",
+        "content": "The automotive market is crowded. Our specialized SEO strategies help your dealership rank for local car-buying keywords, ensuring that when customers search for their next vehicle, they find you first.\n\nWe focus on optimizing your inventory pages and local search presence to increase organic traffic and showroom visits.",
+        "services": [
+          {
+            "icon": "Search",
+            "title": "Inventory Optimization",
+            "description": "Optimizing individual vehicle listing pages to rank for specific make and model searches.",
+            "items": [
+              "Model-specific Keyword Targeting",
+              "Rich Snippet Implementation",
+              "Optimized Image Tags"
+            ]
+          },
+          {
+            "icon": "MapPin",
+            "title": "Local SEO for Dealers",
+            "description": "Ensuring your dealership dominates local maps and searches in your service area.",
+            "items": [
+              "Google Business Profile Management",
+              "Local Citation Building",
+              "Geo-targeted Content"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Automotive SEO Agency - Online Strikers",
+      "description": "Drive more car buyers to your dealership website with professional SEO."
+    }
+  },
+  "/services/b2b-seo": {
+    "sections": [
+      {
+        "sectionId": "b2b_seo_hero",
+        "type": "hero",
+        "title": "B2B SEO Solutions",
+        "subtitle": "Industrial & Enterprise SEO",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
+        "content": "Generate high-value B2B leads through organic search. We specialize in complex industry SEO."
+      },
+      {
+        "sectionId": "b2b_seo_details",
+        "type": "standard",
+        "title": "Establish B2B Authority",
+        "subtitle": "High-Intent SEO Strategy",
+        "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop",
+        "content": "B2B SEO is about more than just traffic; it's about reaching executive decision-makers. We build long-term authority through content-driven SEO that positions your brand as a leader in your industry.\n\nOur B2B strategies focus on the entire sales funnel—from informational 'top of funnel' content to high-intent 'bottom of funnel' keywords.",
+        "services": [
+          {
+            "icon": "FileText",
+            "title": "Content Authority Building",
+            "description": "Creating high-value whitepapers, case studies, and blogs that attract professional searchers.",
+            "items": [
+              "Topic Cluster Development",
+              "E-E-A-T Content Strategy",
+              "Internal Linking Optimization"
+            ]
+          },
+          {
+            "icon": "Link",
+            "title": "Strategic Link Building",
+            "description": "Earning high-quality backlinks from niche-relevant and authoritative industry publications.",
+            "items": [
+              "Guest Posting Outreach",
+              "PR-driven Backlinks",
+              "Broken Link Building"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "B2B SEO Agency - Online Strikers",
+      "description": "Expert B2B search engine optimization to reach corporate decision-makers."
+    }
+  },
+  "/services/education-seo": {
+    "sections": [
+      {
+        "sectionId": "edu_seo_hero",
+        "type": "hero",
+        "title": "Education SEO Services",
+        "subtitle": "Enrollment Growth",
+        "image": "https://images.unsplash.com/photo-1523050335392-93851179ae22?q=80&w=800&auto=format&fit=crop",
+        "content": "Help students find your institution. We provide tailored SEO for schools, colleges, and training centers."
+      },
+      {
+        "sectionId": "edu_seo_details",
+        "type": "standard",
+        "title": "Boost Your Enrollment Rankings",
+        "subtitle": "School & College SEO",
+        "image": "https://images.unsplash.com/photo-1524178232363-1fb280714553?q=80&w=800&auto=format&fit=crop",
+        "content": "When students and parents are looking for educational opportunities, they start on Google. Our specialized education SEO services help your institution rank for critical enrollment keywords, from 'best private school near me' to specialized degree programs.\n\nWe focus on building a strong local presence and high-authority content that establishes your school as a leader in education.",
+        "services": [
+          {
+            "icon": "School",
+            "title": "Local Enrollment SEO",
+            "description": "Ensuring your school or college dominates local search results in your catchment area.",
+            "items": [
+              "Regional Keyword Targeting",
+              "Map Pack Optimization",
+              "Campus Location SEO"
+            ]
+          },
+          {
+            "icon": "BookOpen",
+            "title": "Academic Content Strategy",
+            "description": "Developing informational blogs and guides that answer the questions prospective students are asking.",
+            "items": [
+              "Course Guide Optimization",
+              "Admission FAQ SEO",
+              "Educational Authority Building"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Education SEO Agency - Online Strikers",
+      "description": "Professional SEO for educational institutions. Boost your student inquiries."
+    }
+  },
+  "/services/healthcare-seo": {
+    "sections": [
+      {
+        "sectionId": "health_seo_hero",
+        "type": "hero",
+        "title": "Health Care SEO",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1505751172107-e1773417387a?q=80&w=800&auto=format&fit=crop",
+        "content": "Build trust and visibility for your medical practice with ethical, HIPAA-compliant healthcare SEO."
+      },
+      {
+        "sectionId": "health_seo_details",
+        "type": "standard",
+        "title": "Reliable Medical Search Results",
+        "subtitle": "Patient-Focused SEO",
+        "image": "https://images.unsplash.com/photo-1576091160550-217359f4ecf8?q=80&w=800&auto=format&fit=crop",
+        "content": "Patients look for doctors they can trust. Our healthcare SEO strategies follow strict E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness) guidelines to ensure your medical practice ranks for relevant health queries.\n\nWe optimize your service pages for specific medical conditions and treatments, helping you connect with patients seeking expert care in your local area.",
+        "services": [
+          {
+            "icon": "Stethoscope",
+            "title": "Treatment-Specific SEO",
+            "description": "Ranking for specific medical procedures and health conditions to attract high-intent patients.",
+            "items": [
+              "Condition-based Keywords",
+              "Procedural SEO Content",
+              "Medical Vocabulary Management"
+            ]
+          },
+          {
+            "icon": "UserCheck",
+            "title": "E-E-A-T Compliance",
+            "description": "Aligning your content with Google's medical quality standards to build lasting search authority.",
+            "items": [
+              "Doctor Profile Optimization",
+              "Expert Review Integration",
+              "Medical Backlink Building"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Healthcare SEO Agency - Online Strikers",
+      "description": "Attract more patients to your medical practice with professional search optimization."
+    }
+  },
+  "/services/legal-seo": {
+    "sections": [
+      {
+        "sectionId": "law_seo_hero",
+        "type": "hero",
+        "title": "Law Firm SEO",
+        "subtitle": "Online Strikers",
+        "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800&auto=format&fit=crop",
+        "content": "Dominate the legal search market and attract high-value cases with expert attorney SEO."
+      },
+      {
+        "sectionId": "law_seo_details",
+        "type": "standard",
+        "title": "Win the Legal Search Market",
+        "subtitle": "Attorney Visibility Strategy",
+        "image": "https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=800&auto=format&fit=crop",
+        "content": "In the legal world, ranking for 'lawyer near me' or specific practice areas like 'personal injury attorney' can be the difference between a thriving firm and an invisible one.\n\nOur law firm SEO services focus on technical excellence and high-authority link building, ensuring that your firm occupies the top slots in search results for your most profitable practice areas.",
+        "services": [
+          {
+            "icon": "Gavel",
+            "title": "Practice Area SEO",
+            "description": "Establishing deep topical authority for your specific legal specialties and service areas.",
+            "items": [
+              "Niche Legal Keywords",
+              "Case Study Optimization",
+              "Legal Blog Authority"
+            ]
+          },
+          {
+            "icon": "Link",
+            "title": "High-Authority Legal Links",
+            "description": "Earning backlinks from respected legal directories and industry publications.",
+            "items": [
+              "Legal Directory Optimization",
+              "Press Release SEO",
+              "Local Chamber Backlinks"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Law Firm SEO Agency - Online Strikers",
+      "description": "Expert search engine optimization for lawyers. Grow your firm's organic presence."
+    }
+  },
+  "/services/photographer-seo": {
+    "sections": [
+      {
+        "sectionId": "photo_seo_hero",
+        "type": "hero",
+        "title": "Photographer SEO Services",
+        "subtitle": "Portfolio Optimization",
+        "image": "https://images.unsplash.com/photo-1452784444945-3f422708fe5e?q=80&w=800&auto=format&fit=crop",
+        "content": "Let your work be seen by clients searching for professional photography in your area."
+      },
+      {
+        "sectionId": "photo_seo_details",
+        "type": "standard",
+        "title": "Be Found by New Clients",
+        "subtitle": "Visual Search Optimization",
+        "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800&auto=format&fit=crop",
+        "content": "As a photographer, your work deserves to be seen. Our photographer SEO services help your portfolio rank for local search terms like 'wedding photographer in [City]' or 'professional portrait studio'.\n\nWe optimize your image-heavy website for speed and search engine readability, ensuring your beautiful captures translate into consistent bookings.",
+        "services": [
+          {
+            "icon": "Image",
+            "title": "Image Search SEO",
+            "description": "Optimizing your high-resolution portfolio to appear in Google Image search results.",
+            "items": [
+              "Alt Text Strategy",
+              "Compressed Web Formats",
+              "Image Schema Markup"
+            ]
+          },
+          {
+            "icon": "Map",
+            "title": "Geographic Keyword Focus",
+            "description": "Targeting clients in your specific service areas through localized content and mapping.",
+            "items": [
+              "City-specific Landing Pages",
+              "Local Map Pack Visibility",
+              "Localized Portfolio Tagging"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "SEO for Photographers - Online Strikers",
+      "description": "Boost your photography business with expert organic search optimization."
+    }
+  },
+  "/services/plumber-seo": {
+    "sections": [
+      {
+        "sectionId": "plumber_seo_hero",
+        "type": "hero",
+        "title": "Plumber SEO Services",
+        "subtitle": "Local Dominance",
+        "image": "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=800&auto=format&fit=crop",
+        "content": "Get more emergency calls and service booking through optimized local plumbing SEO."
+      },
+      {
+        "sectionId": "plumber_seo_details",
+        "type": "standard",
+        "title": "Dominating Local Services",
+        "subtitle": "High-Urgency Local SEO",
+        "image": "https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=800&auto=format&fit=crop",
+        "content": "When a pipe bursts, customers don't scroll past the first page of Google. Our plumber SEO services ensure your business is at the top of local search results when it matters most.\n\nWe focus on building a strong local reputation through Google Business Profile optimization and localized service pages that drive clicks and calls.",
+        "services": [
+          {
+            "icon": "GlassWater",
+            "title": "Emergency Keyword SEO",
+            "description": "Ranking for high-urgency keywords that result in immediate service calls.",
+            "items": [
+              "24/7 Service Optimization",
+              "Emergency Repair Rankings",
+              "Localized Trust Signals"
+            ]
+          },
+          {
+            "icon": "BarChart",
+            "title": "Citation & Review Growth",
+            "description": "Monitoring and growing your local mentions and reviews to build search engines' trust.",
+            "items": [
+              "GMB Review Strategy",
+              "Directory Listings (Yelp, Angie's)",
+              "Consistent NAP Data"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Plumber SEO Agency - Online Strikers",
+      "description": "Grow your plumbing business with expert local search engine optimization."
+    }
+  },
+  "/services/real-estate-seo": {
+    "sections": [
+      {
+        "sectionId": "re_seo_hero",
+        "type": "hero",
+        "title": "Real Estate SEO Services",
+        "subtitle": "Property Search Mastery",
+        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop",
+        "content": "Rank your listings and localized property pages at the top of organic search results."
+      },
+      {
+        "sectionId": "re_seo_details",
+        "type": "standard",
+        "title": "Property Search Mastery",
+        "subtitle": "Competitive Real Estate SEO",
+        "image": "https://images.unsplash.com/photo-1582408921715-18e7806365c1?q=80&w=800&auto=format&fit=crop",
+        "content": "The real estate market is dominated by big platforms, but local agencies can still win. Our real estate SEO services help your listings rank for localized property searches and neighborhood-specific queries.\n\nWe build topical authority about your service areas, making you the go-to resource for buyers and sellers in your local market.",
+        "services": [
+          {
+            "icon": "Building2",
+            "title": "Neighborhood SEO",
+            "description": "Ranking for specific neighborhood and community-level property searches.",
+            "items": [
+              "Locality Content Guides",
+              "Neighborhood-level Keywords",
+              "Local Market Reports"
+            ]
+          },
+          {
+            "icon": "MapPin",
+            "title": "Localized Map Pack",
+            "description": "Ensuring your agency appears in the map results for property searches in your area.",
+            "items": [
+              "GMB Optimization",
+              "Local Listing Accuracy",
+              "Proximity search ranking"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Real Estate SEO Agency - Online Strikers",
+      "description": "Expert search engine optimization for agents and developers."
+    }
+  },
+  "/services/roofing-seo": {
+    "sections": [
+      {
+        "sectionId": "roof_seo_hero",
+        "type": "hero",
+        "title": "Roofing SEO Services",
+        "subtitle": "Contractor Strength",
+        "image": "https://images.unsplash.com/photo-1632759162353-194941ee2471?q=80&w=800&auto=format&fit=crop",
+        "content": "Establish local authority and generate consistent organic leads for your roofing business."
+      },
+      {
+        "sectionId": "roof_seo_details",
+        "type": "standard",
+        "title": "Build Your Organic Presence",
+        "subtitle": "Contractor SEO Strength",
+        "image": "https://images.unsplash.com/photo-1635424710928-0544e8512eae?q=80&w=800&auto=format&fit=crop",
+        "content": "High-value roofing projects often start with detailed research. Our roofing SEO strategies help you rank for both emergency repair terms and high-value replacement informational keywords.\n\nWe optimize your site for local authority, ensuring that homeowners in your service areas trust your business above competitors.",
+        "services": [
+          {
+            "icon": "Hammer",
+            "title": "Contractor Service SEO",
+            "description": "Ranking for core roofing services like shingle repair, flat roof install, and storm damage.",
+            "items": [
+              "Service-specific SEO Pages",
+              "Technical Content Optimization",
+              "Regional Keyword Focus"
+            ]
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Authority & Trust Signals",
+            "description": "Implementing local schema and trust badges that signal quality to both Google and users.",
+            "items": [
+              "Local Business Schema",
+              "Certification Highlighting",
+              "Verified Project Showcasing"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Roofing SEO Agency - Online Strikers",
+      "description": "Professional search engine optimization for roofing contractors."
+    }
+  },
+  "/services/web-development": {
+    "sections": [
+      {
+        "sectionId": "web_dev_hero",
+        "type": "hero",
+        "title": "Custom Web Development",
+        "subtitle": "Build Your Digital Future",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
+        "content": "We build fast, secure, and scalable websites tailored to your unique business needs."
+      },
+      {
+        "sectionId": "web_dev_details",
+        "type": "standard",
+        "title": "High-Performance Web Solutions",
+        "subtitle": "Custom Development",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
+        "content": "Your website is your digital storefront. We build custom websites that are not only visually stunning but also technically superior, ensuring fast load times, mobile responsiveness, and high conversion rates.\n\nFrom simple business websites to complex web applications, our development team uses the latest technologies to deliver results that help you grow.",
+        "services": [
+          {
+            "icon": "Code2",
+            "title": "Full-Stack Development",
+            "description": "Comprehensive front-end and back-end development using modern frameworks like React, Next.js, and Node.js.",
+            "items": [
+              "Responsive Web Design",
+              "API Integration",
+              "Single Page Applications"
+            ]
+          },
+          {
+            "icon": "Smartphone",
+            "title": "Mobile-First Approach",
+            "description": "Ensuring your website provides an exceptional experience across all devices and screen sizes.",
+            "items": [
+              "PWA Development",
+              "Cross-browser Compatibility",
+              "Touch-optimized Navigation"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Web Development Agency - Online Strikers",
+      "description": "Expert custom web development services. We build high-performance websites that drive business growth."
+    }
+  },
+  "/services/wordpress-development": {
+    "sections": [
+      {
+        "sectionId": "wp_dev_hero",
+        "type": "hero",
+        "title": "WordPress Development",
+        "subtitle": "Manage Content with Ease",
+        "image": "https://images.unsplash.com/photo-1541462608141-ad60397d5873?q=80&w=800&auto=format&fit=crop",
+        "content": "Scale your business with the world's most popular CMS. We create high-performance custom WordPress sites."
+      },
+      {
+        "sectionId": "wp_dev_details",
+        "type": "standard",
+        "title": "Scalable & Easy to Manage",
+        "subtitle": "WordPress Excellence",
+        "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop",
+        "content": "WordPress powers over 40% of the web for a reason. We create custom WordPress websites that are easy for you to manage while maintaining professional performance and security.\n\nWhether you need a blog, a corporate site, or an e-commerce store, we tailor WordPress to meet your specific business requirements.",
+        "services": [
+          {
+            "icon": "Layout",
+            "title": "Custom Theme Design",
+            "description": "Bespoke WordPress themes built from scratch to match your brand identity perfectly.",
+            "items": [
+              "Lightweight Code",
+              "Gutenberg Optimization",
+              "Brand-consistent UI"
+            ]
+          },
+          {
+            "icon": "Settings2",
+            "title": "Plugin & Feature Dev",
+            "description": "Extending WordPress functionality with custom plugins and seamless third-party integrations.",
+            "items": [
+              "LMS Integration",
+              "Custom Post Types",
+              "Performance Optimization"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "WordPress Development Agency - Online Strikers",
+      "description": "Expert WordPress development services. Custom themes, performance optimization, and secure hosting."
+    }
+  },
+  "/services/shopify-development": {
+    "sections": [
+      {
+        "sectionId": "shopify_dev_hero",
+        "type": "hero",
+        "title": "Shopify Store Development",
+        "subtitle": "Scale Your Ecommerce",
+        "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",
+        "content": "Launch and scale your online store with expert Shopify development and conversion optimization."
+      },
+      {
+        "sectionId": "shopify_dev_details",
+        "type": "standard",
+        "title": "Enterprise Ecommerce Results",
+        "subtitle": "Shopify Store Mastery",
+        "image": "https://images.unsplash.com/photo-1523474253046-2cd2c78a0dbb?q=80&w=800&auto=format&fit=crop",
+        "content": "Shopify is the world's most popular ecommerce platform. We help you unlock its full potential with custom theme development, app integrations, and checkout optimizations that drive sales.\n\nFrom small boutiques to enterprise brands, we build high-converting Shopify stores that provide a seamless shopping experience.",
+        "services": [
+          {
+            "icon": "ShoppingBag",
+            "title": "Shopify Plus Solutions",
+            "description": "Scaling your brand with advanced Shopify features, checkout liquid, and custom flows.",
+            "items": [
+              "Theme Customization",
+              "Headless Commerce",
+              "Migration Services"
+            ]
+          },
+          {
+            "icon": "Kanban",
+            "title": "App Integration",
+            "description": "Connecting your store with ERPs, CRMs, and marketing tools for automated operations.",
+            "items": [
+              "Inventory Sync",
+              "Dynamic Pricing Apps",
+              "Customer Loyalty Programs"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Shopify Development Agency - Online Strikers",
+      "description": "Expert Shopify development and theme customization to boost your ecommerce sales."
+    }
+  },
+  "/services/cms-development": {
+    "sections": [
+      {
+        "sectionId": "cms_dev_hero",
+        "type": "hero",
+        "title": "CMS Development",
+        "subtitle": "Content Control",
+        "image": "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=800&auto=format&fit=crop",
+        "content": "Empower your team with a custom-built Content Management System that fits your workflow."
+      },
+      {
+        "sectionId": "cms_dev_details",
+        "type": "standard",
+        "title": "Empower Your Content Team",
+        "subtitle": "Custom CMS Solutions",
+        "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=800&auto=format&fit=crop",
+        "content": "A powerful CMS allows you to update your website without needing a developer for every small change. We build and integrate Content Management Systems that are intuitive, secure, and tailored to your specific workflow.\n\nWhether you need an enterprise-grade headless CMS or a custom-built solution, we ensure your team has the tools they need to manage digital content efficiently.",
+        "services": [
+          {
+            "icon": "FileEdit",
+            "title": "Headless CMS Integration",
+            "description": "Integrating modern headless systems like Contentful, Strapi, or Sanity for multi-channel content delivery.",
+            "items": [
+              "Omnichannel Content",
+              "Fast API Response",
+              "Developer-friendly Architecture"
+            ]
+          },
+          {
+            "icon": "Server",
+            "title": "Custom CMS Portals",
+            "description": "Building bespoke management panels tailored precisely to your unique business data and processes.",
+            "items": [
+              "Role-based Access",
+              "Custom Dashboard Workflows",
+              "Integrated Data Analytics"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "CMS Development Services - Online Strikers",
+      "description": "Professional CMS development. Custom solutions for easy content management."
+    }
+  },
+  "/services/laravel-development": {
+    "sections": [
+      {
+        "sectionId": "laravel_dev_hero",
+        "type": "hero",
+        "title": "Laravel App Development",
+        "subtitle": "Enterprise PHP Mastery",
+        "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop",
+        "content": "Build complex, high-performance web applications with the power of the Laravel framework."
+      },
+      {
+        "sectionId": "laravel_dev_details",
+        "type": "standard",
+        "title": "Robust Enterprise Applications",
+        "subtitle": "Laravel Framework Mastery",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+        "content": "Laravel is the framework of choice for modern PHP development. We build secure, scalable, and high-performance applications that handle complex business logic and high traffic volumes with ease.\n\nOur Laravel experts follow best practices to deliver clean, maintainable code that grows with your business.",
+        "services": [
+          {
+            "icon": "Box",
+            "title": "Custom Web Apps",
+            "description": "Tailor-made web applications designed to solve specific business challenges and improve efficiency.",
+            "items": [
+              "SaaS Platform Dev",
+              "Custom CRM/ERP Build",
+              "Complex Logic Implementation"
+            ]
+          },
+          {
+            "icon": "Zap",
+            "title": "Backend Optimization",
+            "description": "Building lightning-fast APIs and backend systems that power your web and mobile applications.",
+            "items": [
+              "RESTful API Development",
+              "Real-time Notifications",
+              "Database Architectural Design"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Laravel Development Agency - Online Strikers",
+      "description": "Expert Laravel development services for scalable web applications."
+    }
+  },
+  "/services/ui-ux-design": {
+    "sections": [
+      {
+        "sectionId": "uiux_hero",
+        "type": "hero",
+        "title": "UI/UX Design Services",
+        "subtitle": "User-Centric Excellence",
+        "image": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=800&auto=format&fit=crop",
+        "content": "Design digital experiences that wow your users and drive higher conversion rates."
+      },
+      {
+        "sectionId": "uiux_details",
+        "type": "standard",
+        "title": "User-First Digital Experiences",
+        "subtitle": "Design for Conversion",
+        "image": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=800&auto=format&fit=crop",
+        "content": "Good design is more than just looks; it's about how it works. Our UI/UX design process focuses on understanding your users' needs and creating intuitive interfaces that make their journey seamless and enjoyable.\n\nWe combine creativity with data-driven insights to build digital experiences that strengthen your brand and drive business growth.",
+        "services": [
+          {
+            "icon": "PenTool",
+            "title": "Visual Design (UI)",
+            "description": "Crafting stunning visual interfaces that align with your brand's aesthetic and values.",
+            "items": [
+              "Brand Design Systems",
+              "Interactive Prototypes",
+              "Modern Aesthetic Focus"
+            ]
+          },
+          {
+            "icon": "Users",
+            "title": "Experience Design (UX)",
+            "description": "Optimizing the user journey through research, wireframing, and rigorous testing.",
+            "items": [
+              "User Research & Personas",
+              "Wireframe Architecture",
+              "Usability Testing"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "UI/UX Design Agency - Online Strikers",
+      "description": "Professional UI/UX design services. We create engaging digital experiences."
+    }
+  },
+  "/services/lms-design": {
+    "sections": [
+      {
+        "sectionId": "lms_hero",
+        "type": "hero",
+        "title": "LMS Platform Design",
+        "subtitle": "The Future of Learning",
+        "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop",
+        "content": "Build powerful, engaging, and scalable online learning platforms for your students or employees."
+      },
+      {
+        "sectionId": "lms_details",
+        "type": "standard",
+        "title": "Scale Your Online Education",
+        "subtitle": "Custom Learning Platforms",
+        "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop",
+        "content": "Digital learning is the future. We build custom Learning Management Systems (LMS) that provide a seamless educational experience for both instructors and students.\n\nFrom corporate training portals to globally accessible online course platforms, our LMS solutions are built for high performance, intuitive navigation, and robust user management.",
+        "services": [
+          {
+            "icon": "GraduationCap",
+            "title": "Course Management",
+            "description": "Building powerful tools for creating, organizing, and delivering educational content at scale.",
+            "items": [
+              "Video Lesson Integration",
+              "Interactive Quizzes",
+              "Student Progress Tracking"
+            ]
+          },
+          {
+            "icon": "Users2",
+            "title": "Community & Engagement",
+            "description": "Fostering collaboration with integrated forums, messaging systems, and user profiles.",
+            "items": [
+              "Student Discussion Boards",
+              "Instructor Feedback Tools",
+              "Automated Certification"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "LMS Development Agency - Online Strikers",
+      "description": "Expert LMS design and development services for online education."
+    }
+  },
+  "/services/crm-design": {
+    "sections": [
+      {
+        "sectionId": "crm_hero",
+        "type": "hero",
+        "title": "Custom CRM Development",
+        "subtitle": "Manage Relationships Better",
+        "image": "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=800&auto=format&fit=crop",
+        "content": "Streamline your sales and customer management with a custom CRM built for your business growth."
+      },
+      {
+        "sectionId": "crm_details",
+        "type": "standard",
+        "title": "Streamline Your Business Growth",
+        "subtitle": "Custom CRM Solutions",
+        "image": "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=800&auto=format&fit=crop",
+        "content": "Efficient customer relationship management is the backbone of any successful business. We design and integrate custom CRM systems that help you track leads, manage customer interactions, and automate your sales pipeline.\n\nOur solutions are tailored to your specific business processes, ensuring your team has the data they need to build lasting client relationships and close more deals.",
+        "services": [
+          {
+            "icon": "Users",
+            "title": "Lead & Contact Management",
+            "description": "Centralizing all your customer data in an intuitive, easy-to-use platform with automated entry.",
+            "items": [
+              "Pipeline Visualization",
+              "Automated Lead Scoring",
+              "Customer History Tracking"
+            ]
+          },
+          {
+            "icon": "Zap",
+            "title": "Workflow Automation",
+            "description": "Reducing manual tasks by automating repetitive sales and administrative processes.",
+            "items": [
+              "Email Sequence Automation",
+              "Automated Task Reminders",
+              "Integrated Sales Reporting"
+            ]
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "CRM Development Services - Online Strikers",
+      "description": "Professional CRM design and integration to streamline your business processes."
+    }
   }
 }

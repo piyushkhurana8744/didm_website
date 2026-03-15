@@ -1,0 +1,10 @@
+/: process_initial
+/: blog_initial
+/about: vision_mission
+/services: services_grid_initial
+/services: services_stats_initial
+/portfolio: portfolio_grid_initial
+/team: team_grid_initial
+/faq: common_questions
+/faq: general_questions
+/contact: contact_info

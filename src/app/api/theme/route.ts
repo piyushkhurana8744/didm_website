@@ -8,12 +8,22 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    await connectDB();
-    let theme = await ThemeSettings.findOne({});
-    if (!theme) {
-      theme = await ThemeSettings.create({});
+    try {
+      await connectDB();
+      let theme = await ThemeSettings.findOne({});
+      if (!theme) {
+        theme = await ThemeSettings.create({});
+      }
+      return NextResponse.json(theme);
+    } catch (dbError) {
+      console.error("Theme API: Database connection failed, returning default theme");
+      return NextResponse.json({
+        primaryColor: "#be1e2e",
+        accentColor: "#be1e2e",
+        darkMode: true,
+        customCss: ""
+      });
     }
-    return NextResponse.json(theme);
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }

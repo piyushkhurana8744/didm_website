@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import StatsSection from "@/components/StatsSection";
+import DigitalServicesSection from "@/components/DigitalServicesSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ProcessSection from "@/components/ProcessSection";
 import Testimonials from "@/components/Testimonials";
@@ -60,6 +61,7 @@ export default function Home() {
       
       <Hero content={heroSection} />
       <StatsSection content={statsSection} />
+      <DigitalServicesSection />
       <WhyChooseUs content={whyChooseSection} />
       <ProcessSection content={processSection} />
       

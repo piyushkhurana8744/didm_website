@@ -66,6 +66,7 @@ async function seedContent() {
             "/team": "Team",
             "/faq": "FAQ",
             "/contact": "Contact",
+            "/digital-marketing-agency": "Digital Marketing Agency",
             "__navbar": "Navbar",
             "__footer": "Footer"
         };

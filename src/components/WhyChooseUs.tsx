@@ -9,23 +9,28 @@ import { Card, CardContent } from "@/components/ui/card";
 const reasons = [
   {
     number: "1",
-    title: "Proven Track Record",
-    description: "Hundreds Of Successful Campaigns And Satisfied Clients Across Various Industries.",
+    title: "Experienced Marketing Professionals",
+    description: "Our team consists of digital marketing specialists with experience in SEO, paid advertising, content marketing, and social media growth.",
   },
   {
     number: "2",
-    title: "Custom SEO Plan",
-    description: "We Design SEO Plans That Drive You Towards Your Success And Goals.",
+    title: "Customized Marketing Strategies",
+    description: "Every business has unique goals. We create tailored marketing strategies based on your industry, audience behavior, and business objectives.",
   },
   {
     number: "3",
-    title: "Expert Team",
-    description: "Certified Professionals With Extensive Industry Experience In Digital Marketing.",
+    title: "Transparent Communication and Reporting",
+    description: "We believe in complete transparency. Our detailed performance reports help clients understand campaign progress and marketing impact.",
   },
   {
     number: "4",
-    title: "Clear Reporting",
-    description: "Detailed Reports To Keep You Informed Every Step Of The Way.",
+    title: "Data-Driven Marketing Approach",
+    description: "Our strategies are based on analytics and performance insights, ensuring continuous improvement and better marketing outcomes.",
+  },
+  {
+    number: "5",
+    title: "Focus on Long-Term Growth",
+    description: "Rather than short-term gains, we focus on sustainable growth strategies that build strong online visibility and brand authority.",
   },
 ];
 
@@ -53,31 +58,36 @@ export default function WhyChooseUs({ content }: WhyChooseUsProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const displayTitle = content?.title || "Why We're the Right Choice for Your Business";
+  const displayTitle = content?.title || "Why Choose Online Strikers as Your Digital Marketing Partner?";
   const displaySubtitle = content?.subtitle || "Why Choose Us";
-  const displayContent = content?.content || "We offer tailored digital marketing solutions that drive real results.";
+  const displayContent = content?.content || "Selecting the right digital marketing agency can significantly impact your business growth. Online Strikers focuses on delivering strategies that generate real results.";
   const displayImageUrl = content?.imageUrl || "/images/why_choose_us_new.png";
   const displayCtaText = content?.ctaText || "Work With Us";
   const displayReasons = content?.reasons || [
     {
       number: "1",
-      title: "Proven Track Record",
-      description: "Hundreds Of Successful Campaigns And Satisfied Clients Across Various Industries.",
+      title: "Experienced Marketing Professionals",
+      description: "Our team consists of digital marketing specialists with experience in SEO, paid advertising, content marketing, and social media growth.",
     },
     {
       number: "2",
-      title: "Custom SEO Plan",
-      description: "We Design SEO Plans That Drive You Towards Your Success And Goals.",
+      title: "Customized Marketing Strategies",
+      description: "Every business has unique goals. We create tailored marketing strategies based on your industry, audience behavior, and business objectives.",
     },
     {
       number: "3",
-      title: "Expert Team",
-      description: "Certified Professionals With Extensive Industry Experience In Digital Marketing.",
+      title: "Transparent Communication and Reporting",
+      description: "We believe in complete transparency. Our detailed performance reports help clients understand campaign progress and marketing impact.",
     },
     {
       number: "4",
-      title: "Clear Reporting",
-      description: "Detailed Reports To Keep You Informed Every Step Of The Way.",
+      title: "Data-Driven Marketing Approach",
+      description: "Our strategies are based on analytics and performance insights, ensuring continuous improvement and better marketing outcomes.",
+    },
+    {
+      number: "5",
+      title: "Focus on Long-Term Growth",
+      description: "Rather than short-term gains, we focus on sustainable growth strategies that build strong online visibility and brand authority.",
     },
   ];
 
@@ -98,10 +108,8 @@ export default function WhyChooseUs({ content }: WhyChooseUsProps) {
                {displaySubtitle}
               </span>
             </div>
-            <h2 className="text-4xl lg:text-6xl font-black leading-[1.1] tracking-tighter mb-4 max-w-xl">
-              {displayTitle.includes("Right Choice") ? (
-                <>Why We're the Right Choice <br /> for Your Business</>
-              ) : displayTitle}
+            <h2 className="text-4xl lg:text-6xl font-black leading-[1.1] tracking-tighter mb-4 max-w-xl text-black">
+              {displayTitle}
             </h2>
           </motion.div>
           

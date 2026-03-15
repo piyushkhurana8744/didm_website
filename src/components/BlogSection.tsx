@@ -119,7 +119,7 @@ export default function BlogSection({ content }: BlogSectionProps) {
                 {displaySubtitle}
               </span>
             </div>
-            <h2 className="text-5xl lg:text-6xl font-black leading-[0.95] tracking-tighter mb-0 max-w-2xl">
+            <h2 className="text-5xl lg:text-6xl font-black leading-[0.95] tracking-tighter mb-0 max-w-2xl text-black">
               {displayTitle.includes("DIDM Experts") ? (
                 <>
                   {displayTitle.split("DIDM Experts")[0]} <br /> <span className="text-primary italic">from DIDM Experts</span>
@@ -184,7 +184,7 @@ export default function BlogSection({ content }: BlogSectionProps) {
                 <span className="w-1 h-1 rounded-full bg-[#b1ff01]" />
                 <span>{displayPosts[0].author}</span>
               </div>
-              <h3 className="text-3xl lg:text-4xl font-black mb-6 hover:text-primary transition-colors cursor-pointer leading-[1.1] tracking-tight">
+              <h3 className="text-3xl lg:text-4xl font-black mb-6 hover:text-primary transition-colors cursor-pointer leading-[1.1] tracking-tight text-black">
                 {displayPosts[0].title}
               </h3>
               <p className="text-lg text-black/50 font-medium mb-8 leading-relaxed line-clamp-2">

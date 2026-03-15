@@ -116,7 +116,7 @@ export default function Testimonials({ content }: TestimonialsProps) {
                 {displaySubtitle}
               </span>
             </div>
-            <h2 className="text-5xl lg:text-6xl font-black leading-[0.95] tracking-tighter mb-0 max-w-xl">
+            <h2 className="text-5xl lg:text-6xl font-black leading-[0.95] tracking-tighter mb-0 max-w-xl text-black">
               {displayTitle.includes("Clients' Words") ? (
                 <>
                   {displayTitle.split("Clients' Words")[0]} <br /> <span className="text-primary italic">Clients' Words</span>
@@ -176,7 +176,7 @@ export default function Testimonials({ content }: TestimonialsProps) {
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-3">
                         <div>
-                          <h4 className="font-black text-2xl tracking-tight">{t.name}</h4>
+                          <h4 className="font-black text-2xl tracking-tight text-black">{t.name}</h4>
                           <p
                             className={`text-[10px] uppercase tracking-[0.25em] font-black ${
                               t.isPrimary ? "text-[#b1ff01]" : "text-primary"
