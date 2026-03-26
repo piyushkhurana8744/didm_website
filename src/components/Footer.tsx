@@ -108,8 +108,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-black text-white pt-32 pb-12 overflow-hidden relative" ref={ref}>
-      {/* Background Texture/Grain */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
+      {/* Background Texture/Grain - Removed due to broken external resource */}
       
       {/* Bottom Glows */}
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#be1e2e]/5 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
