@@ -198,11 +198,11 @@ export default function Header() {
           >
             <Button
               asChild
-              className="bg-[#be1e2e] text-white hover:bg-[#a01824] px-6 md:px-8 py-5 md:py-6 h-auto rounded-full text-[12px] md:text-[13px] font-black group transition-all duration-300 shadow-xl shadow-[#be1e2e]/20 active:scale-95 transform hover:-translate-y-0.5"
+              className="bg-[#be1e2e] text-white hover:bg-[#a01824] px-5 py-2.5 h-auto rounded-full text-[12px] font-black tracking-wide group transition-all duration-300 shadow-lg shadow-[#be1e2e]/25 hover:shadow-[#be1e2e]/40 active:scale-95 hover:-translate-y-0.5 transform"
             >
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/contact" className="flex items-center gap-1.5">
                 Contact Us
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </Button>
           </motion.div>
