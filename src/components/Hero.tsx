@@ -137,10 +137,12 @@ export default function Hero({ content }: HeroProps) {
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent border border-white/10 rounded-[3rem] backdrop-blur-sm z-0" />
             
             <div className="absolute inset-4 rounded-[2.5rem] overflow-hidden shadow-2xl z-10">
-              <img
+              <Image
                 src={displayImageUrl}
                 alt="Hero Image"
-                className="w-full h-full object-cover animate-float"
+                fill
+                priority
+                className="object-cover animate-float"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>

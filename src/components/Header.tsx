@@ -8,8 +8,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-export default function Header() {
-  const [navItems, setNavItems] = useState([
+interface HeaderProps {
+  initialNavItems?: any[];
+}
+
+export default function Header({ initialNavItems }: HeaderProps) {
+  const [navItems, setNavItems] = useState(initialNavItems || [
     { name: "Home", href: "/", hasDropdown: false },
     { name: "About", href: "/about", hasDropdown: false },
     { 
@@ -64,6 +68,7 @@ export default function Header() {
 
   useEffect(() => {
     const fetchNavItems = async () => {
+      if (initialNavItems) return; // Skip fetch if data provided via props
       try {
         const res = await fetch("/api/content?path=__navbar");
         const data = await res.json();
@@ -156,7 +161,7 @@ export default function Header() {
                     transition={{ duration: 0.2, ease: "easeOut" }}
                     className="absolute top-full left-0 mt-1 w-52 bg-white rounded-xl shadow-2xl py-3 overflow-hidden border border-black/5"
                   >
-                    {item.dropdownItems?.map((subItem) => {
+                    {item.dropdownItems?.map((subItem: any) => {
                       if (subItem.isHeader) {
                         return (
                           <div 
@@ -250,7 +255,7 @@ export default function Header() {
                     </motion.div>
                     {item.hasDropdown && (
                       <div className="pl-4 mt-2 flex flex-col gap-3">
-                        {item.dropdownItems?.map((subItem) => {
+                        {item.dropdownItems?.map((subItem: any) => {
                           if (subItem.isHeader) {
                             return (
                               <div 

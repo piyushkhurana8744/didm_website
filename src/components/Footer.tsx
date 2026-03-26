@@ -49,11 +49,16 @@ const iconMap: Record<string, any> = {
   X: Send,
 };
 
-export default function Footer() {
-  const [footerContent, setFooterContent] = useState<any>(null);
+interface FooterProps {
+  initialData?: any;
+}
+
+export default function Footer({ initialData }: FooterProps) {
+  const [footerContent, setFooterContent] = useState<any>(initialData);
   
   useEffect(() => {
     const fetchFooter = async () => {
+      if (initialData) return; // Skip fetch if data provided via props
       try {
         const res = await fetch("/api/content?path=__footer");
         const data = await res.json();
@@ -183,7 +188,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-lg font-black mb-8 text-white">Quick Links</h4>
             <ul className="space-y-4">
-              {quickLinks.map((link: { label: string; href: string }) => (
+              {quickLinks.map((link: any) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic">
                     {link.label}
