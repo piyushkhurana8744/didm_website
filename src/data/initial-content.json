@@ -2795,37 +2795,201 @@
       {
         "sectionId": "health_hero",
         "type": "hero",
-        "title": "Health Care Advertising",
-        "subtitle": "Online Strikers",
+        "title": "Healthcare Ads Services",
+        "subtitle": "Healthcare Ads Services",
+        "content": "Get More Patient Inquiries, Bookings & Consistent Growth\n\nToday, most patients don’t walk into a clinic without searching online first. Whether it's finding a nearby doctor, checking reviews, or comparing treatment options—everything starts with a search.\n\nIf your healthcare business isn’t visible at that moment, you’re missing potential patients.\n\nThat’s where our Healthcare Ads services help.\n\nWe create and manage paid ad campaigns that put your clinic, hospital, or medical service right in front of people when they are actively looking for it. The goal is simple—more calls, more appointments, and steady patient growth.",
         "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-        "content": "Reach more patients with ethical, high-performance healthcare marketing. We specialize in HIPAA-compliant advertising for clinics, hospitals, and specialized medical practices.",
         "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80"
       },
       {
-        "sectionId": "health_details",
+        "sectionId": "what_is_healthcare_ads",
         "type": "standard",
-        "title": "Expert Medical Marketing",
-        "subtitle": "Patient-Centric Growth",
-        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-        "content": "In the health care industry, trust is everything. Our advertising strategies focus on building authority and providing value to potential patients while adhering to strict medical advertising regulations.",
+        "title": "What is Healthcare Advertising?",
+        "subtitle": "Healthcare Advertising",
+        "content": "Healthcare advertising is all about promoting your medical services through paid ads on platforms like Google, Facebook, Instagram, and YouTube.\n\nInstead of waiting for patients to find you organically, ads help you reach them instantly.\n\nFor example, when someone searches “doctor near me” or “best dentist in [area],” your clinic can appear right at the top. That kind of visibility makes a big difference."
+      },
+      {
+        "sectionId": "why_paid_ads_matter",
+        "type": "standard",
+        "title": "Why Paid Ads Matter in Healthcare",
+        "subtitle": "Importance of Ads",
+        "content": "Healthcare is a competitive field, and patients are careful about whom they choose.\n\nWith the right ad strategy, you can:\n\nThe biggest advantage? You’re reaching people who are already looking for help—so the chances of conversion are much higher.",
+        "services": [
+          {
+            "icon": "Target",
+            "title": "Show Up Exactly When",
+            "description": "Show up exactly when someone is searching for treatment"
+          },
+          {
+            "icon": "Users",
+            "title": "Target Local People",
+            "description": "Target people in your local area"
+          },
+          {
+            "icon": "Rocket",
+            "title": "Promote Specialties",
+            "description": "Promote specific services or specialties"
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "Quick Appointments",
+            "description": "Get calls and appointment requests quickly"
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Stay Ahead",
+            "description": "Stay ahead of nearby competitors"
+          }
+        ]
+      },
+      {
+        "sectionId": "our_healthcare_services",
+        "type": "standard",
+        "title": "Our Healthcare Advertising Services",
+        "subtitle": "What We Offer",
+        "content": "We run targeted campaigns that connect you with patients searching for your services.",
         "services": [
           {
             "icon": "Search",
-            "title": "Local Patient Targeting",
-            "description": "We target local patients searching for specialized medical services in your immediate area.",
-            "items": [
-              "Geo-Fencing for Clinics",
-              "Local Search Optimization",
-              "Appointment Booking Focus"
-            ]
+            "title": "1. Google Ads for Healthcare",
+            "description": "We run targeted campaigns that connect you with patients searching for your services. This includes:\n• Search ads for high-intent keywords\n• Display ads for brand visibility\n• YouTube ads for video reach\n• Call-focused ads for direct inquiries\nThe focus is on searches like “clinic near me” or treatment-specific queries that bring real patients."
+          },
+          {
+            "icon": "Share2",
+            "title": "2. Facebook & Instagram Ads",
+            "description": "Not every patient searches—many discover clinics through social media. We create campaigns that:\n• Generate leads directly from ads\n• Build awareness in your local area\n• Retarget interested users\n• Use engaging visuals and videos\nThis helps build trust and keeps your brand visible."
+          },
+          {
+            "icon": "Target",
+            "title": "3. Local Advertising for Clinics & Hospitals",
+            "description": "Most healthcare services are location-based, so local targeting is crucial. We make sure your ads reach people nearby through:\n• Area-specific targeting\n• Google Maps visibility\n• Local service ads\n• “Near me” search optimization\nThis ensures you attract patients from your actual service area."
+          },
+          {
+            "icon": "RefreshCcw",
+            "title": "4. Remarketing Campaigns",
+            "description": "Not every visitor takes action the first time—and that's normal. We bring them back by showing ads to:\n• Website visitors\n• People who watched your videos\n• Users who interacted with your social media\nThis increases the chances of conversion significantly."
+          },
+          {
+            "icon": "Monitor",
+            "title": "5. Landing Page Optimization",
+            "description": "Running ads is just one part. What happens after the click matters even more. We improve your landing pages by focusing on:\n• Clear actions like “Book Appointment” or “Call Now”\n• Trust elements such as reviews and certifications\n• Fast loading and mobile-friendly design\nBetter pages lead to more patient inquiries."
+          },
+          {
+            "icon": "LineChart",
+            "title": "6. Tracking & Campaign Optimization",
+            "description": "We closely monitor every campaign. This includes:\n• Tracking calls and leads\n• Measuring performance\n• Understanding what’s working\n• Improving campaigns regularly\nThis way, your budget is always used in the most effective way."
           }
-        ],
-        "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        "sectionId": "how_we_approach",
+        "type": "standard",
+        "title": "How We Approach Healthcare Ads",
+        "subtitle": "Our Process",
+        "content": "We follow a simple but effective process:",
+        "services": [
+          {
+            "icon": "ClipboardList",
+            "title": "Step 1: Understanding Your Business",
+            "description": "We study your services, audience, and competition."
+          },
+          {
+            "icon": "Settings",
+            "title": "Step 2: Campaign Setup",
+            "description": "We create ads, define targeting, and set everything up properly."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Step 3: Ongoing Optimization",
+            "description": "We test, adjust, and improve campaigns continuously."
+          },
+          {
+            "icon": "Rocket",
+            "title": "Step 4: Scaling",
+            "description": "Once we see results, we scale campaigns to increase patient flow."
+          }
+        ]
+      },
+      {
+        "sectionId": "who_we_work_with_health",
+        "type": "standard",
+        "title": "Who We Work With",
+        "subtitle": "Ideal For",
+        "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
+        "content": "Our Healthcare Ads services are suitable for:\n• Hospitals\n• Clinics\n• Dentists\n• Dermatologists\n• Physiotherapists\n• Diagnostic centers\n• IVF clinics\n• Cosmetic and aesthetic clinics\n• Mental health professionals"
+      },
+      {
+        "sectionId": "benefits_health_ads",
+        "type": "standard",
+        "title": "Benefits of Healthcare Ads",
+        "subtitle": "Why Invest?",
+        "content": "",
+        "services": [
+          {
+            "icon": "Zap",
+            "title": "Quick Visibility",
+            "description": "Your clinic appears at the top when patients search."
+          },
+          {
+            "icon": "Users",
+            "title": "Better Quality Leads",
+            "description": "You reach people who are actively looking for treatment."
+          },
+          {
+            "icon": "CheckCircle2",
+            "title": "More Appointments",
+            "description": "Turn clicks into actual patient bookings."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Improved ROI",
+            "description": "Well-optimized campaigns deliver better returns."
+          },
+          {
+            "icon": "BarChart3",
+            "title": "Clear Performance Tracking",
+            "description": "You know exactly how many calls, leads, and results you’re getting."
+          }
+        ]
+      },
+      {
+        "sectionId": "why_work_with_us",
+        "type": "standard",
+        "title": "Why Work With Us?",
+        "subtitle": "Your Growth Partner",
+        "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80",
+        "content": "We’re not just managing ads—we’re helping you grow your patient base in a consistent and sustainable way.\n\n• Experience in healthcare marketing\n• Focus on real patient acquisition\n• Smart targeting strategies\n• Ads that are designed to convert\n• Transparent reporting\n• Strong focus on ROI"
+      },
+      {
+        "sectionId": "faq_health",
+        "type": "standard",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Common Queries",
+        "content": "",
+        "services": [
+          {
+            "icon": "MessageSquare",
+            "title": "Are healthcare ads allowed?",
+            "description": "Yes, but platforms like Google and Facebook have strict rules. We make sure everything is compliant so your campaigns run smoothly."
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "What budget is needed?",
+            "description": "It depends on your location, services, and competition. We guide you on a budget that works best for your goals."
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "How fast can I see results?",
+            "description": "You can start getting inquiries soon after the campaigns go live. Performance improves further as we optimize."
+          }
+        ]
       }
     ],
     "seo": {
-      "title": "Healthcare Advertising Agency - Online Strikers",
-      "description": "Professional medical marketing and healthcare advertising services for clinics and practitioners."
+      "title": "Healthcare Ads Services - Online Strikers",
+      "description": "Get More Patient Inquiries, Bookings & Consistent Growth with our robust Healthcare Advertising services."
     }
   },
   "/services/real-estate-ads": {
@@ -2833,47 +2997,196 @@
       {
         "sectionId": "re_hero",
         "type": "hero",
-        "title": "Real Estate Advertising",
-        "subtitle": "Online Strikers",
+        "title": "Real Estate Ads Services",
+        "subtitle": "Real Estate Ads Services",
+        "content": "Get More Genuine Leads & Sell Properties Faster\n\nIn real estate today, buyers don't wait around. The moment they're interested in a property, they go online, explore options, compare prices, and shortlist quickly.\n\nIf your project isn’t visible during that moment, you're already losing potential buyers.\n\nThat’s where paid advertising helps.\n\nWith the right strategy, your property can appear in front of serious buyers exactly when they're searching. Our Real Estate Ads services are focused on bringing you genuine inquiries, more site visits, and faster closures.",
         "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-        "content": "Find qualified buyers and motivated sellers with precision-targeted real estate ads. We help developers and agencies generate high-quality leads that actually convert.",
         "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
       },
       {
-        "sectionId": "re_details",
+        "sectionId": "what_are_re_ads",
         "type": "standard",
-        "title": "Targeted Property Marketing",
-        "subtitle": "High-Quality Lead Gen",
-        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
-        "content": "In real estate, lead quality is more important than volume. We create campaigns that target serious property buyers based on their search intent, location, and financial behavior.\n\nFrom luxury villas to affordable housing, we optimize your marketing spend to ensure you get the best cost per qualified lead.",
+        "title": "What Are Real Estate Ads?",
+        "subtitle": "Real Estate Ads",
+        "content": "Real estate ads are paid campaigns that promote your properties on platforms like Google, Facebook, Instagram, and YouTube.\n\nThese ads allow you to reach people based on:\n• Their location\n• Budget range\n• Interests\n• Buying intent\n\nInstead of waiting for buyers to find you, your projects are shown directly to people who are already looking for properties or investment opportunities."
+      },
+      {
+        "sectionId": "why_re_ads_matter",
+        "type": "standard",
+        "title": "Why Real Estate Ads Matter",
+        "subtitle": "Importance of Ads",
+        "content": "The real estate market is crowded, and buyers usually explore multiple projects before making a decision.\n\nWith paid ads, you can:",
         "services": [
           {
-            "icon": "Target",
-            "title": "Lead Identification",
-            "description": "We identify and target users actively searching for properties in your specific localities.",
-            "items": [
-              "Geo-targeting",
-              "Property Type Interest",
-              "Income-based Targeting"
-            ]
+            "icon": "Monitor",
+            "title": "Instant Visibility",
+            "description": "Show your property to buyers instantly"
           },
           {
-            "icon": "Home",
-            "title": "Project Showcasing",
-            "description": "High-impact visual ads that highlight the USP of your real estate projects.",
-            "items": [
-              "Virtual Tour Integration",
-              "Floor Plan Highlights",
-              "Amenity Focus"
-            ]
+            "icon": "Target",
+            "title": "Local Targeting",
+            "description": "Focus on specific cities or local areas"
+          },
+          {
+            "icon": "Rocket",
+            "title": "Promote Launches",
+            "description": "Promote ongoing projects, offers, or launches"
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "Quick Inquiries",
+            "description": "Start getting inquiries quickly"
+          },
+          {
+            "icon": "Users",
+            "title": "More Bookings",
+            "description": "Increase site visits and bookings"
           }
-        ],
-        "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        "sectionId": "re_services",
+        "type": "standard",
+        "title": "Our Real Estate Advertising Services",
+        "subtitle": "What We Offer",
+        "content": "Since most property searches begin online, being visible at the right time makes all the difference.",
+        "services": [
+          {
+            "icon": "Search",
+            "title": "1. Google Ads for Real Estate",
+            "description": "We run targeted campaigns that bring in people who are actively searching for properties. This includes:\n• Search ads for queries like “flats in Delhi” or “plots near me”\n• Display ads to increase visibility\n• YouTube ads for project videos and walkthroughs\n• Call ads for direct inquiries\nThese campaigns are ideal for capturing serious buyers who are ready to take action."
+          },
+          {
+            "icon": "Share2",
+            "title": "2. Facebook & Instagram Ads",
+            "description": "Many buyers discover properties while browsing social media. We create campaigns that:\n• Generate leads directly\n• Showcase multiple properties through carousel ads\n• Use videos to highlight projects\n• Retarget interested users\nThis helps you build interest and continuously stay in front of potential buyers."
+          },
+          {
+            "icon": "Target",
+            "title": "3. Location-Based Targeting",
+            "description": "In real estate, location is everything—and we treat it that way. We target audiences based on:\n• Cities and specific areas\n• Pin codes and nearby locations\n• Radius around your project site\n• “Near me” searches\nThis ensures your ads reach people who are actually relevant to your project."
+          },
+          {
+            "icon": "RefreshCcw",
+            "title": "4. Remarketing Campaigns",
+            "description": "Most buyers don’t convert on their first visit—and that’s completely normal. We bring them back by targeting:\n• Website visitors\n• People who engaged with your ads\n• Users who watched your videos\nThis helps increase your chances of conversion and reduces missed opportunities."
+          },
+          {
+            "icon": "Monitor",
+            "title": "5. Landing Page Optimization",
+            "description": "Getting clicks is important, but converting those clicks into leads is what really matters. We improve your landing pages by focusing on:\n• Clear actions like “Book Site Visit” or “Call Now”\n• Strong project highlights and USPs\n• Easy-to-fill lead forms\n• Fast and mobile-friendly experience\nA better landing page directly means better lead quality."
+          },
+          {
+            "icon": "LineChart",
+            "title": "6. Lead Tracking & Performance Monitoring",
+            "description": "We make sure you know exactly what results you're getting. We track:\n• Calls and inquiries\n• Form submissions\n• Campaign performance\n• Return on investment\nThis helps us continuously improve your campaigns and scale what's working."
+          }
+        ]
+      },
+      {
+        "sectionId": "how_we_work_re",
+        "type": "standard",
+        "title": "How We Work",
+        "subtitle": "Our Process",
+        "content": "Our process is simple and focused on results:",
+        "services": [
+          {
+            "icon": "ClipboardList",
+            "title": "Step 1: Research",
+            "description": "We understand your project, target audience, and competition."
+          },
+          {
+            "icon": "Settings",
+            "title": "Step 2: Campaign Setup",
+            "description": "We create ads, define targeting, and set up tracking."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Step 3: Optimization",
+            "description": "We monitor performance, test variations, and improve results."
+          },
+          {
+            "icon": "Rocket",
+            "title": "Step 4: Scaling",
+            "description": "Once campaigns perform well, we increase budgets and expand reach."
+          }
+        ]
+      },
+      {
+        "sectionId": "who_we_work_with_re",
+        "type": "standard",
+        "title": "Who We Work With",
+        "subtitle": "Ideal For",
+        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
+        "content": "Our Real Estate Ads services are suitable for:\n• Real estate developers\n• Builders and promoters\n• Property dealers\n• Commercial real estate firms\n• Residential projects\n• Plotting projects\n• Luxury property brands"
+      },
+      {
+        "sectionId": "benefits_re_ads",
+        "type": "standard",
+        "title": "Benefits of Real Estate Ads",
+        "subtitle": "Why Invest?",
+        "content": "",
+        "services": [
+          {
+            "icon": "Zap",
+            "title": "Quick Lead Generation",
+            "description": "You can start receiving inquiries soon after campaigns go live."
+          },
+          {
+            "icon": "Users",
+            "title": "Better Quality Leads",
+            "description": "Your ads reach people who are genuinely interested in buying."
+          },
+          {
+            "icon": "Target",
+            "title": "More Site Visits",
+            "description": "Bring more potential buyers to your project location."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Higher ROI",
+            "description": "Optimized campaigns ensure better use of your budget."
+          },
+          {
+            "icon": "BarChart3",
+            "title": "Transparent Results",
+            "description": "You can clearly track leads, calls, and performance."
+          }
+        ]
+      },
+      {
+        "sectionId": "why_choose_us_re",
+        "type": "standard",
+        "title": "Why Choose Us?",
+        "subtitle": "Your Growth Partner",
+        "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+        "content": "We don't just generate leads—we help you turn those leads into actual property sales.\n\n• Strong experience in real estate marketing\n• Deep understanding of buyer behavior\n• Creatives and ads designed to convert\n• Smart audience targeting\n• Clear and transparent reporting\n• Focus on real business results"
+      },
+      {
+        "sectionId": "faq_re",
+        "type": "standard",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Common Queries",
+        "content": "",
+        "services": [
+          {
+            "icon": "MessageSquare",
+            "title": "How much budget is needed?",
+            "description": "It depends on your project type, location, and competition. We guide you based on your goals and market."
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "Which platform works best?",
+            "description": "• Google Ads works best for high-intent buyers\n• Facebook & Instagram are great for lead generation and awareness\nUsing both together usually gives the best results."
+          }
+        ]
       }
     ],
     "seo": {
-      "title": "Real Estate Ads Management - Online Strikers",
-      "description": "Expert real estate advertising for agents and developers. High-quality lead generation for property sales."
+      "title": "Real Estate Ads Services - Online Strikers",
+      "description": "Our Real Estate Ads services are focused on bringing you genuine inquiries, more site visits, and faster closures."
     }
   },
   "/services/education-ads": {
@@ -2881,47 +3194,196 @@
       {
         "sectionId": "edu_hero",
         "type": "hero",
-        "title": "Education & School Advertising",
-        "subtitle": "Online Strikers",
+        "title": "Education Ads Services",
+        "subtitle": "Education Ads Services",
+        "content": "Get More Student Inquiries & Increase Admissions\n\nChoosing a course or institute is no longer a quick decision. Students and parents take their time—they search online, compare options, read reviews, and then decide what’s right for them.\n\nIf your institute isn’t visible during this process, chances are they’ll never even consider you.\n\nThat’s exactly why paid advertising has become so important in the education sector.\n\nWith the right approach, your courses and programs can reach the right audience at the right time. Our Education Ads services focus on helping you attract genuine inquiries, connect with the right students, and increase admissions consistently.",
         "image": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1200&q=80",
-        "content": "Boost your enrollments with strategic digital marketing for schools, colleges, and online learning platforms.",
         "imageUrl": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1200&q=80"
       },
       {
-        "sectionId": "edu_details",
+        "sectionId": "what_are_edu_ads",
         "type": "standard",
-        "title": "Increase Student Enrollments",
-        "subtitle": "Strategic Education Marketing",
-        "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-        "content": "The education sector is highly competitive. We help educational institutions build brand awareness and drive student inquiries through targeted PPC and social media campaigns.\n\nWhether you are a local school or a global university, our data-driven approach helps you reach students and parents at the right stage of their decision-making process.",
+        "title": "What Are Education Ads?",
+        "subtitle": "Education Ads",
+        "content": "Education ads are paid promotions that showcase your courses or institute on platforms like Google, Facebook, Instagram, and YouTube.\n\nThese ads help you connect with:\n• Students actively searching for courses\n• Parents looking for the best options\n• Working professionals planning to upgrade their skills\n\nInstead of waiting for students to find you, your institute appears right in front of them when they are already exploring their options."
+      },
+      {
+        "sectionId": "why_edu_ads_matter",
+        "type": "standard",
+        "title": "Why Education Ads Matter",
+        "subtitle": "Importance of Ads",
+        "content": "The education space is more competitive than ever. Students now have endless choices, and they carefully research before making a decision.\n\nWith paid ads, you can:",
         "services": [
           {
-            "icon": "GraduationCap",
-            "title": "Enrollment Campaigns",
-            "description": "Targeted ad campaigns designed to increase course inquiries and campus visits.",
-            "items": [
-              "Seasonal Enrollment Ads",
-              "Course-specific Targeting",
-              "Webinar Promotion"
-            ]
+            "icon": "Target",
+            "title": "Reach Students",
+            "description": "Reach students exactly when they’re searching."
           },
           {
             "icon": "Users",
-            "title": "Parent & Student Outreach",
-            "description": "Tailored messaging that addresses the concerns and aspirations of both parents and students.",
-            "items": [
-              "Remarketing to Visitors",
-              "Testimonial Integration",
-              "Brand Authority Building"
-            ]
+            "title": "Target Audiences",
+            "description": "Target specific courses, cities, or audiences."
+          },
+          {
+            "icon": "Rocket",
+            "title": "Promote Offers",
+            "description": "Promote admissions, batches, and offers."
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "Get Inquiries",
+            "description": "Start getting inquiries quickly."
+          },
+          {
+            "icon": "Monitor",
+            "title": "Stay Visible",
+            "description": "Stay visible in a crowded market."
           }
-        ],
-        "imageUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        "sectionId": "edu_services",
+        "type": "standard",
+        "title": "Our Education Advertising Services",
+        "subtitle": "What We Offer",
+        "content": "When done right, ads don't just bring traffic—they bring students who are genuinely interested.",
+        "services": [
+          {
+            "icon": "Search",
+            "title": "1. Google Ads for Education",
+            "description": "We help you appear in front of students who are actively searching for courses. This includes:\n• Search ads for queries like “best digital marketing course” or “MBA colleges near me”\n• Display ads to increase visibility\n• YouTube ads for course videos and testimonials\n• Call ads for direct inquiries\nThese campaigns are highly effective for capturing serious prospects."
+          },
+          {
+            "icon": "Share2",
+            "title": "2. Facebook & Instagram Ads",
+            "description": "A lot of students discover courses while scrolling through social media. We create campaigns that:\n• Generate leads directly through forms\n• Promote courses using engaging creatives and videos\n• Retarget interested users\n• Build awareness for your institute\nThis helps you stay connected with potential students throughout their decision-making journey."
+          },
+          {
+            "icon": "Target",
+            "title": "3. Smart Course-Based Targeting",
+            "description": "Every course attracts a different type of audience, and we plan campaigns accordingly. We target based on:\n• Age groups (students or working professionals)\n• Interests and career goals\n• Location (local, regional, or nationwide)\nThis ensures your ads reach people who are actually relevant to your courses."
+          },
+          {
+            "icon": "RefreshCcw",
+            "title": "4. Remarketing Campaigns",
+            "description": "Most students don’t take action on their first visit—and that’s normal. We bring them back by targeting:\n• Website visitors\n• People who interacted with your ads\n• Users who engaged with your content\nThis increases your chances of converting interest into actual admissions."
+          },
+          {
+            "icon": "Monitor",
+            "title": "5. Landing Page Optimization",
+            "description": "Getting clicks is easy. Converting them into inquiries is what really matters. We improve your landing pages by focusing on:\n• Clear actions like “Apply Now” or “Enroll Today”\n• Detailed course information\n• Student reviews and testimonials\n• Fast, mobile-friendly experience\nBetter pages lead to better conversion rates."
+          },
+          {
+            "icon": "LineChart",
+            "title": "6. Tracking & Performance Monitoring",
+            "description": "We keep a close eye on everything. We track:\n• Leads and inquiries\n• Calls and form submissions\n• Campaign performance\n• Return on investment\nThis helps us continuously improve your campaigns and get better results over time."
+          }
+        ]
+      },
+      {
+        "sectionId": "how_we_work",
+        "type": "standard",
+        "title": "How We Work",
+        "subtitle": "Our Process",
+        "content": "We follow a simple and practical approach:",
+        "services": [
+          {
+            "icon": "ClipboardList",
+            "title": "Step 1: Understanding Requirements",
+            "description": "We study your courses, audience, and competition."
+          },
+          {
+            "icon": "Settings",
+            "title": "Step 2: Campaign Setup",
+            "description": "We create ads, define targeting, and set up tracking."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Step 3: Optimization",
+            "description": "We test, analyze, and improve campaign performance."
+          },
+          {
+            "icon": "Rocket",
+            "title": "Step 4: Scaling",
+            "description": "Once campaigns start performing well, we scale them to increase results."
+          }
+        ]
+      },
+      {
+        "sectionId": "who_we_work_with",
+        "type": "standard",
+        "title": "Who We Work With",
+        "subtitle": "Ideal For",
+        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+        "content": "Our Education Ads services are ideal for:\n• Schools\n• Colleges and universities\n• Coaching institutes\n• EdTech companies\n• Skill development centers\n• Online course providers\n• Professional training institutes"
+      },
+      {
+        "sectionId": "benefits_edu_ads",
+        "type": "standard",
+        "title": "Benefits of Education Ads",
+        "subtitle": "Why Invest?",
+        "content": "",
+        "services": [
+          {
+            "icon": "Zap",
+            "title": "Faster Visibility",
+            "description": "Your institute appears where students are already searching."
+          },
+          {
+            "icon": "Users",
+            "title": "Better Quality Leads",
+            "description": "You attract students who are genuinely interested."
+          },
+          {
+            "icon": "CheckCircle2",
+            "title": "More Admissions",
+            "description": "Turn inquiries into enrollments more effectively."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Improved ROI",
+            "description": "Well-optimized campaigns give better returns."
+          },
+          {
+            "icon": "BarChart3",
+            "title": "Clear Results",
+            "description": "You can track every lead and understand what’s working."
+          }
+        ]
+      },
+      {
+        "sectionId": "why_choose_us_edu",
+        "type": "standard",
+        "title": "Why Choose Us?",
+        "subtitle": "Your Growth Partner",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+        "content": "We don't just run ads—we help you build a steady flow of student inquiries.\n\n• Strong understanding of the education sector\n• Focus on actual student acquisition\n• Smart targeting strategies\n• Creatives that attract and convert\n• Transparent reporting\n• Result-oriented approach"
+      },
+      {
+        "sectionId": "faq_edu",
+        "type": "standard",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Common Queries",
+        "content": "",
+        "services": [
+          {
+            "icon": "MessageSquare",
+            "title": "How much budget is needed?",
+            "description": "It depends on your course, competition, and audience. We help you decide a budget that fits your goals."
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "Which platform works best?",
+            "description": "• Google Ads works best for high-intent searches\n• Facebook & Instagram are great for awareness and lead generation\nUsing both together usually gives better results."
+          }
+        ]
       }
     ],
     "seo": {
-      "title": "Education Marketing Agency - Online Strikers",
-      "description": "Specialized digital marketing for schools and universities. Drive more enrollments."
+      "title": "Education Ads Services - Online Strikers",
+      "description": "Our Education Ads services focus on helping you attract genuine inquiries, connect with the right students, and increase admissions consistently."
     }
   },
   "/services/b2b-ads": {
@@ -4850,46 +5312,247 @@
         "sectionId": "uiux_hero",
         "type": "hero",
         "title": "UI/UX Design Services",
-        "subtitle": "User-Centric Excellence",
+        "subtitle": "Create Experiences Your Users Actually Enjoy",
+        "content": "Today, people don’t just use websites or apps—they judge them within seconds.\n\nIf your platform feels confusing, slow, or outdated, users won't think twice before leaving. And once they leave, getting them back is tough.\n\nThat’s where good UI/UX design makes all the difference.\n\nIt’s not just about making things look attractive—it’s about making them simple, smooth, and easy to use. When users feel comfortable navigating your website or app, they’re far more likely to stay, explore, and take action.\n\nOur approach to UI/UX design is simple:\nmake it easy for users, and results will follow.",
         "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
-        "content": "Design digital experiences that wow your users and drive higher conversion rates.",
         "imageUrl": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80"
       },
       {
-        "sectionId": "uiux_details",
+        "sectionId": "what_is_uiux",
         "type": "standard",
-        "title": "User-First Digital Experiences",
-        "subtitle": "Design for Conversion",
-        "image": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1200&q=80",
-        "content": "Good design is more than just looks; it's about how it works. Our UI/UX design process focuses on understanding your users' needs and creating intuitive interfaces that make their journey seamless and enjoyable.\n\nWe combine creativity with data-driven insights to build digital experiences that strengthen your brand and drive business growth.",
+        "title": "What Exactly is UI/UX Design?",
+        "subtitle": "UI vs UX",
+        "content": "UI and UX are closely connected, but they focus on different things.\n\n**UI (User Interface)** is everything your users see—colors, layouts, buttons, fonts, and overall design.\n\n**UX (User Experience)** is how users interact with your platform—how easily they move around, find information, and complete tasks.\n\nWhen both are done right, users don’t feel confused or frustrated. Everything just works the way they expect it to.\n\nAnd that’s what keeps them coming back."
+      },
+      {
+        "sectionId": "why_good_design_matters",
+        "type": "standard",
+        "title": "Why Good Design Matters More Than Ever",
+        "subtitle": "The Impact of Design",
+        "content": "Think about your own experience—how long do you stay on a website that feels messy or hard to use?\n\nExactly.\n\nYour users behave the same way.\n\nWhen the experience feels effortless, users are naturally more likely to take action—whether it’s filling out a form, booking a service, or making a purchase.",
         "services": [
           {
-            "icon": "PenTool",
-            "title": "Visual Design (UI)",
-            "description": "Crafting stunning visual interfaces that align with your brand's aesthetic and values.",
-            "items": [
-              "Brand Design Systems",
-              "Interactive Prototypes",
-              "Modern Aesthetic Focus"
-            ]
+            "icon": "Clock",
+            "title": "Stay Longer",
+            "description": "Keep users engaged for longer"
           },
           {
-            "icon": "Users",
-            "title": "Experience Design (UX)",
-            "description": "Optimizing the user journey through research, wireframing, and rigorous testing.",
-            "items": [
-              "User Research & Personas",
-              "Wireframe Architecture",
-              "Usability Testing"
-            ]
+            "icon": "TrendingUp",
+            "title": "More Conversions",
+            "description": "Increase inquiries and conversions"
+          },
+          {
+            "icon": "ArrowDown",
+            "title": "Fewer Drop-offs",
+            "description": "Reduce drop-offs and bounce rates"
+          },
+          {
+            "icon": "ShieldCheck",
+            "title": "Build Trust",
+            "description": "Build trust from the first interaction"
+          },
+          {
+            "icon": "Briefcase",
+            "title": "Professionalism",
+            "description": "Make your brand look more professional"
           }
-        ],
-        "imageUrl": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        "sectionId": "uiux_services_list",
+        "type": "standard",
+        "title": "What We Offer in UI/UX Design",
+        "subtitle": "Our Services",
+        "content": "",
+        "services": [
+          {
+            "icon": "Monitor",
+            "title": "1. Website Design That Feels Effortless",
+            "description": "We create clean, modern website designs that are easy to navigate and aligned with your brand. From homepage to inner pages, everything is designed to guide users smoothly. What we focus on:\n• Clear layout and structure\n• Mobile-friendly design\n• Simple navigation\n• Pages that encourage action"
+          },
+          {
+            "icon": "Smartphone",
+            "title": "2. Mobile App Design That Users Love",
+            "description": "Mobile users expect speed and simplicity. We design app interfaces that feel natural and easy to use. Our work includes:\n• App screen designs for Android & iOS\n• User journey planning\n• Clickable prototypes\n• Smooth navigation flow"
+          },
+          {
+            "icon": "Layout",
+            "title": "3. Landing Pages That Convert",
+            "description": "A landing page has one job—to get results. And we design it with that goal in mind. You get:\n• Clean, focused layouts\n• Strong call-to-action placement\n• Distraction-free design\n• Structure built for ads and campaigns"
+          },
+          {
+            "icon": "PenTool",
+            "title": "4. Wireframes & Prototypes (Before Final Design)",
+            "description": "Before jumping into visuals, we plan everything properly. This helps avoid confusion later. We create:\n• Basic wireframes (structure layout)\n• Detailed prototypes (real feel before development)\n• User flow mapping"
+          },
+          {
+            "icon": "Search",
+            "title": "5. UX Research & Insights",
+            "description": "Good design starts with understanding your users. We take time to study what works and what doesn’t. This includes:\n• User behavior analysis\n• Competitor review\n• Usability testing\n• Improvements based on real feedback"
+          },
+          {
+            "icon": "RefreshCw",
+            "title": "6. Redesign & Improvement",
+            "description": "Already have a website or app but not happy with the results? We can fix that. We help with:\n• Identifying design issues\n• Improving usability\n• Updating outdated visuals\n• Making your platform more modern and effective"
+          }
+        ]
+      },
+      {
+        "sectionId": "how_we_work_uiux",
+        "type": "standard",
+        "title": "How We Work",
+        "subtitle": "Our Process",
+        "content": "We follow a clear, step-by-step process to keep things smooth and transparent.",
+        "services": [
+          {
+            "icon": "Briefcase",
+            "title": "Step 1: Understand Your Business",
+            "description": "We learn about your goals, audience, and competition."
+          },
+          {
+            "icon": "LayoutTemplate",
+            "title": "Step 2: Plan the Structure",
+            "description": "We map out user journeys and create wireframes."
+          },
+          {
+            "icon": "PenTool",
+            "title": "Step 3: Design the Interface",
+            "description": "We build clean, attractive, and user-friendly layouts."
+          },
+          {
+            "icon": "CheckSquare",
+            "title": "Step 4: Test & Refine",
+            "description": "We test usability, gather feedback, and make improvements before final delivery."
+          }
+        ]
+      },
+      {
+        "sectionId": "industries_we_work_with",
+        "type": "standard",
+        "title": "Industries We Work With",
+        "subtitle": "Who We Serve",
+        "content": "We've worked across different industries, including:",
+        "services": [
+          {
+            "icon": "ShoppingCart",
+            "title": "E-commerce",
+            "description": "E-commerce"
+          },
+          {
+            "icon": "Home",
+            "title": "Real Estate",
+            "description": "Real estate"
+          },
+          {
+            "icon": "Heart",
+            "title": "Healthcare",
+            "description": "Healthcare"
+          },
+          {
+            "icon": "BookOpen",
+            "title": "Education",
+            "description": "Education"
+          },
+          {
+            "icon": "Briefcase",
+            "title": "Corporate",
+            "description": "Corporate businesses"
+          },
+          {
+            "icon": "Cloud",
+            "title": "SaaS",
+            "description": "SaaS platforms"
+          },
+          {
+            "icon": "Smartphone",
+            "title": "Mobile Apps",
+            "description": "Mobile apps"
+          }
+        ]
+      },
+      {
+        "sectionId": "what_you_gain_uiux",
+        "type": "standard",
+        "title": "What You Gain from Good UI/UX Design",
+        "subtitle": "The Benefits",
+        "content": "In simple terms—better design leads to better results.",
+        "services": [
+          {
+            "icon": "Smile",
+            "title": "Smoother Experience",
+            "description": "A smoother experience for your users"
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Better Conversions",
+            "description": "Better conversion rates"
+          },
+          {
+            "icon": "Shield",
+            "title": "Stronger Credibility",
+            "description": "Stronger brand credibility"
+          },
+          {
+            "icon": "ArrowDownCircle",
+            "title": "Lower Bounce Rates",
+            "description": "Lower bounce rates"
+          },
+          {
+            "icon": "Smartphone",
+            "title": "Consistent Performance",
+            "description": "Consistent performance across devices"
+          }
+        ]
+      },
+      {
+        "sectionId": "why_work_with_us_uiux",
+        "type": "standard",
+        "title": "Why Work With Us?",
+        "subtitle": "Our Approach",
+        "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80",
+        "content": "We keep things practical and result-focused.\n\n• We design for real users, not just visuals\n• We keep layouts clean and easy to understand\n• We focus on usability as much as design\n• We use insights and data to guide decisions\n• We keep communication clear and transparent\n\nAt the end of the day, our goal is simple—to create designs that people actually enjoy using."
+      },
+      {
+        "sectionId": "faq_uiux",
+        "type": "standard",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Common Queries",
+        "content": "",
+        "services": [
+          {
+            "icon": "MessageSquare",
+            "title": "What’s the difference between UI and UX?",
+            "description": "UI is about how things look. UX is about how things work and feel for the user."
+          },
+          {
+            "icon": "Clock",
+            "title": "How long does a design project take?",
+            "description": "It depends on the size and complexity of your project. Simple designs take less time, while larger platforms need more planning."
+          },
+          {
+            "icon": "RefreshCw",
+            "title": "Can you improve my existing website or app?",
+            "description": "Yes, we can review your current design and suggest practical improvements to make it more effective."
+          },
+          {
+            "icon": "Search",
+            "title": "Does UI/UX design help with SEO?",
+            "description": "Yes, a better user experience keeps visitors engaged longer, which can positively impact your search performance."
+          }
+        ]
+      },
+      {
+        "sectionId": "lets_build",
+        "type": "cta",
+        "title": "Let’s Build Something Your Users Will Appreciate",
+        "subtitle": "Get Started",
+        "content": "If your website or app looks good but doesn’t perform well, design could be the missing piece.\n\nLet’s create something that’s not just visually appealing—but also easy to use and built for results."
       }
     ],
     "seo": {
-      "title": "UI/UX Design Agency - Online Strikers",
-      "description": "Professional UI/UX design services. We create engaging digital experiences."
+      "title": "UI/UX Design Services - Online Strikers",
+      "description": "Create Experiences Your Users Actually Enjoy with our professional UI/UX Design services."
     }
   },
   "/services/lms-design": {
@@ -4897,47 +5560,274 @@
       {
         "sectionId": "lms_hero",
         "type": "hero",
-        "title": "LMS Platform Design",
-        "subtitle": "The Future of Learning",
+        "title": "LMS Design Services",
+        "subtitle": "Build Learning Platforms That People Actually Enjoy Using",
+        "content": "The way people learn today is very different from before.\n\nWhether it’s students, working professionals, or corporate teams—everyone prefers learning online. But here’s the catch: if the platform feels confusing or difficult to use, people lose interest very quickly.\n\nA good LMS is not just about uploading courses. It’s about creating an experience where users can learn comfortably, stay engaged, and complete what they started.\n\nThat’s exactly what we focus on—building LMS platforms that are simple, structured, and easy to use while still being powerful enough to grow with your needs.",
         "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1200&q=80",
-        "content": "Build powerful, engaging, and scalable online learning platforms for your students or employees.",
         "imageUrl": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1200&q=80"
       },
       {
-        "sectionId": "lms_details",
+        "sectionId": "what_is_lms_design",
         "type": "standard",
-        "title": "Scale Your Online Education",
-        "subtitle": "Custom Learning Platforms",
-        "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1200&q=80",
-        "content": "Digital learning is the future. We build custom Learning Management Systems (LMS) that provide a seamless educational experience for both instructors and students.\n\nFrom corporate training portals to globally accessible online course platforms, our LMS solutions are built for high performance, intuitive navigation, and robust user management.",
+        "title": "Understanding LMS Design",
+        "subtitle": "What is LMS Design?",
+        "content": "LMS (Learning Management System) design is all about creating an online platform where users can learn without friction.\n\nIt allows users to:\n• Access courses anytime\n• Track their progress\n• Interact with content and instructors\n• Take tests and earn certifications\n\nWhen an LMS is designed properly, users don’t feel lost. They know exactly where to go, what to do next, and how to complete their learning journey."
+      },
+      {
+        "sectionId": "what_makes_good_lms",
+        "type": "standard",
+        "title": "What Makes a Good LMS?",
+        "subtitle": "Essential Elements",
+        "content": "A well-built LMS is made up of several important parts working together:\n\nAll these elements need to be connected in a simple and user-friendly way.",
         "services": [
           {
-            "icon": "GraduationCap",
-            "title": "Course Management",
-            "description": "Building powerful tools for creating, organizing, and delivering educational content at scale.",
-            "items": [
-              "Video Lesson Integration",
-              "Interactive Quizzes",
-              "Student Progress Tracking"
-            ]
+            "icon": "LayoutDashboard",
+            "title": "Dashboard",
+            "description": "A dashboard where users can see their progress"
           },
           {
-            "icon": "Users2",
-            "title": "Community & Engagement",
-            "description": "Fostering collaboration with integrated forums, messaging systems, and user profiles.",
-            "items": [
-              "Student Discussion Boards",
-              "Instructor Feedback Tools",
-              "Automated Certification"
-            ]
+            "icon": "BookOpen",
+            "title": "Course Management",
+            "description": "A course management system to organize content properly"
+          },
+          {
+            "icon": "Users",
+            "title": "User Roles",
+            "description": "Different user roles (admin, instructor, student)"
+          },
+          {
+            "icon": "Video",
+            "title": "Content Delivery",
+            "description": "Smooth content delivery like videos, PDFs, and quizzes"
+          },
+          {
+            "icon": "FileCheck",
+            "title": "Assessment System",
+            "description": "An assessment system for tests and evaluations"
+          },
+          {
+            "icon": "LineChart",
+            "title": "Reports and Analytics",
+            "description": "Reports and analytics to track performance"
           }
-        ],
-        "imageUrl": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        "sectionId": "types_of_lms",
+        "type": "standard",
+        "title": "Types of LMS Platforms",
+        "subtitle": "LMS Varieties",
+        "content": "Different businesses and institutions use LMS platforms in different ways:\n\nWe design systems based on what suits your model best.",
+        "services": [
+          {
+            "icon": "Building2",
+            "title": "Corporate LMS",
+            "description": "Corporate LMS for employee training"
+          },
+          {
+            "icon": "GraduationCap",
+            "title": "Educational LMS",
+            "description": "Educational LMS for schools and colleges"
+          },
+          {
+            "icon": "MonitorPlay",
+            "title": "Online Course",
+            "description": "Online course platforms for selling courses"
+          },
+          {
+            "icon": "Combine",
+            "title": "Hybrid LMS",
+            "description": "Hybrid LMS that combines training and content delivery"
+          }
+        ]
+      },
+      {
+        "sectionId": "our_lms_services",
+        "type": "standard",
+        "title": "Our LMS Design Services",
+        "subtitle": "What We Offer",
+        "content": "",
+        "services": [
+          {
+            "icon": "Settings",
+            "title": "1. Custom LMS Design",
+            "description": "Every business is different, so we don't believe in one-size-fits-all solutions. We design LMS platforms based on your specific needs, including:\n• Custom dashboards\n• Proper course structure\n• Role-based access\n• Flexible and scalable setup"
+          },
+          {
+            "icon": "Smartphone",
+            "title": "2. UI/UX Design for LMS",
+            "description": "If users can’t use your platform easily, they won’t stay. We focus on:\n• Clean and simple layouts\n• Easy navigation\n• Mobile-friendly design\n• A smooth learning experience\nThe goal is simple—make learning feel effortless."
+          },
+          {
+            "icon": "Layers",
+            "title": "3. Course Structure & Flow Planning",
+            "description": "Even great content can fail if it's not organized properly. We help you:\n• Structure courses into clear modules\n• Design lesson flow\n• Create learning paths\n• Add progress tracking\nThis keeps users focused and motivated."
+          },
+          {
+            "icon": "Code",
+            "title": "4. Development Support",
+            "description": "Design is just one part—we also help you bring everything together. We assist with:\n• Frontend design support\n• Backend planning\n• Feature setup\n• Platform customization"
+          },
+          {
+            "icon": "RefreshCcw",
+            "title": "5. LMS Improvement & Redesign",
+            "description": "If your current LMS isn’t performing well, we can fix it. We:\n• Analyze what's not working\n• Improve usability\n• Upgrade the design\n• Enhance performance"
+          },
+          {
+            "icon": "Link",
+            "title": "6. Integration with Other Tools",
+            "description": "To make your LMS more powerful, we connect it with useful tools like:\n• Payment gateways\n• CRM systems\n• Email automation tools\n• Analytics platforms"
+          }
+        ]
+      },
+      {
+        "sectionId": "how_we_work_lms",
+        "type": "standard",
+        "title": "How We Work",
+        "subtitle": "Our Process",
+        "content": "We keep the process simple and transparent.",
+        "services": [
+          {
+            "icon": "Search",
+            "title": "Step 1: Understand Your Needs",
+            "description": "We learn about your goals, audience, and platform requirements."
+          },
+          {
+            "icon": "Map",
+            "title": "Step 2: Plan the Structure",
+            "description": "We map out user journeys and course flow."
+          },
+          {
+            "icon": "PenTool",
+            "title": "Step 3: Design the Platform",
+            "description": "We create clean and user-friendly layouts."
+          },
+          {
+            "icon": "Code",
+            "title": "Step 4: Build & Integrate",
+            "description": "We work with developers to implement features and tools."
+          },
+          {
+            "icon": "CheckCircle2",
+            "title": "Step 5: Test & Launch",
+            "description": "We test everything, fix issues, and prepare for launch."
+          }
+        ]
+      },
+      {
+        "sectionId": "features_lms_should_have",
+        "type": "standard",
+        "title": "Features Every LMS Should Have",
+        "subtitle": "Key Elements",
+        "content": "A good LMS should feel smooth and reliable.\n\nWhen everything is well-organized, users can focus on learning instead of figuring out how the platform works.",
+        "services": [
+          {
+            "icon": "Navigation",
+            "title": "Easy Navigation",
+            "description": "Easy navigation"
+          },
+          {
+            "icon": "Layers",
+            "title": "Clear Structure",
+            "description": "Clear course structure"
+          },
+          {
+            "icon": "Smartphone",
+            "title": "Mobile Friendly",
+            "description": "Mobile-friendly design"
+          },
+          {
+            "icon": "Zap",
+            "title": "Fast Loading",
+            "description": "Fast loading speed"
+          },
+          {
+            "icon": "MousePointer",
+            "title": "Interactive",
+            "description": "Interactive elements"
+          },
+          {
+            "icon": "LineChart",
+            "title": "Progress Tracking",
+            "description": "Progress tracking"
+          },
+          {
+            "icon": "Lock",
+            "title": "Secure Login",
+            "description": "Secure login system"
+          }
+        ]
+      },
+      {
+        "sectionId": "who_this_is_for_lms",
+        "type": "standard",
+        "title": "Who This is For",
+        "subtitle": "Ideal Clients",
+        "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+        "content": "Our LMS design services are perfect for:\n• Educational institutes\n• Coaching centers\n• EdTech companies\n• Corporate training programs\n• Skill-based platforms\n• Online educators"
+      },
+      {
+        "sectionId": "what_you_get_lms",
+        "type": "standard",
+        "title": "What You Get from a Well-Designed LMS",
+        "subtitle": "The Benefits",
+        "content": "Simply put—a good LMS makes learning easier and more effective.",
+        "services": [
+          {
+            "icon": "Smile",
+            "title": "Better Experience",
+            "description": "A better learning experience for users"
+          },
+          {
+            "icon": "Heart",
+            "title": "Higher Engagement",
+            "description": "Higher engagement and course completion"
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Scalable Platform",
+            "description": "A platform that can grow with your business"
+          },
+          {
+            "icon": "Users",
+            "title": "Better Retention",
+            "description": "Better user retention"
+          },
+          {
+            "icon": "Database",
+            "title": "Centralized Management",
+            "description": "Everything managed in one place"
+          }
+        ]
+      },
+      {
+        "sectionId": "why_work_with_us_lms",
+        "type": "standard",
+        "title": "Why Work With Us?",
+        "subtitle": "Our Approach",
+        "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80",
+        "content": "We keep things practical and result-focused.\n\n• We understand how learning platforms work\n• We design with real users in mind\n• We keep interfaces clean and simple\n• We build scalable systems\n• We follow a clear and structured process\n\nWe don’t just create platforms—we build systems that people actually use and benefit from."
+      },
+      {
+        "sectionId": "faq_lms",
+        "type": "standard",
+        "title": "FAQs",
+        "subtitle": "Common Questions",
+        "content": "",
+        "services": [
+          {
+            "icon": "MessageSquare",
+            "title": "What is an LMS platform?",
+            "description": "It's an online system where you can create, manage, and deliver courses or training programs."
+          }
+        ]
       }
     ],
     "seo": {
-      "title": "LMS Development Agency - Online Strikers",
-      "description": "Expert LMS design and development services for online education."
+      "title": "LMS Design Services - Online Strikers",
+      "description": "Build Learning Platforms That People Actually Enjoy Using."
     }
   },
   "/services/crm-design": {
@@ -4945,47 +5835,265 @@
       {
         "sectionId": "crm_hero",
         "type": "hero",
-        "title": "Custom CRM Development",
-        "subtitle": "Manage Relationships Better",
+        "title": "CRM Design Services",
+        "subtitle": "Build a CRM Your Team Will Actually Use",
+        "content": "Managing customers today is not just about saving their details in a system—it’s about building strong, long-term relationships.\n\nA CRM is where your sales, marketing, and support teams work together. But if the system feels complicated or confusing, people avoid using it. And when that happens, leads get missed, follow-ups are delayed, and opportunities are lost.\n\nThat’s why CRM design is not just about building software—it’s about creating something simple, useful, and easy to work with every day.\n\nWe focus on designing CRM systems that are clean, structured, and practical—so your team can manage leads better, track conversations easily, and work more efficiently.",
         "image": "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80",
-        "content": "Streamline your sales and customer management with a custom CRM built for your business growth.",
         "imageUrl": "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80"
       },
       {
-        "sectionId": "crm_details",
+        "sectionId": "what_is_crm_design",
         "type": "standard",
-        "title": "Streamline Your Business Growth",
-        "subtitle": "Custom CRM Solutions",
-        "image": "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80",
-        "content": "Efficient customer relationship management is the backbone of any successful business. We design and integrate custom CRM systems that help you track leads, manage customer interactions, and automate your sales pipeline.\n\nOur solutions are tailored to your specific business processes, ensuring your team has the data they need to build lasting client relationships and close more deals.",
+        "title": "Understanding CRM Design",
+        "subtitle": "What is CRM Design?",
+        "content": "CRM design is about planning how your system looks and how it works for the people using it.\n\nIt covers things like:\n\n• How your data is organized\n• How users move from one task to another\n• How quickly they can complete their work\n\nWhen a CRM is designed properly, even complex data feels simple. Your team spends less time figuring things out and more time actually doing their work."
+      },
+      {
+        "sectionId": "what_makes_crm_work",
+        "type": "standard",
+        "title": "What Makes a CRM Work Smoothly?",
+        "subtitle": "Smooth CRM",
+        "content": "A good CRM is made up of a few important parts that work together:\n\nThe key is not just having these features—but making them easy to use.",
         "services": [
           {
+            "icon": "LayoutDashboard",
+            "title": "Dashboard",
+            "description": "A dashboard that gives a quick overview of leads and activity"
+          },
+          {
             "icon": "Users",
-            "title": "Lead & Contact Management",
-            "description": "Centralizing all your customer data in an intuitive, easy-to-use platform with automated entry.",
-            "items": [
-              "Pipeline Visualization",
-              "Automated Lead Scoring",
-              "Customer History Tracking"
-            ]
+            "title": "Contact Management",
+            "description": "A contact management system to store customer details"
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Sales Pipeline",
+            "description": "A sales pipeline to track deals and stages"
+          },
+          {
+            "icon": "ClipboardList",
+            "title": "Task System",
+            "description": "A task system for follow-ups and assignments"
+          },
+          {
+            "icon": "MessageSquare",
+            "title": "Communication Tools",
+            "description": "Built-in communication tools like emails and call tracking"
+          },
+          {
+            "icon": "LineChart",
+            "title": "Reports and Analytics",
+            "description": "Reports and analytics to measure performance"
+          }
+        ]
+      },
+      {
+        "sectionId": "types_of_crm",
+        "type": "standard",
+        "title": "Types of CRM Systems",
+        "subtitle": "Different CRMs",
+        "content": "Different businesses use CRM systems in different ways:\n\nWe design CRM solutions based on what fits your business model best.",
+        "services": [
+          {
+            "icon": "Target",
+            "title": "Sales CRM",
+            "description": "for managing leads and closing deals"
+          },
+          {
+            "icon": "Rocket",
+            "title": "Marketing CRM",
+            "description": "for campaigns and automation"
+          },
+          {
+            "icon": "HeadphonesIcon",
+            "title": "Service CRM",
+            "description": "for handling support and customer queries"
+          },
+          {
+            "icon": "Box",
+            "title": "All-in-one CRM",
+            "description": "a complete system covering everything"
+          }
+        ]
+      },
+      {
+        "sectionId": "crm_services_list",
+        "type": "standard",
+        "title": "Our CRM Design Services",
+        "subtitle": "What We Do",
+        "content": "",
+        "services": [
+          {
+            "icon": "Settings",
+            "title": "1. Custom CRM Design",
+            "description": "Every business has its own way of working, so we design CRM systems accordingly. We create:\n• Custom dashboards\n• Workflow-based structures\n• Role-based access\n• Systems that can grow with your business"
+          },
+          {
+            "icon": "Layout",
+            "title": "2. UI/UX Design for CRM",
+            "description": "Your team will use the CRM daily, so it needs to feel simple. We focus on:\n• Clean layouts\n• Easy navigation\n• Fewer clicks to complete tasks\n• Clear and user-friendly screens\nA simple system means better adoption and better results."
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "3. Sales Pipeline Setup",
+            "description": "A clear pipeline helps your team stay organized and focused. We design:\n• Lead stages\n• Deal tracking systems\n• Conversion flow\n• Automation triggers for follow-ups"
+          },
+          {
+            "icon": "Workflow",
+            "title": "4. Data Structure & Workflow Planning",
+            "description": "Data should help you—not confuse you. We organize:\n• Contact information\n• Custom fields\n• Data entry forms\n• Automated workflows"
+          },
+          {
+            "icon": "Code",
+            "title": "5. Development Support",
+            "description": "We don’t stop at design—we help you build it properly. We assist with:\n• Frontend design guidance\n• Backend planning\n• Feature suggestions\n• Integration support"
+          },
+          {
+            "icon": "RefreshCcw",
+            "title": "6. CRM Improvement & Redesign",
+            "description": "If your current CRM feels messy or slow, we can improve it. We:\n• Review your existing system\n• Identify problems\n• Improve usability\n• Upgrade the overall experience"
+          },
+          {
+            "icon": "Link",
+            "title": "7. Integrations with Other Tools",
+            "description": "To make your CRM more powerful, we connect it with tools you already use. This includes:\n• Email marketing platforms\n• Payment systems\n• Automation tools\n• Analytics software"
+          }
+        ]
+      },
+      {
+        "sectionId": "how_we_work_crm",
+        "type": "standard",
+        "title": "How We Work",
+        "subtitle": "Our Process",
+        "content": "We keep the process clear and easy to follow.",
+        "services": [
+          {
+            "icon": "Search",
+            "title": "Step 1: Understand Your Business",
+            "description": "We learn how your team works and what you need."
+          },
+          {
+            "icon": "Map",
+            "title": "Step 2: Plan the System",
+            "description": "We design workflows, structure, and data flow."
+          },
+          {
+            "icon": "PenTool",
+            "title": "Step 3: Design the Interface",
+            "description": "We create clean, easy-to-use layouts."
+          },
+          {
+            "icon": "Code",
+            "title": "Step 4: Build & Integrate",
+            "description": "We work with developers to implement everything."
+          },
+          {
+            "icon": "CheckCircle2",
+            "title": "Step 5: Test & Launch",
+            "description": "We test the system, fix issues, and go live."
+          }
+        ]
+      },
+      {
+        "sectionId": "features_good_crm",
+        "type": "standard",
+        "title": "Features Every Good CRM Should Have",
+        "subtitle": "Key Features",
+        "content": "A CRM should make work easier—not harder.\n\nWhen everything is well-organized, your team can work faster with fewer mistakes.",
+        "services": [
+          {
+            "icon": "LayoutDashboard",
+            "title": "Clean Dashboard",
+            "description": "A clean and simple dashboard"
+          },
+          {
+            "icon": "Navigation",
+            "title": "Easy Navigation",
+            "description": "Easy navigation"
+          },
+          {
+            "icon": "Database",
+            "title": "Data Access",
+            "description": "Quick access to data"
+          },
+          {
+            "icon": "Smartphone",
+            "title": "Mobile Friendly",
+            "description": "Mobile-friendly design"
           },
           {
             "icon": "Zap",
-            "title": "Workflow Automation",
-            "description": "Reducing manual tasks by automating repetitive sales and administrative processes.",
-            "items": [
-              "Email Sequence Automation",
-              "Automated Task Reminders",
-              "Integrated Sales Reporting"
-            ]
+            "title": "Automation",
+            "description": "Automation features"
+          },
+          {
+            "icon": "FileText",
+            "title": "Clear Reports",
+            "description": "Clear reports"
+          },
+          {
+            "icon": "Lock",
+            "title": "Secure Handling",
+            "description": "Secure data handling"
           }
-        ],
-        "imageUrl": "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        "sectionId": "who_this_is_for_crm",
+        "type": "standard",
+        "title": "Who This is For",
+        "subtitle": "Ideal For",
+        "image": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80",
+        "content": "Our CRM design services are ideal for:\n• Real estate companies\n• Healthcare businesses\n• Educational institutes\n• E-commerce brands\n• Service-based businesses\n• Corporate teams"
+      },
+      {
+        "sectionId": "what_you_get_crm",
+        "type": "standard",
+        "title": "What You Get from a Well-Designed CRM",
+        "subtitle": "Benefits",
+        "content": "In simple terms—less confusion, more productivity.",
+        "services": [
+          {
+            "icon": "Zap",
+            "title": "Faster Performance",
+            "description": "Faster and more efficient team performance"
+          },
+          {
+            "icon": "Users",
+            "title": "Better Tracking",
+            "description": "Better tracking of customer interactions"
+          },
+          {
+            "icon": "CheckCircle2",
+            "title": "More Deals",
+            "description": "Higher chances of closing deals"
+          },
+          {
+            "icon": "Database",
+            "title": "All Data in One Place",
+            "description": "All data in one place"
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Scalable System",
+            "description": "A system that can grow with your business"
+          }
+        ]
+      },
+      {
+        "sectionId": "why_work_with_us_crm",
+        "type": "standard",
+        "title": "Why Work With Us?",
+        "subtitle": "Your Partner",
+        "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80",
+        "content": "We focus on making things practical and usable."
       }
     ],
     "seo": {
-      "title": "CRM Development Services - Online Strikers",
-      "description": "Professional CRM design and integration to streamline your business processes."
+      "title": "CRM Design Services - Online Strikers",
+      "description": "Build a CRM Your Team Will Actually Use. We focus on designing CRM systems that are clean, structured, and practical."
     }
   }
 }
