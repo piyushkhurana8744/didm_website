@@ -4,15 +4,9 @@ import fs from "fs/promises";
 import path from "path";
 
 export async function getPageContent(pagePath: string) {
-  try {
-    await connectDB();
-    const content = await PageContent.findOne({ pagePath }).lean();
-    if (content) return JSON.parse(JSON.stringify(content));
-  } catch (dbError) {
-    console.error(`Database error fetching ${pagePath}:`, dbError);
-  }
+  // Bypassing DB connection for faster local/production load
 
-  // Fallback to local JSON file
+  // Load from local JSON file
   try {
     const filePath = path.join(process.cwd(), "src/data/initial-content.json");
     const fileData = await fs.readFile(filePath, "utf-8");

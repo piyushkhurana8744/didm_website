@@ -11,35 +11,22 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const path = searchParams.get("path");
 
+  // Bypassing DB connection for faster local/production load
   try {
-    await connectDB();
+    // Load local JSON file
+    const fs = await import("fs/promises");
+    const pathLib = await import("path");
+    const filePath = pathLib.join(process.cwd(), "src/data/initial-content.json");
+    const fileData = await fs.readFile(filePath, "utf-8");
+    const initialContent = JSON.parse(fileData);
 
     if (path) {
-      const content = await PageContent.findOne({ pagePath: path });
-      return NextResponse.json(content || { sections: [] });
+      return NextResponse.json(initialContent[path] || { sections: [] });
     }
-
-    const allContent = await PageContent.find({});
-    return NextResponse.json(allContent);
-  } catch (dbError) {
-    console.error("Content API: Database error, falling back to local file", dbError);
-    
-    try {
-      // Fallback to local JSON file
-      const fs = await import("fs/promises");
-      const pathLib = await import("path");
-      const filePath = pathLib.join(process.cwd(), "src/data/initial-content.json");
-      const fileData = await fs.readFile(filePath, "utf-8");
-      const initialContent = JSON.parse(fileData);
-
-      if (path) {
-        return NextResponse.json(initialContent[path] || { sections: [] });
-      }
-      return NextResponse.json(initialContent);
-    } catch (fsError) {
-      console.error("Content API: Local file fallback failed", fsError);
-      return NextResponse.json({ error: "Multiple failovers failed" }, { status: 500 });
-    }
+    return NextResponse.json(initialContent);
+  } catch (fsError) {
+    console.error("Content API: Local file fallback failed", fsError);
+    return NextResponse.json({ error: "Multiple failovers failed" }, { status: 500 });
   }
 }
 
