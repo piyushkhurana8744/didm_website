@@ -103,7 +103,7 @@ export default function Home() {
         </section>
       ))}
 
-      <Testimonials content={testimonialsSection} />
+      {/* <Testimonials content={testimonialsSection} /> */}
       <BlogSection content={blogSection} />
       <Footer />
 

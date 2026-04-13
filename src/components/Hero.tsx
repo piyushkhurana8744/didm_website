@@ -40,7 +40,7 @@ export default function Hero({ content }: HeroProps) {
   ];
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center bg-black text-white overflow-hidden pt-20">
+    <section id="home" className="relative min-h-[90vh] flex items-center bg-black text-white overflow-hidden pt-20 pb-32">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#be1e2e]/20 via-black to-[#0a0a0a]" />
@@ -51,7 +51,7 @@ export default function Hero({ content }: HeroProps) {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#be1e2e]/10 rounded-full blur-[150px] animate-blob animation-delay-2000" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pb-12">
         
         {/* LEFT CONTENT */}
         <motion.div
@@ -110,12 +110,12 @@ export default function Hero({ content }: HeroProps) {
           {/* Stats */}
           <motion.div
             variants={fadeUp}
-            className="flex flex-wrap gap-8 pt-8 border-t border-white/5"
+            className="flex flex-wrap gap-12 pt-10 border-t border-white/10"
           >
             {displayStats.map((item, i) => (
               <div key={i} className="flex flex-col">
                 <h3 className="text-3xl font-black tracking-tight">{item.value}</h3>
-                <p className="text-[10px] font-black uppercase tracking-widest text-[#be1e2e] opacity-70">{item.label}</p>
+                <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#fbbf24]">{item.label}</p>
               </div>
             ))}
           </motion.div>

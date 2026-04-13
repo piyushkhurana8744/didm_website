@@ -17,7 +17,7 @@ export default function Header() {
       href: "/digital-marketing-agency", 
       hasDropdown: true,
       dropdownItems: [
-        { name: "Main Agency", href: "/digital-marketing-agency" },
+        { name: "Marketing", href: "/digital-marketing-agency" },
         { name: "Advertising", href: "#", isHeader: true },
         { name: "Google PPC", href: "/services/ppc" },
         { name: "Meta Ads", href: "/services/meta-ads" },

@@ -2,7 +2,7 @@
 
 import { motion, useInView, Variants } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { Facebook, Instagram, Linkedin, Send, Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Send, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -47,6 +47,7 @@ const iconMap: Record<string, any> = {
   Instagram,
   LinkedIn: Linkedin,
   X: Send,
+  Youtube,
 };
 
 export default function Footer() {
@@ -70,7 +71,7 @@ export default function Footer() {
   const getSection = (id: string) => footerContent?.sections?.find((s: any) => s.sectionId === id);
   
   const brandSection = getSection("footer_brand");
-  const quickLinksRef = getSection("footer_quick_links");
+  const importantLinksRef = getSection("footer_important_links");
   const categoryLinksRef = getSection("footer_categories");
   const contactSection = getSection("footer_contact");
   const bottomSection = getSection("footer_bottom");
@@ -86,23 +87,34 @@ export default function Footer() {
     { icon: Send, href: "#", label: "X" },
   ];
 
-  const quickLinks = quickLinksRef?.links || [
+  const importantLinks = importantLinksRef?.links || [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "Services", href: "/services" },
+    { label: "About", href: "/about" },
     { label: "Blog", href: "/blogs" },
     { label: "Contact Us", href: "/contact" },
-    { label: "Testimonials", href: "/testimonials" },
+    { label: "Terms & Conditions", href: "/" },
+    {label:"Refund Policy", href:"/"}
   ];
 
-  const categoryList = categoryLinksRef?.links || [
-    { label: "Digital Marketing", href: "#" },
-    { label: "SEO Marketing", href: "#" },
-    { label: "Startup Agency", href: "#" },
-    { label: "Advertising Agency", href: "#" },
-    { label: "Social Media Agency", href: "#" },
-    { label: "Web Design Agency", href: "#" }
-  ];
+  const seoIndustries = categoryLinksRef?.seo_industries || {
+    title: "Industries By SEO",
+    links: [
+      { label: "Healthcare", href: "/services/healthcare-seo" },
+      { label: "Real Estate", href: "/services/real-estate-seo" },
+      { label: "Law Firm", href: "/services/legal-seo" },
+      { label: "Dental", href: "/services/dental-seo" }
+    ]
+  };
+
+  const adsIndustries = categoryLinksRef?.ads_industries || {
+    title: "Industries By Ads",
+    links: [
+      { label: "Healthcare Ads", href: "/services/healthcare-ads" },
+      { label: "Ecommerce Ads", href: "/services/ecommerce-ppc" },
+      { label: "Real Estate Ads", href: "/services/real-estate-ads" },
+      { label: "Educational Ads", href: "/services/education-ads" }
+    ]
+  };
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -155,7 +167,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-8 group">
               <div className="relative h-12 w-48 transition-transform duration-500 hover:scale-105">
                 <Image
-                  src="/logo.png"
+                  src="/footer-logo.png"
                   alt="Online Strikers Logo"
                   fill
                   className="object-contain"
@@ -180,9 +192,9 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-lg font-black mb-8 text-white">Quick Links</h4>
+            <h4 className="text-lg font-black mb-8 text-white">Important Links</h4>
             <ul className="space-y-4">
-              {quickLinks.map((link: { label: string; href: string }) => (
+              {importantLinks.map((link: { label: string; href: string }) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic">
                     {link.label}
@@ -193,16 +205,32 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-lg font-black mb-8 text-white">Category List</h4>
-            <ul className="space-y-4">
-              {categoryList.map((cat: any) => (
-                <li key={cat.label || cat}>
-                  <Link href={cat.href || "#"} className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic text-sm">
-                    {cat.label || cat}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
+              <div>
+                <h4 className="text-lg font-black mb-6 text-white">{seoIndustries.title}</h4>
+                <ul className="space-y-3">
+                  {seoIndustries.links.map((link: any) => (
+                    <li key={link.label}>
+                      <Link href={link.href} className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic text-sm">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-black mb-6 text-white">{adsIndustries.title}</h4>
+                <ul className="space-y-3">
+                  {adsIndustries.links.map((link: any) => (
+                    <li key={link.label}>
+                      <Link href={link.href} className="text-white/60 hover:text-[#be1e2e] transition-colors duration-300 font-bold italic text-sm">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="lg:col-span-3">
@@ -218,7 +246,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-4 group cursor-pointer">
                 <Phone className="w-5 h-5 text-white/40 group-hover:text-[#be1e2e] transition-colors" />
-                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">{contactSection?.phone || "99999-99999"}</p>
+                <p className="text-white/60 font-bold italic group-hover:text-white transition-colors text-sm">{contactSection?.phone || "9711394581, 9971259994"}</p>
               </div>
             </div>
           </div>
@@ -234,8 +262,8 @@ export default function Footer() {
               Terms & Conditions
             </Link>
             <div className="w-px h-4 bg-white/10 hidden md:block" />
-            <Link href="/privacy" className="text-white/40 text-sm font-bold italic hover:text-white transition-colors">
-              Privacy Policy
+            <Link href="/refund" className="text-white/40 text-sm font-bold italic hover:text-white transition-colors">
+              Refund Policy
             </Link>
           </div>
           

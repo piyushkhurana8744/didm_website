@@ -21,22 +21,32 @@
         "ctaText": "Work With Us",
         "stats": [
           {
-            "label": "Clients Served Worldwide",
-            "description": "Successfully partnered with over 500+ clients across the globe, providing tailor-made marketing solutions that drive growth.",
-            "value": "500 +",
-            "gradient": "from-black via-black to-[#be1e2e]/80"
+            "label": "BOOSTING REVENUE",
+            "description": "Proven growth results",
+            "value": "2X to 6X",
+            "icon": "TrendingUp",
+            "color": "#be1e2e"
           },
           {
-            "label": "Project Successfully Completed",
-            "description": "We focus on high-performance strategy. We have successfully delivered over 700+ projects for various industries.",
-            "value": "700 +",
-            "gradient": "from-black via-black to-[#be1e2e]/60"
+            "label": "IMPROVED LEADS",
+            "description": "Quality lead generation",
+            "value": "3X to 8X",
+            "icon": "Target",
+            "color": "#be1e2e"
           },
           {
-            "label": "Revenue Generated for Clients",
-            "description": "Our marketing strategies have helped our clients generate over $200M in revenue for their businesses.",
-            "value": "$200M+",
-            "gradient": "from-black via-black to-[#be1e2e]/40"
+            "label": "SOCIAL MEDIA ENGAGEMENT",
+            "description": "Enhanced audience reach",
+            "value": "4X to 8X",
+            "icon": "Share2",
+            "color": "#be1e2e"
+          },
+          {
+            "label": "BRAND EXPOSURE",
+            "description": "Massive visibility boost",
+            "value": "100 to 1000%",
+            "icon": "Eye",
+            "color": "#fbbf24"
           }
         ]
       },
@@ -666,7 +676,7 @@
         "type": "standard",
         "title": "Our Office",
         "subtitle": "Location",
-        "content": "Visit us at our Delhi headquarters."
+        "content": "B-49ab, 1st floor Kalkaji Hansraj Sethi Marg Kalkaji Near Nehru Enclave, Block B, Kalkaji, New Delhi, Delhi 110019\n\nPhones: 9711394581, 9971259994"
       }
     ],
     "seo": {
@@ -956,19 +966,15 @@
         "social": [
           {
             "platform": "Facebook",
-            "href": "#"
+            "href": "https://www.facebook.com/onlin9strikers"
           },
           {
             "platform": "Instagram",
-            "href": "#"
+            "href": "https://www.instagram.com/onlinestrikers"
           },
           {
-            "platform": "LinkedIn",
-            "href": "#"
-          },
-          {
-            "platform": "X",
-            "href": "#"
+            "platform": "Youtube",
+            "href": "https://www.youtube.com/@onlinestrikers2969"
           }
         ]
       },
@@ -1003,38 +1009,30 @@
       },
       {
         "sectionId": "footer_categories",
-        "links": [
-          {
-            "label": "Digital Marketing",
-            "href": "#"
-          },
-          {
-            "label": "SEO Marketing",
-            "href": "#"
-          },
-          {
-            "label": "Startup Agency",
-            "href": "#"
-          },
-          {
-            "label": "Advertising Agency",
-            "href": "#"
-          },
-          {
-            "label": "Social Media Agency",
-            "href": "#"
-          },
-          {
-            "label": "Web Design Agency",
-            "href": "#"
-          }
-        ]
+        "seo_industries": {
+          "title": "Industries By SEO",
+          "links": [
+            { "label": "Healthcare", "href": "/services/healthcare-seo" },
+            { "label": "Real Estate", "href": "/services/real-estate-seo" },
+            { "label": "Law Firm", "href": "/services/legal-seo" },
+            { "label": "Dental", "href": "/services/dental-seo" }
+          ]
+        },
+        "ads_industries": {
+          "title": "Industries By Ads",
+          "links": [
+            { "label": "Healthcare Ads", "href": "/services/healthcare-ads" },
+            { "label": "Ecommerce Ads", "href": "/services/ecommerce-ppc" },
+            { "label": "Real Estate Ads", "href": "/services/real-estate-ads" },
+            { "label": "Educational Ads", "href": "/services/education-ads" }
+          ]
+        }
       },
       {
         "sectionId": "footer_contact",
         "email": "info@onlinestrikers.com",
-        "address": "New Delhi, India",
-        "phone": "99999-99999"
+        "address": "B-49ab, 1st floor Kalkaji Hansraj Sethi Marg Kalkaji Near Nehru Enclave, Block B, Kalkaji, New Delhi, Delhi 110019",
+        "phone": "9711394581, 9971259994"
       },
       {
         "sectionId": "footer_bottom",
