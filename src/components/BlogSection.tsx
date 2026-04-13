@@ -90,7 +90,7 @@ export default function BlogSection({ content }: BlogSectionProps) {
       isFeatured: false,
     },
     {
-      title: "The Future of Digital Marketing in 2025 and Beyond.",
+      title: "The Future of Digital Marketing in 2026 and Beyond.",
       date: "15/12/2024",
       author: "Jane Smith",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",

@@ -7,7 +7,7 @@ import Link from "next/link"
 import Header from "@/components/Header"
 import { Button } from "@/components/ui/button"
 
-type Category = "all" | "ui-ux" | "development" | "app"
+type Category = "all" | "seo" | "development" | "advertising"
 
 interface PortfolioItem {
   id: number
@@ -16,21 +16,23 @@ interface PortfolioItem {
   image: string
   description: string
   client: string
+  service: string
   year: string
+  link: string
 }
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "All" },
-  { id: "ui-ux", label: "UI/UX Design" },
+  { id: "seo", label: "SEO" },
+  { id: "advertising", label: "Advertising" },
   { id: "development", label: "Web Development" },
-  { id: "app", label: "Mobile App" },
 ]
 
 const categoryLabels: Record<Category, string> = {
   all: "All Projects",
-  "ui-ux": "UI/UX DESIGN",
+  "seo": "SEO",
   development: "WEB DEVELOPMENT",
-  app: "MOBILE APP",
+  advertising: "ADVERTISING",
 }
 
 export default function PortfolioPage() {
@@ -85,40 +87,18 @@ export default function PortfolioPage() {
           >
             {heroSection?.title || "PORTFOLIO"}
           </motion.h1>
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto text-lg"
           >
             {heroSection?.content || "Showcasing our expertise across digital design and development. Explore our latest projects and see how we transform ideas into reality."}
-          </motion.p>
+          </motion.p> */}
         </div>
       </section>
 
-      {/* Filter Buttons */}
-      <section className="px-6 pb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-8 py-4 rounded-full text-sm font-bold tracking-wide transition-all duration-300 ${
-                activeFilter === category.id
-                  ? "bg-primary text-white shadow-primary-lg"
-                  : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white border border-white/10"
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </motion.div>
-      </section>
+      {/* Filter Buttons Section Removed */}
 
       {/* Portfolio Grid */}
       <section className="px-6 pb-24 min-h-[400px]">
@@ -134,69 +114,70 @@ export default function PortfolioPage() {
                   <motion.div
                     key={item.id}
                     layout
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     onClick={() => setSelectedProject(item)}
-                    className="group relative aspect-[4/3] rounded-3xl overflow-hidden cursor-pointer bg-white/5"
+                    className="group relative flex flex-col rounded-[2rem] overflow-hidden cursor-pointer bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20"
                   >
-                    {/* Image Container */}
-                    <div className="absolute inset-0">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
+                    {/* Top: Image Section */}
+                    <div className="relative aspect-[4/3] overflow-hidden bg-black/40">
+                      {/* Blurred Backdrop */}
+                      <div className="absolute inset-0 z-0 opacity-40">
+                        <Image
+                          src={item.image}
+                          alt=""
+                          fill
+                          className="object-cover blur-2xl scale-110"
+                        />
+                      </div>
+
+                      {/* Actual Image */}
+                      <div className="absolute inset-6 z-10 flex items-center justify-center">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={item.image}
+                            alt={item.title}
+                            fill
+                            className="object-contain transition-transform duration-700 group-hover:scale-110"
+                          />
+                        </div>
+                      </div>
+                      
+                      {/* Subtle Overlay on Image ONLY */}
+                      <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/20 to-transparent" />
                     </div>
 
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-
-                    {/* Content */}
-                    <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                      {/* Category Tag */}
-                      <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        className="inline-block text-xs font-bold text-primary tracking-wider mb-3"
-                      >
-                        {categoryLabels[item.category] || item.category.toUpperCase()}
-                      </motion.span>
-
-                      {/* Title */}
-                      <h3 className="text-2xl font-bold text-white mb-2">
+                    {/* Bottom: Info Section */}
+                    <div className="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                      <h3 className="text-xl font-bold text-white mb-2 line-clamp-1 group-hover:text-primary transition-colors">
                         {item.title}
                       </h3>
-
-                      {/* Description Preview */}
-                      <p className="text-gray-400 text-sm line-clamp-2 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                        {item.description}
-                      </p>
-
-                      {/* View More Arrow */}
-                      <div className="absolute top-8 right-8 w-12 h-12 rounded-full bg-primary flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 text-white">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                        >
-                          <path d="M7 17 17 7" />
-                          <path d="M7 7h10v10" />
-                        </svg>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-primary/80 mb-4 block">
+                        {item.service}
+                      </span>
+                      
+                      <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between">
+                        <span className="text-[9px] font-black uppercase tracking-widest text-white/20">View Case Study</span>
+                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="3"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M7 17 17 7" />
+                            <path d="M7 7h10v10" />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-
-                    {/* Border Glow on Hover */}
-                    <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary/50 transition-colors duration-300" />
                   </motion.div>
                 ))}
               </AnimatePresence>
@@ -248,21 +229,34 @@ export default function PortfolioPage() {
               </button>
 
               {/* Project Image */}
-              <div className="relative aspect-video">
-                <Image
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+              <div className="relative aspect-video bg-white/5 overflow-hidden">
+                {/* Blurred Backdrop */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={selectedProject.image}
+                    alt=""
+                    fill
+                    className="object-cover blur-3xl opacity-30 scale-125"
+                  />
+                </div>
+                
+                {/* Actual Image */}
+                <div className="absolute inset-8 z-10 flex items-center justify-center">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={selectedProject.image}
+                      alt={selectedProject.title}
+                      fill
+                      className="object-contain drop-shadow-2xl"
+                    />
+                  </div>
+                </div>
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black via-transparent to-transparent" />
               </div>
 
               {/* Project Details */}
               <div className="p-8">
-                <span className="inline-block text-sm font-bold text-primary tracking-wider mb-4">
-                  {categoryLabels[selectedProject.category]}
-                </span>
+                {/* Category Tag Removed */}
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   {selectedProject.title}
                 </h2>
@@ -271,21 +265,32 @@ export default function PortfolioPage() {
                 </p>
 
                 {/* Project Info */}
-                <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="bg-white/5 rounded-2xl p-6">
                     <span className="text-sm text-gray-500 block mb-2">Client</span>
                     <span className="text-xl font-bold">{selectedProject.client}</span>
                   </div>
-                  <div className="bg-white/5 rounded-2xl p-6">
-                    <span className="text-sm text-gray-500 block mb-2">Year</span>
+                  <div className="bg-white/5 rounded-2xl p-6 md:col-span-1">
+                    <span className="text-sm text-gray-500 block mb-2">Duration</span>
                     <span className="text-xl font-bold">{selectedProject.year}</span>
+                  </div>
+                  <div className="bg-white/5 rounded-2xl p-6 md:col-span-3">
+                    <span className="text-sm text-gray-500 block mb-2">Service</span>
+                    <span className="text-xl font-bold text-primary">{selectedProject.service}</span>
                   </div>
                 </div>
 
                 {/* CTA */}
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-full text-lg font-bold">
-                  View Live Project
-                </Button>
+                <Link 
+                  href={selectedProject.link} 
+                  target={selectedProject.link.startsWith("http") ? "_blank" : "_self"} 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-full text-lg font-bold">
+                    Visit
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </motion.div>
@@ -296,7 +301,7 @@ export default function PortfolioPage() {
       <footer className="border-t border-white/10 py-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-500">
-            © 2025 Online Strikers. All rights reserved.
+            © 2026 Online Strikers. All rights reserved.
           </p>
         </div>
       </footer>

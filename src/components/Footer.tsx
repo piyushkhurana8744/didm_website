@@ -255,7 +255,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 relative">
           <p className="text-white/40 text-sm font-bold italic">
-            ©Copyright 2025 Online Strikers . All rights reserved
+            ©Copyright 2026 Online Strikers . All rights reserved
           </p>
           <div className="flex items-center gap-6">
             <Link href="/terms" className="text-white/40 text-sm font-bold italic hover:text-white transition-colors">

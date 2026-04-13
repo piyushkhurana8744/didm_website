@@ -88,7 +88,7 @@ export default function TeamPage() {
                 </div>
                 {/* Mini Footer Bar */}
                 <div className="w-full bg-black py-4 px-10 flex flex-col md:flex-row justify-between items-center text-white relative z-20 border-t border-white/5 shrink-0">
-                  <p className="text-[8px] font-black opacity-40 uppercase tracking-widest leading-none">© 2025 ONLINE STRIKERS INC. ALL RIGHTS RESERVED.</p>
+                  <p className="text-[8px] font-black opacity-40 uppercase tracking-widest leading-none">© 2026 ONLINE STRIKERS INC. ALL RIGHTS RESERVED.</p>
                 </div>
                 <div className="flex items-start justify-between px-2">
                   <div>

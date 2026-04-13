@@ -613,7 +613,7 @@ export default function ContentPage() {
                             <div className="space-y-4">
                               <div className="flex items-center justify-between">
                                 <h4 className="text-[10px] font-black uppercase tracking-widest text-[#be1e2e]">Portfolio Projects</h4>
-                                <Button size="sm" variant="ghost" className="h-7 text-[9px] font-black uppercase text-white/40 hover:text-white" onClick={() => addNestedItem(idx, "portfolioItems", { id: Date.now(), title: "New Project", category: "ui-ux", client: "", year: new Date().getFullYear().toString(), description: "", image: "" })}>
+                                <Button size="sm" variant="ghost" className="h-7 text-[9px] font-black uppercase text-white/40 hover:text-white" onClick={() => addNestedItem(idx, "portfolioItems", { id: Date.now(), title: "New Project", category: "seo", client: "", service: "", year: new Date().getFullYear().toString(), description: "", image: "", link: "" })}>
                                   <Plus className="w-3 h-3 mr-1" /> Add Project
                                 </Button>
                               </div>
@@ -637,9 +637,9 @@ export default function ContentPage() {
                                         onChange={(e) => updateNestedItem(idx, pIdx, "portfolioItems", "category", e.target.value)}
                                         className="bg-white/5 border border-white/10 rounded-lg text-[9px] text-white/40 focus:outline-none p-1"
                                       >
-                                        <option value="ui-ux">UI/UX Design</option>
+                                        <option value="seo">SEO</option>
                                         <option value="development">Web Development</option>
-                                        <option value="app">Mobile App</option>
+                                        <option value="advertising">Advertising</option>
                                       </select>
                                       <input 
                                         value={item.client || ""} 
@@ -648,10 +648,22 @@ export default function ContentPage() {
                                         placeholder="Client"
                                       />
                                       <input 
+                                        value={item.service || ""} 
+                                        onChange={(e) => updateNestedItem(idx, pIdx, "portfolioItems", "service", e.target.value)}
+                                        className="bg-transparent text-[9px] text-white/40 focus:outline-none"
+                                        placeholder="Service"
+                                      />
+                                      <input 
                                         value={item.year || ""} 
                                         onChange={(e) => updateNestedItem(idx, pIdx, "portfolioItems", "year", e.target.value)}
                                         className="bg-transparent text-[9px] text-white/40 focus:outline-none"
-                                        placeholder="Year"
+                                        placeholder="Year/Duration"
+                                      />
+                                      <input 
+                                        value={item.link || ""} 
+                                        onChange={(e) => updateNestedItem(idx, pIdx, "portfolioItems", "link", e.target.value)}
+                                        className="bg-transparent text-[9px] text-white/40 focus:outline-none"
+                                        placeholder="Project Link"
                                       />
                                     </div>
                                     <textarea 

@@ -4,66 +4,74 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 
-type Category = "all" | "ui-ux" | "development" | "app"
+type Category = "all" | "seo" | "development" | "advertising"
 
 interface PortfolioItem {
   id: number
   title: string
   category: Category
   image: string
+  service: string
+  link: string
 }
 
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
     title: "Fintech Dashboard",
-    category: "ui-ux",
+    category: "seo",
     image: "https://picsum.photos/seed/fintech/800/600",
+    service: "Financial SEO & UX",
   },
   {
     id: 2,
     title: "E-Commerce Platform",
     category: "development",
     image: "https://picsum.photos/seed/ecommerce/800/600",
+    service: "Web Development",
   },
   {
     id: 3,
     title: "Fitness Tracker App",
-    category: "app",
+    category: "advertising",
     image: "https://picsum.photos/seed/fitness/800/600",
+    service: "Mobile App Ads",
   },
   {
     id: 4,
     title: "Healthcare Portal",
-    category: "ui-ux",
+    category: "seo",
     image: "https://picsum.photos/seed/healthcare/800/600",
+    service: "Healthcare SEO",
   },
   {
     id: 5,
     title: "SaaS Analytics",
     category: "development",
     image: "https://picsum.photos/seed/saas/800/600",
+    service: "SaaS Development",
   },
   {
     id: 6,
     title: "Food Delivery App",
-    category: "app",
+    category: "advertising",
     image: "https://picsum.photos/seed/food/800/600",
+    service: "Food Delivery Ads",
   },
 ]
 
 const categories: { id: Category; label: string }[] = [
   { id: "all", label: "All" },
-  { id: "ui-ux", label: "UI/UX" },
-  { id: "development", label: "Development" },
-  { id: "app", label: "App" },
+  { id: "seo", label: "SEO" },
+  { id: "advertising", label: "Advertising" },
+  { id: "development", label: "Web Development" },
 ]
 
 const categoryLabels: Record<Category, string> = {
   all: "All",
-  "ui-ux": "UI/UX DESIGN",
+  "seo": "SEO",
   development: "WEB DEVELOPMENT",
-  app: "MOBILE APP",
+  advertising: "ADVERTISING",
 }
 
 export default function Portfolio() {
@@ -98,33 +106,9 @@ export default function Portfolio() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             PORTFOLIO
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Showcasing our expertise across digital design and development
-          </p>
         </motion.div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
-        >
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeFilter === category.id
-                  ? "bg-primary text-white shadow-primary-lg"
-                  : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </motion.div>
+        {/* Filter Buttons Removed */}
 
         {/* Portfolio Grid */}
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -133,63 +117,69 @@ export default function Portfolio() {
               <motion.div
                 key={item.id}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
+                exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
+                className="group relative flex flex-col rounded-[2rem] overflow-hidden cursor-pointer bg-white/5 border border-white/10 hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20"
               >
-                {/* Image Container */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                {/* Top: Image Section */}
+                <div className="relative aspect-[4/3] overflow-hidden bg-black/40">
+                  {/* Blurred Backdrop */}
+                  <div className="absolute inset-0 z-0 opacity-40">
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      className="object-cover blur-2xl scale-110"
+                    />
+                  </div>
+
+                  {/* Actual Image */}
+                  <div className="absolute inset-6 z-10 flex items-center justify-center">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-contain transition-transform duration-700 group-hover:scale-110"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Subtle Overlay on Image ONLY */}
+                  <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                {/* Content */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  {/* Category Tag */}
-                  <motion.span
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    className="inline-block text-xs font-bold text-primary tracking-wider mb-2"
-                  >
-                    {categoryLabels[item.category]}
-                  </motion.span>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                {/* Bottom: Info Section */}
+                <div className="p-8 flex flex-col flex-grow bg-gradient-to-b from-white/[0.02] to-transparent">
+                  <h3 className="text-xl font-bold text-white mb-2 line-clamp-1 group-hover:text-primary transition-colors text-left uppercase tracking-tight">
                     {item.title}
                   </h3>
-
-                  {/* View Project Arrow */}
-                  <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="transform group-hover:translate-x-1 transition-transform"
-                    >
-                      <path d="M7 17 17 7" />
-                      <path d="M7 7h10v10" />
-                    </svg>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-primary/80 mb-6 block text-left">
+                    {item.service}
+                  </span>
+                  
+                  <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between">
+                    <span className="text-[9px] font-black uppercase tracking-widest text-white/20">View Case Study</span>
+                    <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M7 17 17 7" />
+                        <path d="M7 7h10v10" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-
-                {/* Border Glow on Hover */}
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/50 transition-colors duration-300" />
               </motion.div>
             ))}
           </AnimatePresence>

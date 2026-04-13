@@ -210,7 +210,7 @@
             "isFeatured": false
           },
           {
-            "title": "The Future of Digital Marketing in 2025 and Beyond.",
+            "title": "The Future of Digital Marketing in 2026 and Beyond.",
             "date": "15/12/2024",
             "author": "Jane Smith",
             "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
@@ -402,8 +402,7 @@
         "sectionId": "portfolio_hero",
         "type": "hero",
         "title": "PORTFOLIO",
-        "subtitle": "OUR WORK",
-        "content": "Showcasing our expertise across digital design and development. Explore our latest projects and see how we transform ideas into reality."
+        "subtitle": "OUR WORK"
       },
       {
         "sectionId": "portfolio_grid_initial",
@@ -411,77 +410,62 @@
         "title": "Our Selection",
         "subtitle": "Featured Projects",
         "portfolioItems": [
+          
+         
           {
             "id": 1,
-            "title": "Fintech Dashboard",
-            "category": "ui-ux",
-            "image": "https://picsum.photos/seed/fintech/800/600",
-            "description": "A comprehensive financial dashboard with real-time analytics, transaction tracking, and customizable widgets.",
-            "client": "FinanceCorp",
-            "year": "2024"
+            "title": "DIDM – Website Development, Complete Digital Marketing",
+            "category": "seo",
+            "image": "/didm_seo.jpeg",
+            "description": "Since 2014, we have been managing the complete digital ecosystem for DIDM. From SEO and website optimization to social media management and paid advertising, our team handles everything end-to-end.\n\nOur focus has been on building a strong online presence, generating consistent leads, and scaling admissions through a combination of organic and paid strategies. With continuous optimization and data-driven decisions, DIDM has achieved sustainable growth across all digital channels.",
+            "client": "DIDM (Delhi Institute of Digital Marketing)",
+            "service": "SEO + Website Management + Social Media + Paid Ads",
+            "year": "2014 – Present",
+            "link": "https://www.didm.in/"
           },
           {
             "id": 2,
-            "title": "E-Commerce Platform",
-            "category": "development",
-            "image": "https://picsum.photos/seed/ecommerce/800/600",
-            "description": "Full-featured online store with payment integration, inventory management, and AI-powered recommendations.",
-            "client": "ShopTech",
-            "year": "2024"
+            "title": "ZICA Pitampura – Complete Digital Growth Case Study",
+            "category": "advertising",
+            "image": "/zica.jpeg",
+            "description": "Since 2025, we have been managing the complete digital ecosystem for ZICA Pitampura. From performance marketing and lead generation campaigns to website optimization and social media management, our team handles everything end-to-end.\n\nOur focus is to generate high-quality student leads, improve conversions, and build a strong brand presence in the local market. With a performance-driven approach and continuous optimization, ZICA Pitampura is consistently growing across all digital platforms.",
+            "client": "ZICA Pitampura",
+            "service": "SEO + Website Management + Social Media + Paid Ads",
+            "year": "2025 – Present",
+            "link": "https://zicapitampura.com/"
           },
           {
             "id": 3,
-            "title": "Fitness Tracker App",
-            "category": "app",
-            "image": "https://picsum.photos/seed/fitness/800/600",
-            "description": "Mobile application for tracking workouts, nutrition, and health metrics with social features.",
-            "client": "FitLife",
-            "year": "2023"
+            "title": "Jhankar College of Pharmacy – Website Design",
+            "category": "advertising",
+            "image": "/Jhankar-college.jpeg",
+            "description": "Since 2014, we have been associated with Jhankar College of Pharmacy, where our primary focus has been designing and maintaining their official website.Our goal was to create a clean, professional, and user-friendly website that effectively represents the institution and provides a seamless experience to students and visitors. The website is designed to ensure easy navigation, mobile responsiveness, and a structured presentation of information.",
+            "client": "Jhankar College of Pharmacy",
+            "service": "Website Design + Development + Maintenance",
+            "year": "2014 – Present",
+            "link": "https://jhankargroupofcolleges.com/"
           },
           {
             "id": 4,
-            "title": "Healthcare Portal",
-            "category": "ui-ux",
-            "image": "https://picsum.photos/seed/healthcare/800/600",
-            "description": "Patient management system with appointment scheduling, telemedicine, and medical records access.",
-            "client": "MedCare",
-            "year": "2024"
+            "title": "Bolbala – Website & Social Media",
+            "category": "advertising",
+            "image": "/Bolbala.jpeg",
+            "description": "We manage the complete digital presence of Bolbala, including website design and social media management. Our focus has been on creating a visually engaging website along with consistent and impactful social media content to build brand awareness and audience engagement. By combining creative design with strategic content planning, we help Bolbala maintain a strong and active digital presence.",
+            "client": "Bolbala",
+            "service": "Website Design + Social Media Management",
+            "year": "Ongoing",
+            "link": "https://bolbala.in/"
           },
           {
             "id": 5,
-            "title": "SaaS Analytics",
-            "category": "development",
-            "image": "https://picsum.photos/seed/saas/800/600",
-            "description": "Business intelligence platform with custom dashboards, data visualization, and predictive analytics.",
-            "client": "DataPro",
-            "year": "2023"
-          },
-          {
-            "id": 6,
-            "title": "Food Delivery App",
-            "category": "app",
-            "image": "https://picsum.photos/seed/food/800/600",
-            "description": "Food delivery platform with real-time tracking, restaurant management, and loyalty program.",
-            "client": "QuickEats",
-            "year": "2024"
-          },
-          {
-            "id": 7,
-            "title": "Real Estate Platform",
-            "category": "ui-ux",
-            "image": "https://picsum.photos/seed/realestate/800/600",
-            "description": "Property listing platform with virtual tours, advanced search, and agent management system.",
-            "client": "PropertyHub",
-            "year": "2023"
-          },
-          {
-            "id": 8,
-            "title": "Education LMS",
-            "category": "development",
-            "image": "https://picsum.photos/seed/education/800/600",
-            "description": "Learning management system with course creation, progress tracking, and interactive assessments.",
-            "client": "EduLearn",
-            "year": "2024"
+            "title": "DesiBiz – Website & Social Media",
+            "category": "advertising",
+            "image": "/DesiBiz.jpeg",
+            "description": "We manage the complete digital presence of DesiBiz, including website design and social media management. Our focus has been on building a clean, modern website along with engaging social media content to enhance brand visibility and audience interaction.Through a combination of creative design and consistent posting, we help DesiBiz maintain a strong and active presence across digital platforms.",
+            "client": "DesiBiz",
+            "service": "Website Design + Social Media Management",
+            "year": "Ongoing",
+            "link": "https://desibiz.in/"
           }
         ]
       }
@@ -1036,7 +1020,7 @@
       },
       {
         "sectionId": "footer_bottom",
-        "copyright": "©Copyright 2025 Online Strikers . All rights reserved",
+        "copyright": "©Copyright 2026 Online Strikers . All rights reserved",
         "legal": [
           {
             "label": "Terms & Conditions",
