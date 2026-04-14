@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 import ThemeProvider from "@/components/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
+import FloatingButtons from "@/components/FloatingButtons";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -27,6 +28,7 @@ export default function RootLayout({
           <ThemeProvider>
             {children}
             <Toaster />
+            <FloatingButtons />
           </ThemeProvider>
         </Providers>
       </body>
